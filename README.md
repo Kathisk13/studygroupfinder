@@ -1,2 +1,2 @@
 # Studyfinder
-* Web-Prototyp zum Finden von Lern- und Bewarbeitungsgruppen.
+* Web-Prototyp zum Finden von Lern- und Bearbeitungsgruppen.
