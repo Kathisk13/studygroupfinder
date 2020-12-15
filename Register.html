@@ -1,0 +1,47 @@
+<!Doctype html>
+<html>
+<title>Studyfinder</title>
+<head>
+	<meta charset="UTF-8">
+	<script src="registerScript.js"></script>
+	<link rel="stylesheet" type="text/css" href="registerStyle.css">
+</head>
+
+<h1 class="CenterMargin col-6">Studyfinder</h1>
+
+<div class="ProfilePicDiv col-6 CenterMargin">
+	
+	<img id="ProfilePic" class="ProfilePic" src="defaultpic.png" alt="ProfilePicture">
+	<button id="uploadImage"class="PicUploadButton" onclick="uploadPic(event);">Profilbild hochladen</button>
+</div>
+
+
+
+<div class="FormularDiv col-6 CenterMargin">
+<ul>
+	<p id="nameLabel" class="FormLabel CenterMargin ">Name:</p>
+	<input autofocus id="nameInput" class="FormInput CenterMargin col-6" type="text">
+</ul>
+<ul>
+	<p id="passwordLabel" class="FormLabel CenterMargin">Passwort:</p>
+	<input id="passwordInput" class="FormInput CenterMargin col-6" type="password">
+</ul>
+</div>
+
+<div class="Stroke"></div>
+
+<div class="FormularDiv col-6 CenterMargin">
+
+<p class="FormLabel CenterMargin">Optionale Felder:</p>
+
+<ul>
+	<p id="fachLabel" class="FormLabel CenterMargin ">Fach:</p>
+	<input id="fachInput" class="FormInput CenterMargin col-6" type="text">
+</ul>
+<ul>
+	<p id="ortLabel" class="FormLabel CenterMargin ">Ort:</p>
+	<input id="ortInput" class="FormInput CenterMargin col-6" type="text">
+</ul>
+<input id="register" class="RegisterButton" type="submit" value="Registrierung abschließen" onclick="register(event);">
+</div>
+</html>
