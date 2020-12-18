@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
+    <link rel="stylesheet" href="style.css">
 <style>
 body {
   background-color: white;
@@ -41,9 +42,49 @@ p {
     <tr>
       <td>Proggen (Prog1)</td>
       <td>1/4</td>
-      <td><button>beiteten</button></td>
+      <td><button onclick="beitreten('Proggen (Prog1)')">beiteten</button></td>
     </tr>
    
   </table>
+
+    <div id="waitForAcceptance" class="modal fade" style="display: none;">
+    
+      <!-- Modal content -->
+      <div class="modal-content">
+        <span class="close" onclick="closeModal()">&times;</span>
+        <p>Du hast dich in die Gruppe</p>
+        <p id="groupName">Name der Gruppe</p>
+        <p>eingetragen. Warte auf Bestätigung des Gruppenadmins.</p>
+      </div>
+    
+    </div>
+    </body>
+
 </body>
+
+<script>
+  function beitreten(groupName) {
+    console.log("hi");
+    document.getElementById("waitForAcceptance").style.display = "block";
+  }
+  function closeModal() {
+    document.getElementById("waitForAcceptance").style.display = "none";
+  }
+  function switchToSettings() {
+    window.location = "settings.html";
+  }
+
+  function switchToMain() {
+    window.location = "dashboard.html";
+  }
+
+  function switchToMessages() {
+    window.location = "chat.html";
+  }
+
+  function switchToProfile() {
+    window.location = "profile.html";
+  }
+
+</script>
 </html>
