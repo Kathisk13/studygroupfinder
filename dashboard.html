@@ -1,0 +1,72 @@
+<!Doctype HTML>
+<html>
+<head>
+<meta charset = "UTF-8">
+
+	<div class="headerContainer"> 
+	
+		<div class="headerImage" col="1"> 
+			<b onclick="switchToMain()"><img src="logo.jpg" alt="Menu"/></b>
+		</div>
+		
+		<div class="topnav" col="2"> 
+			<a class="logout" onclick="openPopup()">Abmelden</a>
+			<a onclick="switchToSettings()">Einstellungen</a>
+			<a onclick="switchToProfile()">Profil</a>
+			<a onclick="switchToMessages()">Nachrichten</a>
+			<a class="active" onclick="switchToMain()">Startseite</a>
+		</div>
+		
+	</div>
+
+	<link rel="stylesheet" href="style.css">
+</head>
+<body bgcolor="F1F1F1">
+
+	<div class="container"> 
+	
+		<!-- Groups Menu -->
+		<div class="left" col="1"> 
+		
+			
+			
+		</div>
+		
+		<!-- Main-Stuff -->
+		<div class="center" col="2"> 
+			
+		</div>
+		
+	</div>
+	<div class="footer"> 
+			<p href=""> Impressum </p>
+		</div>
+</body>
+
+<!--Logout-Script-->
+<script>
+  (function() {
+    var popupButton = document.getElementById('popup');
+    var cancelButton = document.getElementById('cancel');
+    var Dialog = document.getElementById('Dialog');
+	var switchButton = document.getElementById('switch');
+
+    // Update button opens a modal dialog
+    popupButton.addEventListener('click', function() {
+      Dialog.showModal();
+    });
+
+    // Form cancel button closes the dialog box
+    cancelButton.addEventListener('click', function() {
+      Dialog.close(); // Todo: for the Queue add a reset
+    });
+	
+	// For the scene switch
+	switchButton.addEventListener('click', function() {
+      window.location = "Login.html";
+    });
+
+  })();
+</script>
+</html>
+

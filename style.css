@@ -1,0 +1,189 @@
+:root {
+  --cursorForLink: pointer;
+  --font1: Verdana, "Lucida Sans";
+  --font2: Arial, serif;
+}
+
+img {
+	max-width: 65%;
+    height: auto;
+	cursor: var(--cursorForLink);
+}
+
+h2 {
+	padding: 10px;
+}
+
+
+p {
+	padding: 10px;
+}
+
+.text1 {
+	font-family: var(--font1);
+	font-size: 20px;
+	color: black;
+	padding-top: 10px;
+}
+
+.title{
+	display: block;
+	font-size: 36px;
+	font-family: var(--font1);
+	color: #00519E;
+	font-weight: bold;
+	text-align: center;
+}
+
+.headerContainer {  
+	background: #FFFFFF;
+	display: flex;
+	flex-wrap: wrap;
+	column-count: 3;
+}
+
+.headerImage {
+	flex: 15%;
+	text-align: center;
+}
+
+
+.container {  
+	background: #FFFFFF;
+	display: flex;
+	flex-wrap: wrap;
+	column-count: 3;
+}
+
+@media screen and (max-width: 749px) {
+  .container {   
+    flex-direction: column;
+  }
+}
+
+
+
+/* Menu with groups */
+.left {
+	flex: 15%;
+	display: flex;
+	flex-direction: column;
+	background-color: #CCCCCC;
+	font-family: var(--font1);
+}
+
+
+/* Center */
+.center {
+	flex: 85%;
+	display: flex;
+	flex-direction: column;
+	background-color: #FFFFFF;
+	font-family: var(--font1);
+	text-align:center;
+}
+
+.footer{
+	width: 100%;
+	height: 10%;
+	float: bottom;
+	font-size: 12px;
+	font-family: var(--font1);
+	font-weight: bold;
+	color: #3876B0;
+	text-align: center;
+}
+
+.li {
+	padding: 0;
+	margin: 0;
+}
+
+/* Add a black background color to the top navigation */
+.topnav {
+	flex: 85%;
+	background-color: #000000;
+	overflow: hidden;
+}
+
+/* Style the links inside the navigation bar */
+.topnav a {
+	height: 100%;
+	float: right;
+	color: #f2f2f2;
+	text-align: center;
+	padding: 20px 22px;;
+	text-decoration: none;
+	font-size: 20px;
+	font-family: var(--font1);
+}
+
+/* Style the links inside the navigation bar */
+.b {
+	float: left;
+	padding: 0;
+	margin: 0;
+}
+
+/* Change the color of links on hover */
+.topnav a:hover {
+	background-color: #ddd;
+	cursor: var(--cursorForLink);
+	color: black;
+}
+
+/* Change the color of links on hover */
+.topnav a.logout {
+	background-color: darkred;
+	color: white;
+}
+
+.topnav a.active {
+	background-color: grey;
+	color: white;
+}
+
+a.logout:hover {
+	background-color: lightred;
+	color: black;
+}
+
+a.active:hover {
+	background-color: #ddd;
+	color: black;
+}
+
+.header {
+	font-size: 36pt;
+	font-weight: bold;
+	color: black;
+	padding: 15px;
+	display: -webkit-flex; /* Safari */
+	-webkit-justify-content: center; /* Safari 6.1+ */
+	display: flex;
+	justify-content: center;
+	text-align: center;
+}
+	
+.body {
+	font-size: 24pt;
+	color: black;
+	padding: 15px;
+}
+	
+.button {
+	font-size: 24pt;
+	margin: auto;
+	display: block;
+}
+
+.status {
+	font-size: 24pt;
+	color: green;
+	padding: 15px;
+	display: -webkit-flex; /* Safari */
+	-webkit-justify-content: center; /* Safari 6.1+ */
+	display: flex;
+	justify-content: center;
+	text-align: center;
+}
