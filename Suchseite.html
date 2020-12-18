@@ -20,7 +20,7 @@ p {
 </head>
 <body>
 <button>Zurück</button>
-<h1>Ergebnisse für: <input type="text" id="suchfrage" class="item text"/> <button type="button" onclick="Suchelement" 
+<h1>Ergebnisse für: <input type="text" id="suchfrage" class="item text"/> <button type="button" onclick="suchen()" 
     class="text">suchen</button></h1>
 
 
@@ -35,17 +35,17 @@ p {
     <tr>
       <td>Prog 1</td>
       <td>2/4</td>
-      <td><button onclick="beitreten()">beitreten</button></td>
+      <td><button>beitreten</button></td>
     </tr>
     <tr>
       <td>Programmieren 1</td>
       <td>3/4</td>
-      <td><button onclick="beitreten()">beitreten</button></td>
+      <td><button>beitreten</button></td>
     </tr>
     <tr>
       <td>Proggen (Prog1)</td>
       <td>1/4</td>
-      <td><button onclick="beitreten()">beitreten</button></td>
+      <td><button onclick="beitreten('Proggen (Prog1)')">beitreten</button></td>
     </tr>
    
   </table>
@@ -55,9 +55,9 @@ p {
       <!-- Modal content -->
       <div class="modal-content">
         <span class="close" onclick="closeModal()">&times;</span>
-        <p>Du hast dich in die Gruppe
-        <b id="groupName">Name der Gruppe</b>
-        eingetragen. Warte auf Bestätigung des Gruppenadmins.</p>
+        <p>Du hast dich in die Gruppe</p>
+        <p id="groupName">Name der Gruppe</p>
+        <p>eingetragen. Warte auf Bestätigung des Gruppenadmins.</p>
       </div>
     
     </div>
@@ -66,15 +66,19 @@ p {
 </body>
 
 <script>
-  function beitreten(event) {
-    if(!event) {
-      event = window.event;
+
+    function suchen() {
+        anfrage = document.getElementById('suchfrage').value;
+        if (anfrage == "Prog 1") {
+            alert("funktioniert");
+            
+        }
     }
-    groupName = event.target.parentNode.parentNode.childNodes[1].textContent;
-    document.getElementById("groupName").innerHTML = groupName;
+
+  function beitreten(groupName) {
+    console.log("hi");
     document.getElementById("waitForAcceptance").style.display = "block";
   }
-
   function closeModal() {
     document.getElementById("waitForAcceptance").style.display = "none";
   }
