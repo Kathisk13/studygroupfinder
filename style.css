@@ -264,13 +264,139 @@ a.active:hover {
 	font-size: 20px;
   }
 
-  .searchcontainer{
+  .searchBarContainer{
 	width: 30%;
 	position: relative;
 	top: 10%;
 	left: 50%;
 	transform: translate(-50%, -50%);
   }
+
+  /* Nächste Termine */
+
+.eventContainer {
+
+	width: 90%;
+	position: relative;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+
+	display: grid;
+	grid-template-columns: 48% 48%;
+	grid-gap: 4%;
+	
+}
+
+.nextEvent {
+
+	width: 100%;
+	border-radius: 5px;
+	border-color: black;
+	border-width: 3px;
+	border-style: solid;
+}
+
+.eventHeader {
+
+	background-color: black;
+	border-color: black;
+	border-width: 3px;
+	border-style: solid;
+	color: white;
+}
+
+.eventBody {
+
+}
+
+tr {
+	border: 1.5px solid black;
+	padding:0px;
+	margin: 0px;
+}
+
+td {
+	margin: 0px;
+	text-align: left;
+}
+
+th {
+	background-color: lightgrey;
+	margin: 0px;
+	text-align: left;
+}
+
+.tableButton {
+	padding-left: 8%;
+}
+
+
+/* Search Results */
+
+.searchContainer {
+
+	width: 90%;
+	position: relative;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+
+}
+
+
+.searchResultHeader {
+
+	display: flex;
+	align-items: center;
+	margin: 0pt;
+	padding-left: 20pt;
+	padding-right: 20pt;
+	border-radius: 5px;
+	border-color: black;
+	background-color: black;
+	color: white;
+	border-width: 3px;
+	border-style: solid;
+}
+
+.searchResult {
+
+	display: flex;
+
+	align-items: center;
+	margin: 5pt 20pt 5pt 20pt;
+	padding: 0pt;
+	border-radius: 5px;
+	border-color: black;
+	border-width: 3px;
+	border-style: solid;
+	cursor: var(--cursorForLink);
+}
+
+.searchPic {
+	flex: 5%;
+	text-align: left;
+}
+
+.searchName {
+	flex: 35%;
+	text-align: left;
+}
+
+.searchPlaces {
+	flex: 20%;
+	text-align: left;
+}
+
+.searchTime {
+	flex: 20%;
+	text-align: left;
+}
+
+.searchJoin {
+	flex: 20%;
+}
 
 
 /* Popups */
