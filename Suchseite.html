@@ -20,13 +20,13 @@ p {
 </head>
 <body>
 <button>Zurück</button>
-<h1>Ergebnisse für: <input type="text" id="weatherCity" class="item text"/> <button type="button" onclick="sendWeatherRequest()" 
+<h1>Ergebnisse für: <input type="text" id="suchfrage" class="item text"/> <button type="button" onclick="suchen()" 
     class="text">suchen</button></h1>
-
+    
 
 <p>Gruppen:</p>
 
-<table id="suchseite">
+<table id="suchseite" style="display:none">
     <tr>
        <th>Name</th>
        <th>Anzahl</th>
@@ -93,6 +93,15 @@ p {
   function switchToProfile() {
     window.location = "profile.html";
   }
+
+  function suchen() {
+        anfrage = document.getElementById('suchfrage').value;
+        if (anfrage == "Prog 1") {
+            //alert("Button Aufruf");
+            document.getElementById('suchseite').style.display='block'
+            
+        }
+    }
 
 </script>
 </html>
