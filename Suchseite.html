@@ -35,17 +35,17 @@ p {
     <tr>
       <td>Prog 1</td>
       <td>2/4</td>
-      <td><button>beiteten</button></td>
+      <td><button onclick="beitreten()">beitreten</button></td>
     </tr>
     <tr>
       <td>Programmieren 1</td>
       <td>3/4</td>
-      <td><button>beiteten</button></td>
+      <td><button onclick="beitreten()">beitreten</button></td>
     </tr>
     <tr>
       <td>Proggen (Prog1)</td>
       <td>1/4</td>
-      <td><button onclick="beitreten('Proggen (Prog1)')">beiteten</button></td>
+      <td><button onclick="beitreten()">beitreten</button></td>
     </tr>
    
   </table>
@@ -55,9 +55,9 @@ p {
       <!-- Modal content -->
       <div class="modal-content">
         <span class="close" onclick="closeModal()">&times;</span>
-        <p>Du hast dich in die Gruppe</p>
-        <p id="groupName">Name der Gruppe</p>
-        <p>eingetragen. Warte auf Bestätigung des Gruppenadmins.</p>
+        <p>Du hast dich in die Gruppe
+        <b id="groupName">Name der Gruppe</b>
+        eingetragen. Warte auf Bestätigung des Gruppenadmins.</p>
       </div>
     
     </div>
@@ -66,10 +66,15 @@ p {
 </body>
 
 <script>
-  function beitreten(groupName) {
-    console.log("hi");
+  function beitreten(event) {
+    if(!event) {
+      event = window.event;
+    }
+    groupName = event.target.parentNode.parentNode.childNodes[1].textContent;
+    document.getElementById("groupName").innerHTML = groupName;
     document.getElementById("waitForAcceptance").style.display = "block";
   }
+
   function closeModal() {
     document.getElementById("waitForAcceptance").style.display = "none";
   }
