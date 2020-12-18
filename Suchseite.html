@@ -19,14 +19,17 @@ p {
 </head>
 <body>
 <button>Zurück</button>
-<h1>Ergebnisse für: Prog 1</h1>
+<h1>Ergebnisse für: <input type="text" id="weatherCity" class="item text"/> <button type="button" onclick="sendWeatherRequest()" 
+    class="text">suchen</button></h1>
+
+
 <p>Gruppen:</p>
 
 <table id="suchseite">
     <tr>
-      <th>Name</th>
-      <th>Anzahl</th>
-      <th></th>
+       <th>Name</th>
+       <th>Anzahl</th>
+       <th></th>
     </tr>
     <tr>
       <td>Prog 1</td>
