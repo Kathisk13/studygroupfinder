@@ -1,8 +1,10 @@
-<style type="text/css">
-
 *{
 	box-sizing: border-box;
 }
+
+body {
+	background-color: #030303;
+  }
 
 .col-1 {width: 8.33%;}
 .col-2 {width: 16.66%;}
@@ -24,7 +26,8 @@
 }
 
 .Button{
-	background-color: #e5e7e9;
+	background-color: #030303;
+	color: grey;
 	margin: 10px;
 	padding: 15px;
 	border-style: solid;
