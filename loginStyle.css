@@ -23,63 +23,7 @@
 	}
 }
 
-.PicUploadButton{
-	background-color: #e5e7e9;
-	margin: 2px;
-	padding: 5px;
-	border-style: solid;
-	border-width: 2px;
-	border-color: lightblue;
-	border-radius: 5px;
-	transition-duration: 0.4s;
-}
-
-.PicUploadButton:hover{
-	background-color: lightblue;
-}
-
-ul{
-	list-style-type: none;
-	margin: 0px;
-	padding: 5px;
-	background-color: inherit;
-}
-
-.FormInput{
-	padding: 12px 20px;
-	border-radius: 5px;
-	border-style: solid;
-	border-color:  #e5e7e9;
-	background-color: #f8f8f8;
-	resize: none;
-}
-
-.FormLabel{
-	color:black;
-	background-color: white;
-	margin:0px;
-	padding-bottom:2px;
-}
-
-.Stroke{
-	border-style: dotted;
-	border-bottom: 2px;
-	border-color: lightgrey;
-}
-
-.ProfilePicDiv{
-}
-
-.ProfilePic{
-	width: 200px;
-	height: auto;
-	margin-left: calc(50% - 100px);
-}
-
-.FormularDiv{
-}
-
-.RegisterButton{
+.LoginButton{
 	background-color: #e5e7e9;
 	margin: 2px;
 	padding: 5px;
@@ -92,13 +36,31 @@ ul{
 	margin-left: calc(50% - 80px);
 }
 
-.RegisterButton:hover{
+.LoginButton:hover{
 	background-color: lightblue;
 }
 
-.CenterMargin{
-		margin-left:25%;
+.FormInput{
+	padding: 12px 20px;
+	border-radius: 5px;
+	border-style: solid;
+	border-color:  #e5e7e9 ;
+	background-color: #f8f8f8;
+	resize: none;
 }
+
+.FormLabel{
+	color:black;
+	background-color: white;
+	margin:0px;
+	padding-bottom:2px;
+}
+
+
+.FormularDiv{
+	margin-left: calc(50% - 200px);
+}
+
 	
 @media only screen and (max-width: 600px){
 	.CenterMargin{

@@ -7,11 +7,10 @@ function checkBrowserSupport(){
 window.onload = checkBrowserSupport();
 
 function register(ev){
-	sessionStorage.setItem("name", document.getElementById("nameInput").value);
-	sessionStorage.setItem("fach", document.getElementById("fachInput").value);
-	sessionStorage.setItem("ort", document.getElementById("ortInput").value);
-	sessionStorage.setItem("passwort", document.getElementById("passwordInput").value);
-	sessionStorage.setItem("pic", profilePic);
+	setCookie("name", document.getElementById("nameInput").value, COOKIE_EXPIRE_HOURS);
+	setCookie("passwort", document.getElementById("passwordInput").value, COOKIE_EXPIRE_HOURS);
+	setCookie("fach", document.getElementById("fachInput").value, COOKIE_EXPIRE_HOURS);
+	setCookie("ort", document.getElementById("ortInput").value, COOKIE_EXPIRE_HOURS);
 	var pathname = window.location.pathname;
 	window.location.replace(pathname.substring(0, pathname.lastIndexOf("Register.html")) + "dashboard.html");
 }
