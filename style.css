@@ -226,6 +226,53 @@ a.active:hover {
 	float: right;
 }
 
+.search {
+	vertical-align: middle;
+	width: 80%;
+	position: relative;
+	display: flex;
+  }
+  
+  .searchTerm {
+	width: 100%;
+	border-color: gray;
+	border-width: 3px;
+	border-style: solid;
+	padding: 5px;
+	height: 20px;
+	border-radius: 3px;
+	outline: none;
+	color: #9DBFAF;
+  }
+  
+  .searchTerm:focus{
+	color: gray;
+  }
+  
+  .searchButton {
+	width: 36px;
+	height: 36px;
+	padding: 0pt;
+	padding-top: 3pt;
+	border-color: gray;
+	border-width: 3px;
+	border-style: solid;
+	background: gray;
+	text-align: center;
+	color: #fff;
+	border-radius: 3px;
+	font-size: 20px;
+  }
+
+  .searchcontainer{
+	width: 30%;
+	position: relative;
+	top: 10%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+  }
+
+
 /* Popups */
 
 /* popup style: */
