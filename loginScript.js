@@ -1,8 +1,8 @@
 function checkCredentials(){
-	if(getCookie("name") != document.getElementById("nameInput").value){
+	if(getCookie("name") != document.getElementById("nameInput").value || getCookie("name") == ""){
 		return false;
 	}
-	if(getCookie("passwort") != document.getElementById("passwordInput").value){
+	if(getCookie("passwort") != document.getElementById("passwordInput").value || getCookie("passwordInput") == ""){
 		return false;
 	}
 	return true;
@@ -11,7 +11,7 @@ function checkCredentials(){
 function login(ev){
 	if(checkCredentials()){
 		var pathname = window.location.pathname;
-		window.location.replace(pathname.substring(0, pathname.lastIndexOf("Register.html")) + "dashboard.html");
+		window.location.href = pathname.substring(0, pathname.lastIndexOf("Register.html")) + "dashboard.html";
 	}
 	document.getElementById("nameInput").style.backgroundColor = "#f2acac";
 	document.getElementById("passwordInput").style.backgroundColor = "#f2acac";

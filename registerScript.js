@@ -12,7 +12,7 @@ function register(ev){
 	setCookie("fach", document.getElementById("fachInput").value, COOKIE_EXPIRE_HOURS);
 	setCookie("ort", document.getElementById("ortInput").value, COOKIE_EXPIRE_HOURS);
 	var pathname = window.location.pathname;
-	window.location.replace(pathname.substring(0, pathname.lastIndexOf("Register.html")) + "dashboard.html");
+	window.location.href = pathname.substring(0, pathname.lastIndexOf("Register.html")) + "dashboard.html";
 }
 
 var profilePic = null;
