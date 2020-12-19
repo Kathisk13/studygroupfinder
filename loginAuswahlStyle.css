@@ -1,10 +1,11 @@
+@import "colorConstants.css"; /*import colors*/
 *{
 	box-sizing: border-box;
 }
 
 body {
-	background-color: #030303;
-  }
+	background-color: var(--background-bright);
+}
 
 .col-1 {width: 8.33%;}
 .col-2 {width: 16.66%;}
@@ -26,23 +27,52 @@ body {
 }
 
 .Button{
-	background-color: #030303;
-	color: grey;
+	background-color: var(--button-background-bright);
+	color: var(--button-font-color-bright);
 	margin: 10px;
 	padding: 15px;
 	border-style: solid;
 	border-width: 2px;
-	border-color: lightblue;
+	border-color: var(--button-border-color-bright);
 	border-radius: 5px;
 	transition-duration: 0.4s;
 	width:250px;
 	margin-left: calc(50% - 125px);
 }
 
+
+
 .Button:hover{
-	background-color: lightblue;
+	background-color: var(--button-hover-color-bright);
 }
 
-.Buttons{
-	margin: 10%;
+
+.dark-button{
+	background-color: var(--button-background-dark);
+	color: var(--button-font-color-dark);
+	margin: 10px;
+	padding: 15px;
+	border-style: solid;
+	border-width: 2px;
+	border-color: var(--button-border-color-dark);
+	border-radius: 5px;
+	transition-duration: 0.4s;
+	width:250px;
+	margin-left: calc(50% - 125px);
+}
+
+.dark-button:hover{
+	background-color: var(--button-hover-color-dark);
+}
+
+.Darkmode-Button{
+	margin-left: 10px;
+	margin-top: 10px;
+	height: 30px;
+	width: auto;
+	cursor: pointer;
+}
+
+.dark-body{
+	background-color: var(--background-dark);
 }

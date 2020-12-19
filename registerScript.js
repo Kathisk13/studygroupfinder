@@ -30,3 +30,17 @@ function uploadPic(ev){
 		input.remove();
 	}
 }
+
+function darkmode_toggle(ev){
+	document.getElementById("uploadImage").classList.toggle("dark-PicUploadButton");
+	document.getElementById("nameInput").classList.toggle("dark-FormInput");
+	document.getElementById("nameLabel").classList.toggle("dark-FormLabel");
+	document.getElementById("passwordInput").classList.toggle("dark-FormInput");
+	document.getElementById("passwordLabel").classList.toggle("dark-FormLabel");
+	document.body.classList.toggle("dark-body");
+	document.getElementById("register").classList.toggle("dark-RegisterButton");
+	document.getElementById("fachInput").classList.toggle("dark-FormInput");
+	document.getElementById("fachLabel").classList.toggle("dark-FormLabel");
+	document.getElementById("ortInput").classList.toggle("dark-FormInput");
+	document.getElementById("ortLabel").classList.toggle("dark-FormLabel");
+}

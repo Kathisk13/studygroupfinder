@@ -1,0 +1,20 @@
+:root{
+	/* ########font########## */
+	--font-color-bright: black;
+	--font-color-dark: white;
+	/* #########body########## */
+	--background-dark: #2b2929;
+	--background-bright: white;
+	/* #############Buttons################ */
+	--button-background-bright: #f7fae3;
+	--button-background-dark: #000000;
+	--button-border-color-bright: lightblue;
+	--button-border-color-dark: #f1fabb;
+	--button-font-color-bright: grey; 
+	--button-font-color-dark: white;
+	--button-hover-color-bright: lightblue;
+	--button-hover-color-dark: #f1fabb;
+	/* ############Inputs########## */
+	--input-background-bright: #eaebe6;
+	--input-background-dark: #686968;
+}

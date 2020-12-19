@@ -16,3 +16,12 @@ function login(ev){
 	document.getElementById("nameInput").style.backgroundColor = "#f2acac";
 	document.getElementById("passwordInput").style.backgroundColor = "#f2acac";
 }
+
+function darkmode_toggle(ev){
+	document.getElementById("loginButton").classList.toggle("dark-button");
+	document.getElementById("nameInput").classList.toggle("dark-FormInput");
+	document.getElementById("nameLabel").classList.toggle("dark-FormLabel");
+	document.getElementById("passwordInput").classList.toggle("dark-FormInput");
+	document.getElementById("passwordLabel").classList.toggle("dark-FormLabel");
+	document.body.classList.toggle("dark-body");
+}

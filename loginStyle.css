@@ -1,9 +1,10 @@
+@import "colorConstants.css"; /*import colors*/
 body {
-	background: #030303;
+	background-color: var(--background-bright);
 }
 
-*{
-	box-sizing: border-box;
+.dark-body{
+	background-color: var(--background-dark);
 }
 
 .col-1 {width: 8.33%;}
@@ -25,37 +26,74 @@ body {
 	}
 }
 
-.LoginButton{
-	background-color: #030303;
-	margin: 2px;
-	padding: 5px;
+.Button{
+	background-color: var(--button-background-bright);
+	color: var(--button-font-color-bright);
+	margin: 10px;
+	padding: 15px;
 	border-style: solid;
 	border-width: 2px;
-	border-color: grey;
+	border-color: var(--button-border-color-bright);
 	border-radius: 5px;
 	transition-duration: 0.4s;
-	width:180px;
-	margin-left: calc(50% - 80px);
-	color: grey
+	width:250px;
+	margin-left: calc(50% - 125px);
 }
 
-.LoginButton:hover{
-	background-color: 030303;
+
+
+.Button:hover{
+	background-color: var(--button-hover-color-bright);
+}
+
+.dark-button{
+	background-color: var(--button-background-dark);
+	color: var(--button-font-color-dark);
+	margin: 10px;
+	padding: 15px;
+	border-style: solid;
+	border-width: 2px;
+	border-color: var(--button-border-color-dark);
+	border-radius: 5px;
+	transition-duration: 0.4s;
+	width:250px;
+	margin-left: calc(50% - 125px);
+}
+
+.dark-button:hover{
+	background-color: var(--button-hover-color-dark);
 }
 
 .FormInput{
+	width: 400px;
 	padding: 12px 20px;
 	border-radius: 5px;
 	border-style: solid;
-	border-color:  grey ;
-	background-color: #030303;
+	border-color:  var(--button-border-color-bright);
+	background-color: var(--button-background-bright);
 	resize: none;
-	color: grey
+	color: var(--font-color-bright);
 }
 
 .FormLabel{
-	color:grey;
-	background-color: #030303;
+	color: var(--font-color-bright);
+	margin:0px;
+	padding-bottom:2px;
+}
+
+.dark-FormInput{
+	width: 400px;
+	padding: 12px 20px;
+	border-radius: 5px;
+	border-style: solid;
+	border-color:  var(--button-border-color-dark);
+	background-color: var(--button-background-dark);
+	resize: none;
+	color: var(--font-color-dark);
+}
+
+.dark-FormLabel{
+	color: var(--font-color-dark);
 	margin:0px;
 	padding-bottom:2px;
 }
@@ -70,4 +108,12 @@ body {
 	.CenterMargin{
 		margin-left:0%;
 	}
+}
+
+.Darkmode-Button{
+	margin-left: 10px;
+	margin-top: 10px;
+	height: 30px;
+	width: auto;
+	cursor: pointer;
 }

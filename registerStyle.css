@@ -1,10 +1,16 @@
+@import "colorConstants.css"; /*import colors*/
+
 *{
 	box-sizing: border-box;
 }
 
 body {
-	background-color: #030303;
-  }
+	background-color: var(--background-bright);
+}
+
+.dark-body{
+	background-color: var(--background-dark);
+}
 
 .col-1 {width: 8.33%;}
 .col-2 {width: 16.66%;}
@@ -26,19 +32,35 @@ body {
 }
 
 .PicUploadButton{
-	background-color: #030303;
-	color: grey;
+	background-color: var(--button-background-bright);
+	color: var(--button-font-color-bright);
 	margin: 2px;
 	padding: 5px;
 	border-style: solid;
 	border-width: 2px;
-	border-color: grey;
+	border-color: var(--button-border-color-bright);
 	border-radius: 5px;
 	transition-duration: 0.4s;
 }
 
 .PicUploadButton:hover{
-	background-color: lightblue;
+	background-color: var(--button-hover-color-bright);
+}
+
+.dark-PicUploadButton{
+	background-color: var(--button-background-dark);
+	color: var(--button-font-color-dark);
+	margin: 2px;
+	padding: 5px;
+	border-style: solid;
+	border-width: 2px;
+	border-color: var(--button-border-color-dark);
+	border-radius: 5px;
+	transition-duration: 0.4s;
+}
+
+.dark-PicUploadButton:hover{
+	background-color: var(--button-hover-color-dark);
 }
 
 ul{
@@ -52,20 +74,34 @@ ul{
 	padding: 12px 20px;
 	border-radius: 5px;
 	border-style: solid;
-	border-color:  grey;
-	background-color: #030303;
-	color: grey;
+	border-color:  var(--button-border-color-bright);
+	background-color: var(--input-background-bright);
+	resize: none;
+}
+
+.dark-FormInput{
+	padding: 12px 20px;
+	border-radius: 5px;
+	border-style: solid;
+	border-color:  var(--button-border-color-dark);
+	background-color: var(--input-background-dark);
 	resize: none;
 }
 
 .FormLabel{
-	color:grey;
-	background-color: #030303;
+	color: var(--font-color-bright);
+	margin:0px;
+	padding-bottom:2px;
+}
+
+.dark-FormLabel{
+	color: var(--font-color-dark);
 	margin:0px;
 	padding-bottom:2px;
 }
 
 .Stroke{
+	margin: 20px;
 	border-style: dotted;
 	border-bottom: 2px;
 	border-color: grey;
@@ -84,13 +120,13 @@ ul{
 }
 
 .RegisterButton{
-	background-color: #030303;
-	color: grey;
+	background-color: var(--button-background-bright);
+	color: var(--button-font-color-bright);
 	margin: 2px;
 	padding: 5px;
 	border-style: solid;
 	border-width: 2px;
-	border-color: grey;
+	border-color: var(--button-border-color-bright);
 	border-radius: 5px;
 	transition-duration: 0.4s;
 	width:180px;
@@ -98,9 +134,25 @@ ul{
 }
 
 .RegisterButton:hover{
-	background-color: #030303;
-	color: grey;
+	background-color: var(--button-hover-color-bright);
+}
 
+.dark-RegisterButton{
+	background-color: var(--button-background-dark);
+	color: var(--button-font-color-dark);
+	margin: 2px;
+	padding: 5px;
+	border-style: solid;
+	border-width: 2px;
+	border-color: var(--button-border-color-dark);
+	border-radius: 5px;
+	transition-duration: 0.4s;
+	width:180px;
+	margin-left: calc(50% - 80px);
+}
+
+.dark-RegisterButton:hover{
+	background-color: var(--button-hover-color-dark);
 }
 
 .CenterMargin{
@@ -112,4 +164,11 @@ ul{
 	.CenterMargin{
 		margin-left:0%;
 	}
+}
+.Darkmode-Button{
+	margin-left: 10px;
+	margin-top: 10px;
+	height: 30px;
+	width: auto;
+	cursor: pointer;
 }
