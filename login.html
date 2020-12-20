@@ -8,17 +8,14 @@
 	<link rel="stylesheet" href="loginStyle.css">
 </head>
 <img src="moon.png" class="Darkmode-Button" onclick="darkmode_toggle(event);">
-<div class="FormularDiv col-6 CenterMargin">
-<ul>
+<div class="FormularDiv CenterMargin">
 	<p id="nameLabel" class="FormLabel">Name:</p>
 	<input autofocus id="nameInput" class="FormInput" type="text">
-</ul>
-<ul>
 	<p id="passwordLabel" class="FormLabel">Passwort:</p>
 	<input id="passwordInput" class="FormInput" type="password">
-</ul>
 </div>
-
+<div id="infoDiv" class="InfoDiv CenterMargin">
+	<p id="infoLabel" class="FormLabel infoLabel">Die eingegeben Daten sind nicht hinterlegt. Bitte überprüfen Sie die Richtigkeit oder setzen Sie sich mit einem Administrator in Verbindung.</p>
+</div>
 <input id="loginButton" class="Button" type="button" value="Anmelden" onclick="login(event);">
-</div>
 </html>

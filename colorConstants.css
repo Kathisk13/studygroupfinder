@@ -5,6 +5,8 @@
 	/* #########body########## */
 	--background-dark: #2b2929;
 	--background-bright: white;
+	--highlight-color-bright: #cc5454;
+	--hightlight-color-dark: #866ef0;
 	/* #############Buttons################ */
 	--button-background-bright: #f7fae3;
 	--button-background-dark: #000000;

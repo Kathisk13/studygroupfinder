@@ -15,6 +15,7 @@ function login(ev){
 	}
 	document.getElementById("nameInput").style.backgroundColor = "#f2acac";
 	document.getElementById("passwordInput").style.backgroundColor = "#f2acac";
+	document.getElementById("infoDiv").style.display = "inherit";
 }
 
 function darkmode_toggle(ev){

@@ -29,7 +29,7 @@ body {
 .Button{
 	background-color: var(--button-background-bright);
 	color: var(--button-font-color-bright);
-	margin: 10px;
+	margin-top: 10px;
 	padding: 15px;
 	border-style: solid;
 	border-width: 2px;
@@ -66,7 +66,7 @@ body {
 
 .FormInput{
 	width: 400px;
-	padding: 12px 20px;
+	padding: 12px 20px 12px 20px;
 	border-radius: 5px;
 	border-style: solid;
 	border-color:  var(--button-border-color-bright);
@@ -83,7 +83,7 @@ body {
 
 .dark-FormInput{
 	width: 400px;
-	padding: 12px 20px;
+	padding: 12px 20px 12px 20px;
 	border-radius: 5px;
 	border-style: solid;
 	border-color:  var(--button-border-color-dark);
@@ -100,14 +100,27 @@ body {
 
 
 .FormularDiv{
+	margin-top: calc(10%);
 	margin-left: calc(50% - 200px);
 }
 
 	
 @media only screen and (max-width: 600px){
 	.CenterMargin{
-		margin-left:0%;
+		margin-top: calc(10%);
+		margin-left: 20px;
 	}
+}
+
+.InfoDiv{
+	border-radius: 5px;
+	border-style: solid;
+	border-color:  var(--highlight-color-bright);
+	background-color: var(--button-background-bright);
+	padding: 10px 10px 10px 10px;
+	text-align: center;
+	margin: 20px 20% 20px 20%;
+	display: none;
 }
 
 .Darkmode-Button{
