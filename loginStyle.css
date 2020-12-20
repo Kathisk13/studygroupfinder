@@ -64,6 +64,10 @@ body {
 	background-color: var(--button-hover-color-dark);
 }
 
+@keyframes falseCredentials{
+	0% {background-color: var(--highlight-color-bright);}
+}
+
 .FormInput{
 	width: 400px;
 	padding: 12px 20px 12px 20px;
@@ -73,6 +77,9 @@ body {
 	background-color: var(--button-background-bright);
 	resize: none;
 	color: var(--font-color-bright);
+	animation-direction: alternate;
+	animation-duration: 2s;
+	
 }
 
 .FormLabel{
@@ -90,6 +97,8 @@ body {
 	background-color: var(--button-background-dark);
 	resize: none;
 	color: var(--font-color-dark);
+	animation-direction: alternate;
+	animation-duration: 2s;
 }
 
 .dark-FormLabel{
@@ -120,14 +129,12 @@ body {
 	text-align: center;
 	margin: 20px 20% 20px 20%;
 	display: none;
-	color: var(--font-color-bright);
 }
 
 .dark-InfoDiv{
-	color: var(--font-color-dark);
 	border-radius: 5px;
 	border-style: solid;
-	border-color:  var(--highlight-color-dark);
+	border-color: var(--highlight-color-dark);
 	background-color: var(--button-background-dark);
 	padding: 10px 10px 10px 10px;
 	text-align: center;

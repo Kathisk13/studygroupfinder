@@ -13,8 +13,8 @@ function login(ev){
 		var pathname = window.location.pathname;
 		window.location.href = pathname.substring(0, pathname.lastIndexOf("Register.html")) + "dashboard.html";
 	}
-	document.getElementById("nameInput").style.backgroundColor = "#f2acac";
-	document.getElementById("passwordInput").style.backgroundColor = "#f2acac";
+	document.getElementById("nameInput").style.animationName = "falseCredentials"
+	document.getElementById("passwordInput").style.animationName = "falseCredentials"
 	document.getElementById("infoDiv").style.display = "inherit";
 }
 
