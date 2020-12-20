@@ -31,7 +31,7 @@ function uploadPic(ev){
 	}
 }
 
-function darkmode_toggle(ev){
+function change_theme(){
 	document.getElementById("uploadImage").classList.toggle("dark-PicUploadButton");
 	document.getElementById("nameInput").classList.toggle("dark-FormInput");
 	document.getElementById("nameLabel").classList.toggle("dark-FormLabel");
@@ -44,3 +44,23 @@ function darkmode_toggle(ev){
 	document.getElementById("ortInput").classList.toggle("dark-FormInput");
 	document.getElementById("ortLabel").classList.toggle("dark-FormLabel");
 }
+
+function darkmode_toggle(ev){
+	change_theme();
+	if(getCookie("theme") == "dark"){
+		setCookie("theme", "bright", COOKIE_EXPIRE_HOURS);
+	}else if(getCookie("theme") == "bright"){
+		setCookie("theme", "dark", COOKIE_EXPIRE_HOURS);
+	}else{
+		setCookie("theme", "dark", COOKIE_EXPIRE_HOURS);
+	}
+}
+
+
+function checkTheme(){
+	if(getCookie("theme") == "dark"){
+		change_theme();
+	}
+	console.log("Checking theme...");
+}
+window.onload = checkTheme();
