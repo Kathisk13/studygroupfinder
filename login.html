@@ -4,20 +4,21 @@
 <head>
 	<meta charset="UTF-8">
 	<script src="loginScript.js"></script>
-	<link rel="stylesheet" type="text/css" href="loginStyle.css">
+	<script src="cookieScript.js"></script>
+	<link rel="stylesheet" href="loginStyle.css">
 </head>
-
+<img src="moon.png" class="Darkmode-Button" onclick="darkmode_toggle(event);">
 <div class="FormularDiv col-6 CenterMargin">
 <ul>
 	<p id="nameLabel" class="FormLabel">Name:</p>
-	<input autofocus id="nameInput" class="FormInput col-6" type="text">
+	<input autofocus id="nameInput" class="FormInput" type="text">
 </ul>
 <ul>
 	<p id="passwordLabel" class="FormLabel">Passwort:</p>
-	<input id="passwordInput" class="FormInput col-6" type="password">
+	<input id="passwordInput" class="FormInput" type="password">
 </ul>
 </div>
 
-<input id="register" class="LoginButton" type="submit" value="Anmelden" onclick="login(event);">
+<input id="loginButton" class="Button" type="button" value="Anmelden" onclick="login(event);">
 </div>
 </html>

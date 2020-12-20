@@ -1,10 +1,10 @@
 @import "colorConstants.css"; /*import colors*/
-body {
-	background-color: var(--background-bright);
+*{
+	box-sizing: border-box;
 }
 
-.dark-body{
-	background-color: var(--background-dark);
+body {
+	background-color: var(--background-bright);
 }
 
 .col-1 {width: 8.33%;}
@@ -46,6 +46,7 @@ body {
 	background-color: var(--button-hover-color-bright);
 }
 
+
 .dark-button{
 	background-color: var(--button-background-dark);
 	color: var(--button-font-color-dark);
@@ -64,56 +65,14 @@ body {
 	background-color: var(--button-hover-color-dark);
 }
 
-.FormInput{
-	width: 400px;
-	padding: 12px 20px;
-	border-radius: 5px;
-	border-style: solid;
-	border-color:  var(--button-border-color-bright);
-	background-color: var(--button-background-bright);
-	resize: none;
-	color: var(--font-color-bright);
-}
-
-.FormLabel{
-	color: var(--font-color-bright);
-	margin:0px;
-	padding-bottom:2px;
-}
-
-.dark-FormInput{
-	width: 400px;
-	padding: 12px 20px;
-	border-radius: 5px;
-	border-style: solid;
-	border-color:  var(--button-border-color-dark);
-	background-color: var(--button-background-dark);
-	resize: none;
-	color: var(--font-color-dark);
-}
-
-.dark-FormLabel{
-	color: var(--font-color-dark);
-	margin:0px;
-	padding-bottom:2px;
-}
-
-
-.FormularDiv{
-	margin-left: calc(50% - 200px);
-}
-
-	
-@media only screen and (max-width: 600px){
-	.CenterMargin{
-		margin-left:0%;
-	}
-}
-
 .Darkmode-Button{
 	margin-left: 10px;
 	margin-top: 10px;
 	height: 30px;
 	width: auto;
 	cursor: pointer;
+}
+
+.dark-body{
+	background-color: var(--background-dark);
 }

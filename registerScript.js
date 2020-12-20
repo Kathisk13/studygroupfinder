@@ -12,7 +12,7 @@ function register(ev){
 	setCookie("fach", document.getElementById("fachInput").value, COOKIE_EXPIRE_HOURS);
 	setCookie("ort", document.getElementById("ortInput").value, COOKIE_EXPIRE_HOURS);
 	var pathname = window.location.pathname;
-	window.location.replace(pathname.substring(0, pathname.lastIndexOf("Register.html")) + "dashboard.html");
+	window.location.href = pathname.substring(0, pathname.lastIndexOf("Register.html")) + "dashboard.html";
 }
 
 var profilePic = null;
@@ -29,4 +29,18 @@ function uploadPic(ev){
 		document.getElementById("ProfilePic").src = profilePic;
 		input.remove();
 	}
+}
+
+function darkmode_toggle(ev){
+	document.getElementById("uploadImage").classList.toggle("dark-PicUploadButton");
+	document.getElementById("nameInput").classList.toggle("dark-FormInput");
+	document.getElementById("nameLabel").classList.toggle("dark-FormLabel");
+	document.getElementById("passwordInput").classList.toggle("dark-FormInput");
+	document.getElementById("passwordLabel").classList.toggle("dark-FormLabel");
+	document.body.classList.toggle("dark-body");
+	document.getElementById("register").classList.toggle("dark-RegisterButton");
+	document.getElementById("fachInput").classList.toggle("dark-FormInput");
+	document.getElementById("fachLabel").classList.toggle("dark-FormLabel");
+	document.getElementById("ortInput").classList.toggle("dark-FormInput");
+	document.getElementById("ortLabel").classList.toggle("dark-FormLabel");
 }

@@ -1,3 +1,7 @@
+body {
+	background-color: #030303;
+  }
+
 :root {
   --cursorForLink: pointer;
   --font1: Verdana, "Lucida Sans";
@@ -20,6 +24,13 @@ p {
 	padding: 0px;
 }
 
+button {
+	background-color: #030303;
+	color: grey;
+	border-color: grey;
+	cursor: var(--cursorForLink);
+}
+
 .text1 {
 	font-family: var(--font1);
 	font-size: 20px;
@@ -37,13 +48,14 @@ p {
 }
 
 .headerContainer {  
-	background: #FFFFFF;
+	background: #AAAAAA;
 	display: flex;
 	flex-wrap: wrap;
 	column-count: 3;
 }
 
 .headerImage {
+	background: #AAAAAA;
 	flex: 15%;
 	text-align: center;
 }
@@ -69,7 +81,7 @@ p {
 	flex: 15%;
 	display: flex;
 	flex-direction: column;
-	background-color: #CCCCCC;
+	background-color: #444444;
 	font-family: var(--font1);
 }
 
@@ -80,7 +92,7 @@ p {
 .center {
 	flex: 85%;
 	flex-direction: column;
-	background-color: #FFFFFF;
+	background-color: #030303;
 	font-family: var(--font1);
 	text-align:center;
 }
@@ -92,7 +104,8 @@ p {
 	font-size: 12px;
 	font-family: var(--font1);
 	font-weight: bold;
-	color: #3876B0;
+	background-color: #030303;
+	color: white;
 	text-align: center;
 }
 
@@ -104,7 +117,7 @@ p {
 /* Add a black background color to the top navigation */
 .topnav {
 	flex: 85%;
-	background-color: #000000;
+	background-color: #858585;
 	overflow: hidden;
 }
 
@@ -129,9 +142,9 @@ p {
 
 /* Change the color of links on hover */
 .topnav a:hover {
-	background-color: #ddd;
 	cursor: var(--cursorForLink);
-	color: black;
+	background-color: #333333;
+	color: white;
 }
 
 /* Change the color of links on hover */
@@ -141,18 +154,18 @@ p {
 }
 
 .topnav a.active {
-	background-color: grey;
+	background-color: #000000;
 	color: white;
 }
 
 a.logout:hover {
-	background-color: lightred;
-	color: black;
+	background-color: #550000;
+	color: white;
 }
 
 a.active:hover {
-	background-color: #ddd;
-	color: black;
+	background-color: #333333;
+	color: white;
 }
 
 .header {
@@ -201,6 +214,9 @@ a.active:hover {
 	border-width: 3px;
 	border-style: solid;
 	cursor: var(--cursorForLink);
+
+	background-color: black;
+	
 }
 
 .elempic {
@@ -215,6 +231,7 @@ a.active:hover {
 	padding-top: 8pt;
 	margin-right: 0pt;
 	float: left;
+	color: lightgrey;
 }
 
 .elemstat {
@@ -224,6 +241,193 @@ a.active:hover {
 	margin-right: 0pt;
 	float: right;
 }
+
+.search {
+	vertical-align: middle;
+	width: 80%;
+	position: relative;
+	display: flex;
+  }
+  
+  .searchTerm {
+	width: 100%;
+	border-color: grey;
+	border-width: 3px;
+	border-style: solid;
+
+	background-color: #030303;
+	color: #9DBFAF;
+
+	padding: 5px;
+	height: 20px;
+	border-radius: 3px;
+	outline: none;
+  }
+  
+  .searchTerm:focus{
+	color: gray;
+  }
+  
+  .searchButton {
+	width: 36px;
+	height: 36px;
+	padding: 0pt;
+	padding-top: 3pt;
+	border-color: grey;
+	border-width: 3px;
+	border-style: solid;
+	background: gray;
+	text-align: center;
+	color: grey;
+	border-radius: 3px;
+	font-size: 20px;
+  }
+
+  .searchBarContainer{
+	width: 30%;
+	position: relative;
+	top: 10%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+  }
+
+  /* Nächste Termine */
+
+.eventContainer {
+
+	width: 90%;
+	position: relative;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+
+	display: grid;
+	grid-template-columns: 48% 48%;
+	grid-gap: 4%;
+	
+}
+
+.nextEvent {
+
+	width: 100%;
+	border-radius: 5px;
+	border-color: grey;
+	border-width: 3px;
+	border-style: solid;
+	color: grey;
+}
+
+.eventHeader {
+
+	background-color: black;
+	border-color: grey;
+	border-width: 3px;
+	border-style: solid;
+	color: grey;
+}
+
+.eventBody {
+
+}
+
+tr {
+	border: 1.5px solid grey;
+	padding:0px;
+	margin: 0px;
+}
+
+td {
+	margin: 0px;
+	text-align: left;
+}
+
+th {
+	background-color: #222222;
+	margin: 0px;
+	text-align: left;
+}
+
+.tableButton {
+	padding-left: 8%;
+}
+
+
+/* Search Results */
+
+.searchContainer {
+
+	width: 90%;
+	position: relative;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+
+}
+
+
+.searchResultHeader {
+
+	display: flex;
+	align-items: center;
+	margin: 0pt;
+	padding-left: 20pt;
+	padding-right: 20pt;
+	border-radius: 5px;
+	border-color: grey;
+	background-color: black;
+	color: grey;
+	border-width: 3px;
+	border-style: solid;
+}
+
+.searchResult {
+
+	display: flex;
+
+	align-items: center;
+	margin: 5pt 20pt 5pt 20pt;
+	padding: 0pt;
+	border-radius: 5px;
+	border-color: grey;
+	border-width: 3px;
+	border-style: solid;
+	color: grey;
+}
+
+.searchPic {
+	flex: 5%;
+	text-align: left;
+}
+
+.searchName {
+	flex: 35%;
+	text-align: left;
+	color: grey;
+}
+
+.searchPlaces {
+	flex: 20%;
+	text-align: left;
+	color: grey;
+}
+
+.searchTime {
+	flex: 20%;
+	text-align: left;
+	color: grey;
+}
+
+.searchJoin {
+	flex: 20%;
+	color: grey;
+}
+
+.searchJoinButton {
+	flex: 20%;
+	color: grey;
+	cursor: var(--cursorForLink);
+}
+
 
 /* Popups */
 
