@@ -11,6 +11,7 @@ function register(ev){
 	setCookie("passwort", document.getElementById("passwordInput").value, COOKIE_EXPIRE_HOURS);
 	setCookie("fach", document.getElementById("fachInput").value, COOKIE_EXPIRE_HOURS);
 	setCookie("ort", document.getElementById("ortInput").value, COOKIE_EXPIRE_HOURS);
+	// console.log(getCookie("name")+"|"+getCookie("passwort")+"|"+getCookie("fach")+"|"+getCookie("ort"));
 	var pathname = window.location.pathname;
 	window.location.href = pathname.substring(0, pathname.lastIndexOf("Register.html")) + "dashboard.html";
 }

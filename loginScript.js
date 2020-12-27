@@ -1,8 +1,11 @@
 function checkCredentials(){
-	if(getCookie("name") != document.getElementById("nameInput").value || getCookie("name") == ""){
+	// console.log(getCookie("name")+"|"+getCookie("passwort")+"|"+getCookie("fach")+"|"+getCookie("ort"));
+	// console.log(document.getElementById("nameInput").value);
+	// console.log(document.getElementById("passwordInput").value);
+	if(getCookie("name") != document.getElementById("nameInput").value){
 		return false;
 	}
-	if(getCookie("passwort") != document.getElementById("passwordInput").value || getCookie("passwordInput") == ""){
+	if(getCookie("passwort") != document.getElementById("passwordInput").value){
 		return false;
 	}
 	return true;
@@ -12,10 +15,11 @@ function login(ev){
 	if(checkCredentials()){
 		var pathname = window.location.pathname;
 		window.location.href = pathname.substring(0, pathname.lastIndexOf("Register.html")) + "dashboard.html";
+	}else{
+		document.getElementById("nameInput").style.animationName = "falseCredentials";
+		document.getElementById("passwordInput").style.animationName = "falseCredentials";
+		document.getElementById("infoDiv").style.display = "inherit";
 	}
-	document.getElementById("nameInput").style.animationName = "falseCredentials"
-	document.getElementById("passwordInput").style.animationName = "falseCredentials"
-	document.getElementById("infoDiv").style.display = "inherit";
 }
 
 function change_theme(){
