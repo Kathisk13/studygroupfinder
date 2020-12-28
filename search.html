@@ -108,7 +108,7 @@
 
 				<div class="search">
 
-				   <input type="text" class="searchTerm" placeholder="Suche eine Gruppe">
+				   <input type="text" onkeydown="enterSearch(event)" class="searchTerm" placeholder="Suche eine Gruppe">
 				   <button onclick="switchToSearch()" type="submit" class="searchButton">
 						<img src="Logo/search.png"/>
 				  </button>
@@ -285,7 +285,13 @@
 	function switchToSearch() {
 		window.location = "search.html";
 	}
-
+  function enterSearch(event) {
+    console.log("key pressed: " + event);
+    if (event.key == "Enter" || event.which == 13 || event.keyCode == 13) {
+      event.preventDefault();
+      switchToSearch();
+    }
+  }
 </script>
 
 </html>
