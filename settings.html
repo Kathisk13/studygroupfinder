@@ -1,67 +1,95 @@
 <!Doctype HTML>
 <html>
+
 <head>
-<meta charset = "UTF-8">
+  <meta charset="UTF-8">
 
-	<div class="headerContainer"> 
-	
-		<div class="headerImage" col="1"> 
-			<b onclick="switchToMain()"><img src="Logo/logo.png" alt="Menu" style="padding-top: 5pt;" /></b>
-		</div>
-		
-		<div class="topnav" col="2"> 
-			<a class="logout" onclick="openPopup()">Abmelden</a>
-			<a class="active" onclick="switchToSettings()">Einstellungen</a>
-			<a onclick="switchToProfile()">Profil</a>
-			<a onclick="switchToMessages()">Nachrichten</a>
-			<a onclick="switchToMain()">Startseite</a>
-		</div>
-		
-	</div>
+  <div class="headerContainer">
 
-	<link rel="stylesheet" href="style.css">
+    <div class="headerImage" col="1">
+      <b onclick="switchToMain()"><img src="Logo/logo.png" alt="Menu" style="padding-top: 5pt;" /></b>
+    </div>
+
+    <div class="topnav" col="2">
+      <a class="logout" onclick="openPopup()">Abmelden</a>
+      <a class="active" onclick="switchToSettings()">Einstellungen</a>
+      <a onclick="switchToProfile()">Profil</a>
+      <a onclick="switchToMessages()">Nachrichten</a>
+      <a onclick="switchToMain()">Startseite</a>
+    </div>
+
+  </div>
+
+  <link rel="stylesheet" href="style.css">
 </head>
-<body bgcolor="F1F1F1">
 
-	<div class="container"> 
-	
-		<!-- Groups Menu -->
-		<div class="left" col="1"> 
-		
-			
-			
-		</div>
-		
-		<!-- Main-Stuff -->
-		<div class="center" col="2"> 
-			<p> Einstellungen </p>
-		</div>
-		
-	</div>
-	<div class="footer"> 
-			<p href=""> Impressum </p>
-		</div>
+<body>
+
+  <div class="container">
+
+    <!-- Groups Menu -->
+    <div class="left" col="1">
+
+
+
+    </div>
+
+    <!-- Main-Stuff -->
+    <div class="center" col="2" style="color:white">
+      <p> Einstellungen </p>
+      <img class="Darkmode-Button" height=60px width=60px src="moon.svg" onclick="darkmode_toggle(event);">
+      Farbschema ändern
+    </img>
+
+    </div>
+
+  </div>
+  <div class="footer">
+    <p href=""> Impressum </p>
+  </div>
 </body>
 
 <!-- Navigation via Top Menu -->
 <script>
 
-	function switchToSettings() {	
-		window.location = "settings.html";
-	}
+  function switchToSettings() {
+    window.location = "settings.html";
+  }
 
-	function switchToMain() {
-		window.location = "dashboard.html";
-	}
+  function switchToMain() {
+    window.location = "dashboard.html";
+  }
 
-	function switchToMessages() {
-		window.location = "chat.html";
-	}
+  function switchToMessages() {
+    window.location = "chat.html";
+  }
 
-	function switchToProfile() {
-		window.location = "profile.html";
-	}
-
+  function switchToProfile() {
+    window.location = "profile.html";
+  }
+  function darkmode_toggle(ev) {
+    change_theme();
+    if (getCookie("theme") == "dark") {
+      setCookie("theme", "bright", COOKIE_EXPIRE_HOURS);
+    } else if (getCookie("theme") == "bright") {
+      setCookie("theme", "dark", COOKIE_EXPIRE_HOURS);
+    } else {
+      setCookie("theme", "dark", COOKIE_EXPIRE_HOURS);
+    }
+  }
+  function change_theme() {
+    document.getElementById("uploadImage").classList.toggle("dark-PicUploadButton");
+    document.getElementById("nameInput").classList.toggle("dark-FormInput");
+    document.getElementById("nameLabel").classList.toggle("dark-FormLabel");
+    document.getElementById("passwordInput").classList.toggle("dark-FormInput");
+    document.getElementById("passwordLabel").classList.toggle("dark-FormLabel");
+    document.body.classList.toggle("dark-body");
+    document.getElementById("register").classList.toggle("dark-RegisterButton");
+    document.getElementById("fachInput").classList.toggle("dark-FormInput");
+    document.getElementById("fachLabel").classList.toggle("dark-FormLabel");
+    document.getElementById("ortInput").classList.toggle("dark-FormInput");
+    document.getElementById("ortLabel").classList.toggle("dark-FormLabel");
+  }
 </script>
-</html>
 
+</html>
