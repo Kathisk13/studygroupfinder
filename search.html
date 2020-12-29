@@ -170,7 +170,7 @@
           </div>
           
           <div class="searchJoin">
-            <button class="searchJoinButton"> Bewerben </button>
+            <button  onclick="beitreten('Programmieren 1')" class="searchJoinButton"> Bewerben </button>
           </div>
   
         </div>
@@ -194,7 +194,7 @@
           </div>
           
           <div class="searchJoin">
-            <button class="searchJoinButton"> Bewerben </button>
+            <button  onclick="beitreten('Prog 1 Lerngruppe')" class="searchJoinButton"> Bewerben </button>
           </div>
   
         </div>
@@ -218,7 +218,7 @@
           </div>
           
           <div class="searchJoin">
-            <button class="searchJoinButton"> Bewerben </button>
+            <button  onclick="beitreten('Proggen (Prog 1)')" class="searchJoinButton"> Bewerben </button>
           </div>
   
         </div>
@@ -242,7 +242,7 @@
           </div>
           
           <div class="searchJoin">
-            <button class="searchJoinButton"> Bewerben </button>
+            <button onclick="beitreten('1 nice Programmierer')" class="searchJoinButton"> Bewerben </button>
           </div>
   
 
@@ -253,7 +253,19 @@
 	</div>
 	<div class="footer"> 
 			<p href=""> Impressum </p>
-		</div>
+    </div>
+        <div id="waitForAcceptance" class="modal fade" style="display: none;">
+        
+          <!-- Modal content -->
+          <div class="modal-content">
+            <span class="close" onclick="closeModal()">&times;</span>
+            <p>Du hast dich in die Gruppe
+              <b id="groupName">Name der Gruppe</b>
+              eingetragen. Warte auf Bestätigung des Gruppenadmins.
+            </p>
+          </div>
+        
+        </div>
 </body>
 
 <!-- Navigation via Top Menu -->
@@ -261,14 +273,15 @@
 
 	var theme = 1;
 
-  	function showmodal() {
-    	console.log("hi");
-    	document.getElementById("myModal").style.display = "block";
-  	}
-  	function closeModal() {
-   		document.getElementById("myModal").style.display = "none";
-  	}
-  	function switchToSettings() {
+    function beitreten(groupName) {
+      document.getElementById("groupName").innerHTML = groupName;
+      document.getElementById("waitForAcceptance").style.display = "block";
+    }
+
+    function closeModal() {
+      document.getElementById("waitForAcceptance").style.display = "none";
+    }
+     	function switchToSettings() {
     	window.location = "settings.html";
   	}
 
