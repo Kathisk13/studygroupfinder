@@ -1,0 +1,8 @@
+
+<svg id="be452e83-5912-4855-80f8-a79ecab91838"
+xmlns="http://www.w3.org/2000/svg"
+width="60px" height="60px"
+viewBox="0 0 400 400">
+  <path d="M 180 10 A 80 80 0 1 0 390 300
+           A 235 235 0 0 1 180 10" fill="yellow" stroke="black" stroke-width="6" />
+</svg>

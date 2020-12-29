@@ -1,0 +1,29 @@
+:root{
+	/* ########font########## */
+	--font-color: black;
+	/* #########body########## */
+	--background: white;
+	--highlight-color: #cc5454;
+	/* #############Buttons################ */
+	--button-background: #f7fae3;
+	--button-border-color: lightblue;
+	--button-font-color: grey; 
+	--button-hover-color: lightblue;
+	/* ############Inputs########## */
+	--input-background: #eaebe6;
+}
+
+:root.dark-theme {
+	/* ########font########## */
+	--font-color: white;
+	/* #########body########## */
+	--background: #2b2929;
+	--highlight-color:#866ef0;
+	/* #############Buttons################ */
+	--button-background: #000000;
+	--button-border-color: #f1fabb;
+	--button-font-color: white;
+	--button-hover-color: #f1fabb;
+	/* ############Inputs########## */
+	--input-background: #686968;
+}
