@@ -185,7 +185,7 @@ a.active:hover {
 	
 .body {
 	font-size: 24pt;
-	color: var(--background);
+	color: var(--font-color);
 	padding: 15px;
 }
 	

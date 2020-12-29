@@ -3,6 +3,7 @@ function createMessageElement(text, member){
     var pic = document.createElement('img');
     pic.src="https://freesvg.org/img/abstract-user-flat-4.png";
     pic.alt=member;
+    pic.className = "profilepic";
     var user = document.createElement('span');
     user.textContent=member;
     user.style.color = "blue";
@@ -24,7 +25,7 @@ function createMessageUser(text, member){
     var pic = document.createElement('img');
     pic.src="https://th.bing.com/th/id/OIP.dd7FtogXVzIRU8Xavk3MUgAAAA?pid=Api&rs=1";
     pic.alt=member;
-    pic.className="right";
+    pic.className="right profilepic";
     var user = document.createElement('span');
     user.textContent=member;
     user.style.color = "magenta";
