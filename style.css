@@ -95,7 +95,7 @@ button {
 .center {
 	flex: 85%;
 	flex-direction: column;
-	background-color: #030303;
+	background-color: var(--background);
 	font-family: var(--font1);
 	text-align:center;
 }
@@ -107,8 +107,8 @@ button {
 	font-size: 12px;
 	font-family: var(--font1);
 	font-weight: bold;
-	background-color: #030303;
-	color: white;
+	background-color: var(--background);
+	color: var(--font-color);
 	text-align: center;
 }
 
@@ -185,7 +185,7 @@ a.active:hover {
 	
 .body {
 	font-size: 24pt;
-	color: black;
+	color: var(--background);
 	padding: 15px;
 }
 	
@@ -218,7 +218,7 @@ a.active:hover {
 	border-style: solid;
 	cursor: var(--cursorForLink);
 
-	background-color: black;
+	background-color: var(--background);
 	
 }
 
@@ -234,7 +234,7 @@ a.active:hover {
 	padding-top: 8pt;
 	margin-right: 0pt;
 	float: left;
-	color: lightgrey;
+	color: var(--font-color);
 }
 
 .elemstat {
@@ -258,8 +258,8 @@ a.active:hover {
 	border-width: 3px;
 	border-style: solid;
 
-	background-color: #030303;
-	color: #9DBFAF;
+	background-color:var(--input-background);
+	color: var(--input-font);
 
 	padding: 5px;
 	height: 20px;
@@ -311,22 +311,23 @@ a.active:hover {
 }
 
 .nextEvent {
-
+  display: flex;
+  flex-direction: column;
 	width: 100%;
 	border-radius: 5px;
 	border-color: grey;
 	border-width: 3px;
 	border-style: solid;
-	color: grey;
+	color: var(--font-color);
 }
 
 .eventHeader {
-
-	background-color: black;
+  
+	background-color: var(--eventHeader-background);
 	border-color: grey;
 	border-width: 3px;
-	border-style: solid;
-	color: grey;
+/*	border-style: solid;*/
+	color: var(--font-color);
 }
 
 .eventBody {
@@ -345,13 +346,9 @@ td {
 }
 
 th {
-	background-color: #222222;
+	background-color: var(--tableHeader-background);
 	margin: 0px;
 	text-align: left;
-}
-
-.tableButton {
-	padding-left: 8%;
 }
 
 
@@ -451,11 +448,11 @@ th {
 
 /* Modal Content/Box */
 .modal-content {
-  background-color: #fefefe;
+  background-color:var(--modal-background);
   margin: 15% auto; /* 15% from the top and centered */
   padding: 20px;
   border: 1px solid #888;
-  width: 80%; /* Could be more or less, depending on screen size */
+  width: 60%; /* Could be more or less, depending on screen size */
 }
 
 /* The Close Button */
@@ -514,10 +511,11 @@ th {
 
 .container img {
 	float: left;
-	max-width: 50px;
+  max-width: 50px;
+  max-height: 50px;
 	width: 70%;
-	margin-right: 20px;
-	border-radius: 50%;
+  margin: 5px;
+  margin-right: 20px;
 }
 
 .container img.right {
@@ -526,6 +524,13 @@ th {
 	margin-right: 0;
 }
 
+.profilepic {
+  border-radius: 50%;
+  border-width: 1px;
+  border-color: black;
+  border-style: solid;
+ 
+}
 .time-right {
 	float: right;
 	color: #aaaaaa;

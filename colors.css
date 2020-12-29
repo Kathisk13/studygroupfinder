@@ -7,23 +7,36 @@
 	/* #############Buttons################ */
 	--button-background: #f7fae3;
 	--button-border-color: lightblue;
-	--button-font-color: grey; 
+	--button-font-color: rgb(102, 102, 102); 
 	--button-hover-color: lightblue;
 	/* ############Inputs########## */
-	--input-background: #eaebe6;
+  --input-background: #eaebe6;
+  --input-font: #3b3b3b;
+  /* ############ Modals ######### */
+  --modal-background: #fefefe;
+  /* ######### events ############ */
+  --eventHeader-background: #d9d9d9;
+  --tableHeader-background: #eeeeee;
+
 }
 
 :root.dark-theme {
-	/* ########font########## */
-	--font-color: white;
+  /* ########font########## */
+	--font-color: #b3b3b3;
 	/* #########body########## */
-	--background: #2b2929;
+	--background: #272727;
 	--highlight-color:#866ef0;
 	/* #############Buttons################ */
 	--button-background: #000000;
 	--button-border-color: #f1fabb;
-	--button-font-color: white;
+	--button-font-color: rgb(212, 211, 211);
 	--button-hover-color: #f1fabb;
 	/* ############Inputs########## */
-	--input-background: #686968;
+  --input-background: #404040;
+  --input-font: #dadada;
+  /* ############ Modals ######### */
+  --modal-background: #2f3131;
+  /* ######### events ############ */
+  --eventHeader-background: black;
+  --tableHeader-background: #222222;
 }
