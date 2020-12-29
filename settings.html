@@ -1,5 +1,7 @@
 <!Doctype HTML>
 <html>
+  <script src="./darkmode.js"></script>
+  <script src="cookieScript.js"></script>
 
 <head>
   <meta charset="UTF-8">
@@ -37,7 +39,7 @@
     <!-- Main-Stuff -->
     <div class="center" col="2" style="color:white">
       <p> Einstellungen </p>
-      <img class="Darkmode-Button" height=60px width=60px src="moon.svg" onclick="darkmode_toggle(event);">
+      <img class="Darkmode-Button" height=60px width=60px src="moon.svg" onclick="darkmode_toggle();">
       Farbschema ändern
     </img>
 
@@ -50,6 +52,7 @@
 </body>
 
 <!-- Navigation via Top Menu -->
+
 <script>
 
   function switchToSettings() {
@@ -67,7 +70,7 @@
   function switchToProfile() {
     window.location = "profile.html";
   }
-  function darkmode_toggle(ev) {
+  function darkmode_toggle() {
     change_theme();
     if (getCookie("theme") == "dark") {
       setCookie("theme", "bright", COOKIE_EXPIRE_HOURS);
@@ -78,17 +81,9 @@
     }
   }
   function change_theme() {
-    document.getElementById("uploadImage").classList.toggle("dark-PicUploadButton");
-    document.getElementById("nameInput").classList.toggle("dark-FormInput");
-    document.getElementById("nameLabel").classList.toggle("dark-FormLabel");
-    document.getElementById("passwordInput").classList.toggle("dark-FormInput");
-    document.getElementById("passwordLabel").classList.toggle("dark-FormLabel");
-    document.body.classList.toggle("dark-body");
-    document.getElementById("register").classList.toggle("dark-RegisterButton");
-    document.getElementById("fachInput").classList.toggle("dark-FormInput");
-    document.getElementById("fachLabel").classList.toggle("dark-FormLabel");
-    document.getElementById("ortInput").classList.toggle("dark-FormInput");
-    document.getElementById("ortLabel").classList.toggle("dark-FormLabel");
+    document.documentElement.classList.toggle("dark-theme");
+          console.log(document.body.classList)
+
   }
 </script>
 

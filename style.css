@@ -1,5 +1,8 @@
+@import "colors.css"; /*import colors*/
+
 body {
-	background-color: #030303;
+  color: var(--font-color);
+  background-color: var(--background);
   }
 
 :root {
@@ -25,16 +28,16 @@ p {
 }
 
 button {
-	background-color: #030303;
-	color: grey;
-	border-color: grey;
+	background-color: var(--button-background);
+	color: var(--button-font-color);
+	border-color: var(--button-border-color);
 	cursor: var(--cursorForLink);
 }
 
 .text1 {
 	font-family: var(--font1);
 	font-size: 20px;
-	color: black;
+	color: var(--font-color);
 	padding-top: 10px;
 }
 
