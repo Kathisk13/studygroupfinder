@@ -11,6 +11,19 @@ body {
   --font2: Arial, serif;
 }
 
+.col-1 {width: 8.33%;}
+.col-2 {width: 16.66%;}
+.col-3 {width: 25%;}
+.col-4 {width: 33.33%;}
+.col-5 {width: 41.66%;}
+.col-6 {width: 50%;}
+.col-7 {width: 58.33%;}
+.col-8 {width: 66.66%;}
+.col-9 {width: 75%;}
+.col-10 {width: 83.33%;}
+.col-11 {width: 91.66%;}
+.col-12 {width: 100%;}
+
 img {
 	max-width: 65%;
     height: auto;
@@ -484,12 +497,12 @@ th {
 
 .container {
 	border: 2px solid #dedede;
-	background-color: #f1f1f1;
+	background-color: var(--background);
 	border-radius: 5px;
 	padding: 10px;
 	margin: 10px 0;
 	font-size: 16px;
-	font-family: Arial, serif;
+	font-family: var(--font2);
 }
 
 .darker {
@@ -500,7 +513,7 @@ th {
 	border-color: #cccccc;
 	background-color: #ddd;
 	font-size: 16px;
-	font-family: Arial, serif;
+	font-family: var(--font2);
 }
 
 .container::after {
@@ -572,4 +585,25 @@ th {
 	margin: 10px;
 	font-size: 16px;
 	font-family: Arial, serif;
+}
+
+/* profile page */
+input {
+  color: var(--input-font);
+  background: var(--input-background);
+  margin: 8px 4px;
+  display: table-cell;
+}
+
+label {
+  display: table-cell;
+}
+
+.table-row {
+  display: table-row;
+}
+
+form {
+  display: table;
+  width: 100%;
 }

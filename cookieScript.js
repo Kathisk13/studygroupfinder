@@ -21,7 +21,7 @@ function getCookie(cname){
   return "";
 }
 
-const COOKIE_EXPIRE_HOURS = 1;
+const COOKIE_EXPIRE_HOURS = 24;
 
 // export const COOKIE_EXPIRE_HOURS = 1;
 
