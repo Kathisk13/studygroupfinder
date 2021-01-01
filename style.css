@@ -492,34 +492,18 @@ th {
 	flex-direction: column;
 	max-height: 100vh;
 	font-size: 16px;
-	font-family: Arial, serif;
   }
 
-.container {
-	border: 2px solid #dedede;
-	background-color: var(--background);
-	border-radius: 5px;
-	padding: 10px;
-	margin: 10px 0;
-	font-size: 16px;
-	font-family: var(--font2);
-}
-
 .darker {
-	border: 2px solid #dedede;
+	border: 2px solid #999999;
 	border-radius: 5px;
 	padding: 10px;
 	margin: 10px 0;
-	border-color: #cccccc;
+	border-color: #999999;
 	background-color: #ddd;
 	font-size: 16px;
 	font-family: var(--font2);
-}
 
-.container::after {
-	content: "";
-	clear: both;
-	display: table;
 }
 
 .container img {
@@ -545,27 +529,29 @@ th {
  
 }
 .time-right {
-	float: right;
-	color: #aaaaaa;
+	color: #999999;
 	font-size: 12px;
-	font-family: Arial, serif;
+	float: right;
 }
 
 .time-left {
-	float: left;
 	color: #999999;
 	font-size: 12px;
-	font-family: Arial, serif;
+	float: left;
 }
 
-.members-count,
-.members-list {
+.members{
+	padding: 10px;
+	margin-bottom: 10px;
+	font-size: 16px;
+}
+
+.preview {
 	border: 1px solid #e4e4e4;
 	padding: 15px;
 	margin-bottom: 15px;
 	margin-top: 5px;
 	font-size: 16px;
-	font-family: Arial, serif;
 }
 
 .message-form {
@@ -578,13 +564,11 @@ th {
 	border: 1px solid #dfdfdf;
 	padding: 10px 15px;
 	font-size: 16px;
-	font-family: Arial, serif;
 }
 
 .message-form-button {
 	margin: 10px;
 	font-size: 16px;
-	font-family: Arial, serif;
 }
 
 /* profile page */

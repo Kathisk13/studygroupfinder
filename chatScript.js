@@ -1,5 +1,8 @@
+var timer = 10;
+
 function createMessageElement(text, member){
-    var message = document.createElement('container');
+    var message = document.createElement('darker');
+    message.className = 'darker';
     var pic = document.createElement('img');
     pic.src="https://freesvg.org/img/abstract-user-flat-4.png";
     pic.alt=member;
@@ -11,19 +14,21 @@ function createMessageElement(text, member){
     var txt = document.createElement('p');
     txt.innerHTML=text;
     var time = document.createElement('span');
-    time.textContent="11:05";
+    time.textContent="11:" + timer;
     time.className="time-right";
     message.appendChild(pic);
     message.appendChild(user);
     message.appendChild(txt);
     message.appendChild(time);
+    timer = timer + 1;
     return message;
 }
 
 function createMessageUser(text, member){
     var message = document.createElement('darker');
+    message.className = 'darker';
     var pic = document.createElement('img');
-    pic.src="https://th.bing.com/th/id/OIP.dd7FtogXVzIRU8Xavk3MUgAAAA?pid=Api&rs=1";
+    pic.src="https://freesvg.org/img/abstract-user-flat-4.png";
     pic.alt=member;
     pic.className="right profilepic";
     var user = document.createElement('span');
@@ -33,36 +38,44 @@ function createMessageUser(text, member){
     var txt = document.createElement('p');
     txt.innerHTML=text;
     var time = document.createElement('span');
-    time.textContent="11:01";
+    time.textContent="11:"+timer;
     time.className="time-left";
     message.appendChild(pic);
     message.appendChild(user);
     message.appendChild(txt);
     message.appendChild(time);
+    timer = timer + 1;
     return message;
 }
 
 
 function sendMessage() {
-    const message = document.getElementById('message').value;
+    if (timer >= 60) timer = 10;
+    var message = document.getElementById('message').value;
     var messages = document.getElementById('chat');
     if (message == ''){
         return;
     }
 
-    chat.appendChild(createMessageUser(message, "Bob"));
-    chat.appendChild(createMessageElement("Hallo :-)", "Rosemarie"));
+    messages.appendChild(createMessageUser(message, "Bob"));
+    setTimeout(response("Hallo Bob :)", "Rosemarie"), 10000);
 }
 
-function sendMessageGroup() {
-    const message = document.getElementById('message').value;
+function response(message, user){
+    var messages = document.getElementById('chat');
+    messages.appendChild(createMessageElement(message, user));
+}
+
+function sendMessageGroupe(user) {
+    if (timer >= 60) timer = 10;
+    var message = document.getElementById('message').value;
     var messages = document.getElementById('chat');
     if (message == ''){
         return;
     }
 
-    chat.appendChild(createMessageUser(message, "Bob"));
-    chat.appendChild(createMessageElement("Wilkommen in unserer Gruppe!", "Robbie"));
+    messages.appendChild(createMessageUser(message, "Bob"));
+    setTimeout(response("Wilkommen in unserer Gruppe!", user), 10000);
 }
 
 function switchToSettings() {	
@@ -75,4 +88,16 @@ function switchToMain() {
 
 function switchToProfile() {
     window.location = "profile.html";
+}
+function switchToMessages() {
+    window.location = "chatOverview.html";
+}
+function switchToChat() {
+    window.location = "chat.html";
+}
+function switchTogroupeChat(groupe) {
+    if (groupe==1) window.location = "Prog1Chat.html";
+    if (groupe==2) window.location = "ETechnikChat.html";
+    if (groupe==3) window.location = "AnalysisAChat.html";
+    if (groupe==4) window.location = "LinaAChat.html";
 }

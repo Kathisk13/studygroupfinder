@@ -6,14 +6,14 @@
 	<div class="headerContainer"> 
 	
 		<div class="headerImage" col="1"> 
-			<b><img src="logo.jpg" alt="Menu"/></b>
+			<b onclick="switchToMain()"><img src="Logo/logo.png" alt="Menu" style="padding-top: 5pt;" /></b>
 		</div>
 		
 		<div class="topnav" col="2"> 
 			<a class="logout" onclick="openPopup()">Abmelden</a>
 			<a onclick="switchToSettings()">Einstellungen</a>
 			<a onclick="switchToProfile()">Profil</a>
-			<a>Nachrichten</a>
+			<a onclick="switchToMessages()">Nachrichten</a>
 			<a onclick="switchToMain()">Startseite</a>
 		</div>
 		
@@ -26,19 +26,18 @@
 	<div class="container"> 
 	
 		<!-- Groups Menu -->
-		<div class="left" col="1"> 
-
+		<div class="center" col="1"> 
+			<p>Prog 1</p>
 		</div>
 		
 		<!-- Main-Stuff -->
 		<div class="center" col="2"> 
-			<p> "Gruppe"</p>
-			<div class="members-count">5 Personen im Chat: </div>
-			<div class="members-list">Alexander, Robbie, Marty, Chuck, Rosemarie</div>
+			<div class="members">5 Personen im Chat: </div>
+			<div class="members">Alexander, Robbie, Marty, Chuck, Bob</div>
 			<div class="body" id="chat"></div>
 			<form class="message-form">
 				<input class="message-form-input" id="message" placeholder="Schreibe eine Nachricht.." type="text"></input>
-				<button class="message-form-button" onclick="sendMessage()" type="button">Senden</button>
+				<button class="message-form-button" onclick="sendMessageGroupe('Marty')" type="button">Senden</button>
 			</form>
 		</div>
 		

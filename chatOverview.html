@@ -17,7 +17,7 @@
 			<a class="logout" href="./login.html">Abmelden</a>
 			<a onclick="switchToSettings()">Einstellungen</a>
 			<a onclick="switchToProfile()">Profil</a>
-			<a onclick="switchToMessages()">Nachrichten</a>
+			<a class="active">Nachrichten</a>
 			<a onclick="switchToMain()">Startseite</a>
 		</div>
 		
@@ -31,16 +31,17 @@
 	
 		<!-- Groups Menu -->
 		<div class="center" col="1"> 
-			<p>Rosemarie</p>
+            <p>Personen</p>
+            <div class="center" col="2"> <button class="preview" onclick="switchToChat()" type="button">Rosemarie</button></div>
 		</div>
 		
 		<!-- Main-Stuff -->
-		<div class="center" col="2"> 
-			<div class="body" id="chat"></div>
-			<form class="message-form">
-				<input class="message-form-input" id="message" placeholder="Schreibe eine Nachricht.." type="text"></input>
-				<button class="message-form-button" onclick="sendMessage()" type="button">Senden</button>
-			</form>
+		<div class="center" col="3"> 
+            <p>Gruppen</p>
+            <div class="center" col="4"> <button class="preview" onclick="switchTogroupeChat(1)" type="button">Prog 1</button></div>
+            <div class="center" col="5"> <button class="preview" onclick="switchTogroupeChat(2)" type="button">E-Technik</button></div>
+            <div class="center" col="6"> <button class="preview" onclick="switchTogroupeChat(3)" type="button">Analysis A</button></div>
+            <div class="center" col="7"> <button class="preview" onclick="switchTogroupeChat(4)" type="button">Lina A</button></div>
 		</div>
 		
 	</div>
@@ -49,6 +50,5 @@
 			<p href=""> Impressum </p>
 	</div>
 	
-	</body>
+</body>
 </html>
-

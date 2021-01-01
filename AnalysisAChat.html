@@ -1,8 +1,5 @@
 <!Doctype HTML>
 <html>
-  <script src="./chatScript.js"></script>
-  <script src="./cookieScript.js"></script>
-  <script src="./darkmode.js"></script>
 <head>
 <meta charset = "UTF-8">
 
@@ -10,11 +7,10 @@
 	
 		<div class="headerImage" col="1"> 
 			<b onclick="switchToMain()"><img src="Logo/logo.png" alt="Menu" style="padding-top: 5pt;" /></b>
-
 		</div>
 		
 		<div class="topnav" col="2"> 
-			<a class="logout" href="./login.html">Abmelden</a>
+			<a class="logout" onclick="openPopup()">Abmelden</a>
 			<a onclick="switchToSettings()">Einstellungen</a>
 			<a onclick="switchToProfile()">Profil</a>
 			<a onclick="switchToMessages()">Nachrichten</a>
@@ -25,21 +21,23 @@
 
 	<link rel="stylesheet" href="style.css">
 </head>
-<body>
+<body bgcolor="F1F1F1">
 
 	<div class="container"> 
 	
 		<!-- Groups Menu -->
 		<div class="center" col="1"> 
-			<p>Rosemarie</p>
+			<p>Analysis A</p>
 		</div>
 		
 		<!-- Main-Stuff -->
 		<div class="center" col="2"> 
+			<div class="members">4 Personen im Chat: </div>
+			<div class="members">Tom, Robbie, Bob, Rosemarie</div>
 			<div class="body" id="chat"></div>
 			<form class="message-form">
 				<input class="message-form-input" id="message" placeholder="Schreibe eine Nachricht.." type="text"></input>
-				<button class="message-form-button" onclick="sendMessage()" type="button">Senden</button>
+				<button class="message-form-button" onclick="sendMessageGroupe('Rosemarie')" type="button">Senden</button>
 			</form>
 		</div>
 		
@@ -49,6 +47,6 @@
 			<p href=""> Impressum </p>
 	</div>
 	
+	<script src="./chatScript.js"></script>
 	</body>
 </html>
-
