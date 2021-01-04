@@ -100,4 +100,5 @@ function switchTogroupeChat(groupe) {
     if (groupe==2) window.location = "ETechnikChat.html";
     if (groupe==3) window.location = "AnalysisAChat.html";
     if (groupe==4) window.location = "LinaAChat.html";
+    if (groupe==5) window.location = "GDSChat.html";
 }
