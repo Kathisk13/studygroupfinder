@@ -78,7 +78,7 @@ button {
 
 
 .container {  
-	background: #FFFFFF;
+	background: var(--background);
 	display: flex;
 	flex-wrap: wrap;
 	column-count: 3;
