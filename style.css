@@ -123,6 +123,7 @@ button {
 	background-color: var(--background);
 	color: var(--font-color);
 	text-align: center;
+	margin-top: 50pt;
 }
 
 .li {
@@ -273,7 +274,9 @@ a.active:hover {
 
 	background-color:var(--input-background);
 	color: var(--input-font);
-
+	
+	margin-right: 0pt;
+	margin-top: 0pt;
 	padding: 5px;
 	height: 20px;
 	border-radius: 3px;
@@ -288,7 +291,7 @@ a.active:hover {
 	width: 36px;
 	height: 36px;
 	padding: 0pt;
-	padding-top: 3pt;
+	padding-top: 2pt;
 	border-color: grey;
 	border-width: 3px;
 	border-style: solid;
