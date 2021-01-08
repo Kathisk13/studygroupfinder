@@ -25,7 +25,7 @@
   <link rel="stylesheet" href="style.css">
 </head>
 
-<body>
+<body onload="initPage()">
 
 	<div class="container" id="container"> 
 	
@@ -42,7 +42,7 @@
 				<div class="elemname">
 					<p> Analysis A </p>
 				</div>
-				<div class="elemstat">
+				<div class="elemstatWaiting">
 					<img src="Logo/hourglass.png" height="50" width="40"/>
 				</div>
 			</div>
@@ -165,11 +165,13 @@
 				<!-- Nächste Termine-->
 				<div class="nextEvent">
 					<div class="eventHeader">
-						<p> Placeholder für anderes Menu </p>
+						<p> Terminkalender  </p>
 					</div>
 
-					<div class="eventBody">
-						<p> Placeholder für anderes Menu </p>
+					<div class="navigateWeekdays">
+						<button class="weekdayButton"  onclick="lastDay()"> &larr; </button>
+						<p class="weekday" id="weekday"> Montag </p>
+						<button class="weekdayButton" onclick="nextDay()"> &rarr; </button>
 					</div>
 
 					<div class="eventBody">
@@ -235,6 +237,32 @@
 <script>
 
 	var theme = 1;
+	var days = ["Montag", "Dienstag", "Mittwoch", "Donnerstag", "Freitag", "Samstag", "Sonntag"];
+	var currentDay = 0;
+
+
+	function initPage(){
+		var elements = document.getElementsByClassName("elemstat");
+    	while(elements.length > 0){
+        	elements[0].parentNode.removeChild(elements[0]);
+    	}
+	}
+
+	function nextDay(){
+		currentDay = currentDay + 1;
+		if(currentDay > 6) {
+			currentDay = currentDay - 7;
+		}
+		document.getElementById("weekday").innerHTML = days[currentDay];
+	}
+
+	function lastDay(){
+		currentDay = currentDay - 1;
+		if(currentDay < 0) {
+			currentDay = currentDay + 7;
+		}
+		document.getElementById("weekday").innerHTML = days[currentDay];
+	}
 
   	function showmodal() {
     	console.log("hi");

@@ -23,7 +23,7 @@
 
 	<link rel="stylesheet" href="style.css">
 </head>
-<body bgcolor="F1F1F1">
+<body bgcolor="F1F1F1" onload="initPage()">
 
 	<div class="container"> 
 	
@@ -36,8 +36,8 @@
 				<div class="elemname">
 					<p> Analysis A </p>
 				</div>
-				<div class="elemstat">
-					<img src="Logo/hourglass.png" height="50" width="40"/>
+				<div class="elemstatWaiting">
+					<img src="Logo/bubble.png" height="50" width="40"/>
 				</div>
 			</div>
 			<div onclick="switchTogroupeChat(4)" class="groupelement">
@@ -48,7 +48,7 @@
 					<p> Lina A </p>
 				</div>
 				<div class="elemstat">
-					<img src="Logo/hourglass.png" height="50" width="40"/>
+					<img src="Logo/bubble.png" height="50" width="40"/>
 				</div>
 			</div>
 			<div onclick="switchTogrou(5)" class="groupelement">
@@ -59,7 +59,7 @@
 					<p> GDS </p>
 				</div>
 				<div class="elemstat">
-					<img src="Logo/hourglass.png" height="50" width="40"/>
+					<img src="Logo/bubble.png" height="50" width="40"/>
 				</div>
 			</div>
 			<div onclick="switchTogroupeChat(2)" class="groupelement">
@@ -70,7 +70,7 @@
 					<p> E-Technik </p>
 				</div>
 				<div class="elemstat">
-					<img src="Logo/hourglass.png" height="50" width="40"/>
+					<img src="Logo/bubble.png" height="50" width="40"/>
 				</div>
 			</div>
 			<div onclick="switchTogroupeChat(1)" class="groupelement">
@@ -81,7 +81,7 @@
 					<p> Prog 1 </p>
 				</div>
 				<div class="elemstat">
-					<img src="Logo/hourglass.png" height="50" width="40"/>
+					<img src="Logo/bubble.png" height="50" width="40"/>
 				</div>
 			</div>
 			<div onclick="switchToChat()" class="groupelement">
@@ -92,7 +92,7 @@
 					<p>Rosemarie</p>
 				</div>
 				<div class="elemstat">
-					<img src="Logo/hourglass.png" height="50" width="40"/>
+					<img src="Logo/bubble.png" height="50" width="40"/>
 				</div>
 			</div>
 		</div>
@@ -117,4 +117,13 @@
 	
 	<script src="./chatScript.js"></script>
 	</body>
+
+	<script>
+		function initPage(){
+			var elements = document.getElementsByClassName("elemstat");
+    		while(elements.length > 0){
+        		elements[0].parentNode.removeChild(elements[0]);
+    		}
+  		}
+	</script>
 </html>

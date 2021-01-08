@@ -25,7 +25,7 @@
   <link rel="stylesheet" href="style.css">
 </head>
 
-<body>
+<body onload="initPage()">
 
 	<div class="container" id="container"> 
 	
@@ -42,7 +42,7 @@
 				<div class="elemname">
 					<p> Analysis A </p>
 				</div>
-				<div class="elemstat">
+				<div class="elemstatWaiting">
 					<img src="Logo/hourglass.png" height="50" width="40"/>
 				</div>
 			</div>
@@ -101,12 +101,14 @@
 			</div>
 			
 		</div>
-		
+
 		<!-- Main-Stuff -->
 		<div class="center" col="2"> 
 
+      <button onclick="switchToMain()" class="returnButton"> Zurück </button>
+      
 			<!-- Searchbar -->
-			<div class="searchBarContainer">
+			<div class="searchBarContainer" style="transform: translate(-65.8%, -52.0%);">
 
 				<div class="search">
 
@@ -273,6 +275,13 @@
 
 	var theme = 1;
 
+  function initPage(){
+		var elements = document.getElementsByClassName("elemstat");
+    	while(elements.length > 0){
+        	elements[0].parentNode.removeChild(elements[0]);
+    	}
+  }
+  
     function beitreten(groupName) {
       document.getElementById("groupName").innerHTML = groupName;
       document.getElementById("waitForAcceptance").style.display = "block";

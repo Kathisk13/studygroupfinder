@@ -240,6 +240,7 @@ a.active:hover {
 	text-align: left;
 	padding: 0pt;
 	margin-right: 0pt;
+	margin-top: 4pt;
 	float: left;
 }
 
@@ -253,8 +254,14 @@ a.active:hover {
 
 .elemstat {
 	text-align: right;
+	padding-bottom: 8pt;
+	float: right;
+}
+
+.elemstatWaiting {
+	text-align: right;
 	padding-right: 20pt;
-	padding-top: 10pt;
+	padding-top: 8pt;
 	margin-right: 0pt;
 	float: right;
 }
@@ -302,6 +309,12 @@ a.active:hover {
 	font-size: 20px;
   }
 
+  .returnButton{
+	margin: 8pt;
+	padding: 8pt;
+	float: left;
+  }
+
   .searchBarContainer{
 	width: 30%;
 	position: relative;
@@ -327,8 +340,8 @@ a.active:hover {
 }
 
 .nextEvent {
-  display: flex;
-  flex-direction: column;
+  	display: flex;
+  	flex-direction: column;
 	width: 100%;
 	border-radius: 5px;
 	border-color: grey;
@@ -365,6 +378,18 @@ th {
 	background-color: var(--tableHeader-background);
 	margin: 0px;
 	text-align: left;
+}
+
+.navigateWeekdays{
+	display: flex;
+}
+
+.weekday{
+	flex: 90%;
+}
+
+.weekdayButton{
+	flex: 5%;
 }
 
 
