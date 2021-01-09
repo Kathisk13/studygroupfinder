@@ -6,14 +6,15 @@
 	<link rel="stylesheet" href="loginStyle.css">
 </head>
 <img src="moon.png" class="Darkmode-Button" onclick="darkmode_toggle(event);">
-<div class="FormularDiv CenterMargin">
+<div class="FormularDiv">
 	<p id="nameLabel" class="FormLabel">Name:</p>
 	<input autofocus id="nameInput" class="FormInput" type="text">
 	<p id="passwordLabel" class="FormLabel">Passwort:</p>
 	<input id="passwordInput" class="FormInput" type="password">
 </div>
-<div id="infoDiv" class="InfoDiv CenterMargin">
+<div id="infoDiv" class="InfoDiv">
 	<p id="infoLabel" class="FormLabel infoLabel">Die eingegeben Daten sind nicht hinterlegt. Bitte überprüfen Sie die Richtigkeit oder setzen Sie sich mit einem Administrator in Verbindung.</p>
+	<a id="registerLink" class="RegisterLabel" onclick="redirectRegister(event);" >Noch nicht registriert? Hier geht es zur Registrierung.</a>
 </div>
 <input id="loginButton" class="Button" type="button" value="Anmelden" onclick="login(event);">
 <script src="cookieScript.js"></script>

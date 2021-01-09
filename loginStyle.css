@@ -86,6 +86,7 @@ body {
 	color: var(--font-color-bright);
 	margin:0px;
 	padding: 2px 2px 2px 2px;
+	width: 100%;
 }
 
 .dark-FormInput{
@@ -113,13 +114,6 @@ body {
 	margin-left: calc(50% - 222px);
 }
 
-	
-@media only screen and (max-width: 600px){
-	.CenterMargin{
-		margin-top: calc(10%);
-	}
-}
-
 .InfoDiv{
 	border-radius: 5px;
 	border-style: solid;
@@ -140,6 +134,16 @@ body {
 	text-align: center;
 	margin: 20px 20% 20px 20%;
 	display: none;
+}
+
+.RegisterLabel{
+	color: var(--highlight-color-bright);
+	cursor: pointer;
+}
+
+.dark-RegisterLabel{
+	color: var(--highlight-color-dark);
+	cursor: pointer;
 }
 
 .Darkmode-Button{

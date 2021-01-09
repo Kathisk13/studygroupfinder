@@ -22,6 +22,12 @@ function login(ev){
 	}
 }
 
+function redirectRegister(ev){
+	console.log("redirect...");
+	var pathname = window.location.pathname;
+	window.location.href = pathname.substring(0, pathname.lastIndexOf("Register.html")) + "Register.html";
+}
+
 function change_theme(){
 	document.getElementById("loginButton").classList.toggle("dark-button");
 	document.getElementById("nameInput").classList.toggle("dark-FormInput");
@@ -31,6 +37,7 @@ function change_theme(){
 	document.body.classList.toggle("dark-body");
 	document.getElementById("infoDiv").classList.toggle("dark-InfoDiv");
 	document.getElementById("infoLabel").classList.toggle("dark-FormLabel");
+	document.getElementById("registerLink").classList.toggle("dark-RegisterLabel");
 }
 
 function darkmode_toggle(ev){
