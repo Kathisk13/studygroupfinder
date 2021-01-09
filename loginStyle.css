@@ -65,7 +65,7 @@ body {
 }
 
 @keyframes falseCredentials{
-	0% {background-color: var(--highlight-color-bright);}
+	50% {background-color: var(--highlight-color-bright);}
 }
 
 .FormInput{
@@ -77,8 +77,8 @@ body {
 	background-color: var(--button-background-bright);
 	resize: none;
 	color: var(--font-color-bright);
-	animation-direction: alternate;
-	animation-duration: 2s;
+	/* animation-direction: normal; */
+	/* animation-duration: 2s; */
 	
 }
 
@@ -98,8 +98,8 @@ body {
 	background-color: var(--button-background-dark);
 	resize: none;
 	color: var(--font-color-dark);
-	animation-direction: alternate;
-	animation-duration: 2s;
+	/* animation-direction: normal; */
+	/* animation-duration: 2s; */
 }
 
 .dark-FormLabel{

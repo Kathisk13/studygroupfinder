@@ -16,9 +16,21 @@ function login(ev){
 		var pathname = window.location.pathname;
 		window.location.href = pathname.substring(0, pathname.lastIndexOf("Register.html")) + "dashboard.html";
 	}else{
-		document.getElementById("nameInput").style.animationName = "falseCredentials";
-		document.getElementById("passwordInput").style.animationName = "falseCredentials";
+		document.getElementById("nameInput").addEventListener("animationiteration", function(){
+			document.getElementById("nameInput").style.animationPlayState = "paused";
+		})
+		document.getElementById("passwordInput").addEventListener("animationiteration", function(){
+			document.getElementById("passwordInput").style.animationPlayState = "paused";
+		})
+		document.getElementById("nameInput").style.animation = "falseCredentials 2s linear 0s infinite normal running";
+		document.getElementById("passwordInput").style.animation = "falseCredentials 2s linear 0s infinite normal running";		
 		document.getElementById("infoDiv").style.display = "inherit";
+	}
+}
+
+function enterToLogin(event){
+	if(event.key == "Enter"){
+		login(event);
 	}
 }
 
