@@ -7,6 +7,22 @@ function checkBrowserSupport(){
 window.onload = checkBrowserSupport();
 
 function register(ev){
+	var accept = true;
+	if(document.getElementById("nameInput").value.length < 2){
+		document.getElementById("nameInput").addEventListener("animationiteration", function(){
+			document.getElementById("nameInput").style.animationPlayState = "paused";
+		});
+		document.getElementById("nameInput").style.animation = "falseCredentials 2s linear 0s infinite normal running";
+		accept = false;
+	}
+	if(document.getElementById("passwordInput").value.length < 8){
+		document.getElementById("passwordInput").addEventListener("animationiteration", function(){
+				document.getElementById("passwordInput").style.animationPlayState = "paused";
+		});
+		document.getElementById("passwordInput").style.animation = "falseCredentials 2s linear 0s infinite normal running";
+		return;
+	}
+	if(!accept) return;
 	setCookie("name", document.getElementById("nameInput").value, COOKIE_EXPIRE_HOURS);
 	setCookie("passwort", document.getElementById("passwordInput").value, COOKIE_EXPIRE_HOURS);
 	setCookie("fach", document.getElementById("fachInput").value, COOKIE_EXPIRE_HOURS);

@@ -1,4 +1,6 @@
 function setCookie(cname, cvalue, exhours){
+	cname = cname.replace(";", "");
+	cvalue = cvalue.replace(";", "");
 	var d = new Date();
 	d.setTime(d.getTime() + (exhours*60*60*1000));
 	var expires = "expires="+ d.toUTCString();

@@ -31,6 +31,10 @@ body {
 	}
 }
 
+@keyframes falseCredentials{
+	50% {background-color: var(--highlight-color-bright);}
+}
+
 .PicUploadButton{
 	background-color: var(--button-background-bright);
 	color: var(--button-font-color-bright);
