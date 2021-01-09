@@ -60,6 +60,7 @@ function change_theme(){
 	document.getElementById("fachLabel").classList.toggle("dark-FormLabel");
 	document.getElementById("ortInput").classList.toggle("dark-FormInput");
 	document.getElementById("ortLabel").classList.toggle("dark-FormLabel");
+	document.getElementById("optionalInputsString").classList.toggle("dark-FormLabel");
 }
 
 function darkmode_toggle(ev){

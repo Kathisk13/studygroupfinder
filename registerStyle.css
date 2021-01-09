@@ -80,6 +80,7 @@ ul{
 	border-style: solid;
 	border-color:  var(--button-border-color-bright);
 	background-color: var(--input-background-bright);
+	color: var(--font-color-bright);
 	resize: none;
 }
 
@@ -89,6 +90,7 @@ ul{
 	border-style: solid;
 	border-color:  var(--button-border-color-dark);
 	background-color: var(--input-background-dark);
+	color: var(--font-color-dark);
 	resize: none;
 }
 
@@ -161,7 +163,6 @@ ul{
 
 .CenterMargin{
 		margin-left:25%;
-		color: grey;
 }
 	
 @media only screen and (max-width: 600px){
@@ -172,7 +173,7 @@ ul{
 .Darkmode-Button{
 	margin-left: 10px;
 	margin-top: 10px;
-	height: 60px;
+	height: 30px;
 	width: auto;
 	cursor: pointer;
 }
