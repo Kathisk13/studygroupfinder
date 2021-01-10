@@ -66,7 +66,7 @@ function response(message, user){
     messages.appendChild(createMessageElement(message, user));
 }
 
-function sendMessageGroupe(user) {
+function sendMessageGroup(user) {
     if (timer >= 60) timer = 10;
     var message = document.getElementById('message').value;
     var messages = document.getElementById('chat');
@@ -76,29 +76,4 @@ function sendMessageGroupe(user) {
 
     messages.appendChild(createMessageUser(message, "Bob"));
     setTimeout(response("Wilkommen in unserer Gruppe!", user), 10000);
-}
-
-function switchToSettings() {	
-    window.location = "settings.html";
-}
-
-function switchToMain() {
-    window.location = "dashboard.html";
-}
-
-function switchToProfile() {
-    window.location = "profile.html";
-}
-function switchToMessages() {
-    window.location = "chatOverview.html";
-}
-function switchToChat() {
-    window.location = "chat.html";
-}
-function switchTogroupeChat(groupe) {
-    if (groupe==1) window.location = "Prog1Chat.html";
-    if (groupe==2) window.location = "ETechnikChat.html";
-    if (groupe==3) window.location = "AnalysisAChat.html";
-    if (groupe==4) window.location = "LinaAChat.html";
-    if (groupe==5) window.location = "GDSChat.html";
 }

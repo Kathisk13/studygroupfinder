@@ -3,8 +3,9 @@
 
 <head>
   <meta charset="UTF-8">
-  <script src="./darkmode.js"></script>
-  <script src="./cookieScript.js"></script>
+    <script src="./darkmode.js"></script>
+    <script src="./cookieScript.js"></script>
+	  <script src="./redirectionScript.js"></script>
 
   <div class="headerContainer">
 
@@ -34,10 +35,10 @@
 		
 
 			<!-- Gruppennamen klein halten -->
-			<div onclick="switchToSettings()" class="groupelement">
+			<div onclick="()" class="groupelement">
 
 				<div class="elempic">
-					<img src="Logo/groupAna.png" height="110" width="110"/>
+					<img class="profilepic" src="Logo/groupAna.png" height="110" width="110"/>
 				</div>
 				<div class="elemname">
 					<p> Analysis A </p>
@@ -46,9 +47,9 @@
 					<img src="Logo/hourglass.png" height="50" width="40"/>
 				</div>
 			</div>
-			<div onclick="switchToSettings()" class="groupelement">
+			<div onclick="" class="groupelement">
 				<div class="elempic">
-					<img src="Logo/group1.png" height="110" width="110"/>
+					<img class="profilepic" src="Logo/group1.png" height="110" width="110"/>
 				</div>
 				<div class="elemname">
 					<p> Lina A </p>
@@ -57,9 +58,9 @@
 					<img src="Logo/hourglass.png" height="50" width="40"/>
 				</div>
 			</div>
-			<div onclick="switchToSettings()" class="groupelement">
+			<div onclick="" class="groupelement">
 				<div class="elempic">
-					<img src="Logo/group2.png" height="110" width="110"/>
+					<img class="profilepic" src="Logo/group2.png" height="110" width="110"/>
 				</div>
 				<div class="elemname">
 					<p> GDS </p>
@@ -68,9 +69,9 @@
 					<img src="Logo/hourglass.png" height="50" width="40"/>
 				</div>
 			</div>
-			<div onclick="switchToSettings()" class="groupelement">
+			<div onclick="" class="groupelement">
 				<div class="elempic">
-					<img src="Logo/groupET.png" height="110" width="110"/>
+					<img class="profilepic" src="Logo/groupET.png" height="110" width="110"/>
 				</div>
 				<div class="elemname">
 					<p> E-Technik </p>
@@ -79,9 +80,9 @@
 					<img src="Logo/hourglass.png" height="50" width="40"/>
 				</div>
 			</div>
-			<div onclick="switchToSettings()" class="groupelement">
+			<div onclick="" class="groupelement">
 				<div class="elempic">
-					<img src="Logo/groupProg.png" height="110" width="110"/>
+					<img class="profilepic" src="Logo/groupProg.png" height="110" width="110"/>
 				</div>
 				<div class="elemname">
 					<p> Prog 1 </p>
@@ -90,10 +91,9 @@
 					<img src="Logo/hourglass.png" height="50" width="40"/>
 				</div>
 			</div>
-
-			<div onclick="switchToSettings()" class="groupelement" style="border-color: green;">
+			<div onclick="" class="groupelement" style="border-color: green;">
 				<div class="elempic">
-					<img src="Logo/newGroup.png" height="110" width="110"/>
+					<img class="profilepic" src="Logo/newGroup.png" height="110" width="110"/>
 				</div>
 				<div class="elemname">
 					<p> Gruppe erstellen </p>
@@ -293,22 +293,6 @@
      	function switchToSettings() {
     	window.location = "settings.html";
   	}
-
-	function switchToMain() {
-		window.location = "dashboard.html";
-	}
-
-	function switchToMessages() {
-		window.location = "chat.html";
-	}
-
-	function switchToProfile() {
-		window.location = "profile.html";
-	}
-	
-	function switchToSearch() {
-		window.location = "search.html";
-	}
   function enterSearch(event) {
     console.log("key pressed: " + event);
     if (event.key == "Enter" || event.which == 13 || event.keyCode == 13) {

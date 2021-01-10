@@ -2,6 +2,7 @@
 <html>
   <script src="./darkmode.js"></script>
   <script src="cookieScript.js"></script>
+  <script src="./redirectionScript.js"></script>
 
 <head>
   <meta charset="UTF-8">
@@ -48,21 +49,6 @@
 
 <script>
 
-  function switchToSettings() {
-    window.location = "settings.html";
-  }
-
-  function switchToMain() {
-    window.location = "dashboard.html";
-  }
-
-  function switchToMessages() {
-    window.location = "chatOverview.html";
-  }
-
-  function switchToProfile() {
-    window.location = "profile.html";
-  }
   function darkmode_toggle() {
     change_theme();
     if (getCookie("theme") == "dark") {

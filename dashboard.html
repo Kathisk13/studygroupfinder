@@ -2,6 +2,7 @@
 <html>
   <script src="./darkmode.js"></script>
   <script src="cookieScript.js"></script>
+  <script src="./redirectionScript.js"></script>
 
 <head>
   <meta charset="UTF-8">
@@ -34,7 +35,7 @@
 		
 
 			<!-- Gruppennamen klein halten -->
-			<div onclick="switchToSettings()" class="groupelement">
+			<div onclick="" class="groupelement">
 
 				<div class="elempic">
 					<img class="profilepic" src="Logo/groupAna.png" height="110" width="110"/>
@@ -46,7 +47,7 @@
 					<img src="Logo/hourglass.png" height="50" width="40"/>
 				</div>
 			</div>
-			<div onclick="switchToSettings()" class="groupelement">
+			<div onclick="" class="groupelement">
 				<div class="elempic">
 					<img class="profilepic" src="Logo/group1.png" height="110" width="110"/>
 				</div>
@@ -57,7 +58,7 @@
 					<img src="Logo/hourglass.png" height="50" width="40"/>
 				</div>
 			</div>
-			<div onclick="switchToSettings()" class="groupelement">
+			<div onclick="" class="groupelement">
 				<div class="elempic">
 					<img class="profilepic" src="Logo/group2.png" height="110" width="110"/>
 				</div>
@@ -68,7 +69,7 @@
 					<img src="Logo/hourglass.png" height="50" width="40"/>
 				</div>
 			</div>
-			<div onclick="switchToSettings()" class="groupelement">
+			<div onclick="" class="groupelement">
 				<div class="elempic">
 					<img class="profilepic" src="Logo/groupET.png" height="110" width="110"/>
 				</div>
@@ -79,7 +80,7 @@
 					<img src="Logo/hourglass.png" height="50" width="40"/>
 				</div>
 			</div>
-			<div onclick="switchToSettings()" class="groupelement">
+			<div onclick="" class="groupelement">
 				<div class="elempic">
 					<img class="profilepic" src="Logo/groupProg.png" height="110" width="110"/>
 				</div>
@@ -91,9 +92,9 @@
 				</div>
 			</div>
 
-			<div onclick="switchToSettings()" class="groupelement" style="border-color: green;">
+			<div onclick="" class="groupelement" style="border-color: green;">
 				<div class="elempic">
-					<img src="Logo/newGroup.png" height="110" width="110"/>
+					<img class="profilepic" src="Logo/newGroup.png" height="110" width="110"/>
 				</div>
 				<div class="elemname">
 					<p> Gruppe erstellen </p>
@@ -170,57 +171,66 @@
 
 					<div class="navigateWeekdays">
 						<button class="weekdayButton"  onclick="lastDay()"> &larr; </button>
-						<p class="weekday" id="weekday"> Montag </p>
+						<p class="weekday" id="weekday"> Wochentag </p>
 						<button class="weekdayButton" onclick="nextDay()"> &rarr; </button>
 					</div>
 
-					<div class="eventBody">
-						<p> Placeholder für anderes Menu </p>
-					</div>
+					<table style="width:100%; border-collapse: collapse;">
+						<tr>
+							<td>8:00 - 9:00</td>
+							<td class="dayActivity">Vorlesung</td>
+						</tr>
+						<tr>
+							<td>9:00 - 10:00</td>
+							<td class="dayActivity">Vorlesung</td>
+						</tr>
+						<tr>
+							<td>10:00 - 11:00</td>
+							<td class="dayActivity"></td>
+						</tr>
+						<tr>
+							<td>11:00 - 12:00</td>
+							<td class="dayActivity"></td>
+						</tr>
+						<tr>
+							<td>12:00 - 13:00</td>
+							<td class="dayActivity"></td>
+						</tr>
+						<tr>
+							<td>13:00 - 14:00</td>
+							<td class="dayActivity">Fußball</td>
+						</tr>
+						<tr>
+							<td>14:00 - 15:00</td>
+							<td class="dayActivity">Fußball</td>
+						</tr>
+						<tr>
+							<td>15:00 - 16:00</td>
+							<td class="dayActivity">Fußball</td>
+						</tr>
+						<tr>
+							<td>17:00 - 18:00</td>
+							<td class="dayActivity"></td>
+						</tr>
+						<tr>
+							<td>18:00 - 19:00</td>
+							<td class="dayActivity"></td>
+						</tr>
+						<tr>
+							<td>19:00 - 20:00</td>
+							<td class="dayActivity"></td>
+						</tr>
+						<tr>
+							<td>20:00 - 21:00</td>
+							<td class="dayActivity"></td>
+						</tr>
+						<tr>
+							<td>21:00 - 22:00</td>
+							<td class="dayActivity"></td>
+						</tr>
+					</table>
 
-					<div class="eventBody">
-						<p> Placeholder für anderes Menu </p>
-					</div>
 				</div>
-
-				<!-- Nächste Termine-->
-				<div class="nextEvent">
-					<div class="eventHeader">
-						<p> Placeholder für anderes Menu </p>
-					</div>
-
-					<div class="eventBody">
-						<p> Placeholder für anderes Menu </p>
-					</div>
-
-					<div class="eventBody">
-						<p> Placeholder für anderes Menu </p>
-					</div>
-
-					<div class="eventBody">
-						<p> Placeholder für anderes Menu </p>
-					</div>
-				</div>
-
-				<!-- Nächste Termine-->
-				<div class="nextEvent">
-					<div class="eventHeader">
-						<p> Placeholder für anderes Menu </p>
-					</div>
-
-					<div class="eventBody">
-						<p> Placeholder für anderes Menu </p>
-					</div>
-
-					<div class="eventBody">
-						<p> Placeholder für anderes Menu </p>
-					</div>
-
-					<div class="eventBody">
-						<p> Placeholder für anderes Menu </p>
-					</div>
-				</div>
-
 				
 				
 			</div>
@@ -236,16 +246,25 @@
 <!-- Navigation via Top Menu -->
 <script>
 
-	var theme = 1;
-	var days = ["Montag", "Dienstag", "Mittwoch", "Donnerstag", "Freitag", "Samstag", "Sonntag"];
+	//var theme = 1;
+	var days = ["Sonntag", "Montag", "Dienstag", "Mittwoch", "Donnerstag", "Freitag", "Samstag"];
 	var currentDay = 0;
 
 
 	function initPage(){
+		getDay();
 		var elements = document.getElementsByClassName("elemstat");
     	while(elements.length > 0){
         	elements[0].parentNode.removeChild(elements[0]);
-    	}
+		}
+		loadDay(currentDay);
+	}
+
+	function getDay() {
+		var d = new Date();
+		document.getElementById("weekday").innerHTML = days[d.getDay()];
+		currentDay = d.getDay();
+		loadDay(currentDay);
 	}
 
 	function nextDay(){
@@ -254,6 +273,7 @@
 			currentDay = currentDay - 7;
 		}
 		document.getElementById("weekday").innerHTML = days[currentDay];
+		loadDay(currentDay);
 	}
 
 	function lastDay(){
@@ -262,34 +282,31 @@
 			currentDay = currentDay + 7;
 		}
 		document.getElementById("weekday").innerHTML = days[currentDay];
+		loadDay(currentDay);
+	}
+
+	function loadDay(day) {
+		elements = document.getElementsByClassName("dayActivity");
+		var i = 0;
+		while(elements.length > i){
+			var timeslot = elements[i].parentNode;
+        	if(elements[i].innerHTML == "") {
+				timeslot.style.backgroundColor = "green";
+			} else {
+				timeslot.style.backgroundColor = "red";
+			}
+			i = i + 1;
+    	}
 	}
 
   	function showmodal() {
     	console.log("hi");
     	document.getElementById("myModal").style.display = "block";
-  	}
+	  }
+	  
   	function closeModal() {
    		document.getElementById("myModal").style.display = "none";
   	}
-  	function switchToSettings() {
-    	window.location = "settings.html";
-  	}
-
-	function switchToMain() {
-		window.location = "dashboard.html";
-	}
-
-	function switchToMessages() {
-		window.location = "chatOverview.html";
-	}
-
-	function switchToProfile() {
-		window.location = "profile.html";
-	}
-	
-	function switchToSearch() {
-		window.location = "search.html";
-	}
 
   function enterSearch(event) {
     console.log("key pressed: " + event);

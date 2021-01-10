@@ -1,7 +1,9 @@
 <!Doctype HTML>
 <html>
 	<script src="./darkmode.js"></script>
-  	<script src="cookieScript.js"></script>
+	 <script src="cookieScript.js"></script>
+	 <script src="./chatScript.js"></script>
+	 <script src="./redirectionScript.js"></script>
 <head>
 <meta charset = "UTF-8">
 
@@ -29,7 +31,7 @@
 	
 		<!-- Groups Menu -->
 		<div class="left" col="1"> 
-			<div onclick="switchTogroupeChat(3)" class="groupelement">
+			<div onclick="switchTogroupChat(3)" class="groupelement">
 				<div class="elempic">
 					<img class="profilepic" src="Logo/groupAna.png" height="110" width="110"/>
 				</div>
@@ -40,7 +42,7 @@
 					<img src="Logo/bubble.png" height="50" width="40"/>
 				</div>
 			</div>
-			<div onclick="switchTogroupeChat(4)" class="groupelement">
+			<div onclick="switchTogroupChat(4)" class="groupelement">
 				<div class="elempic">
 					<img class="profilepic" src="Logo/group1.png" height="110" width="110"/>
 				</div>
@@ -51,7 +53,7 @@
 					<img src="Logo/bubble.png" height="50" width="40"/>
 				</div>
 			</div>
-			<div onclick="switchTogroupeChat(5)" class="groupelement">
+			<div onclick="switchTogroupChat(5)" class="groupelement">
 				<div class="elempic">
 					<img class="profilepic" src="Logo/group2.png" height="110" width="110"/>
 				</div>
@@ -62,7 +64,7 @@
 					<img src="Logo/bubble.png" height="50" width="40"/>
 				</div>
 			</div>
-			<div onclick="switchTogroupeChat(2)" class="groupelement">
+			<div onclick="switchTogroupChat(2)" class="groupelement">
 				<div class="elempic">
 					<img class="profilepic" src="Logo/groupET.png" height="110" width="110"/>
 				</div>
@@ -73,7 +75,7 @@
 					<img src="Logo/bubble.png" height="50" width="40"/>
 				</div>
 			</div>
-			<div onclick="switchTogroupeChat(1)" class="groupelement">
+			<div onclick="switchTogroupChat(1)" class="groupelement">
 				<div class="elempic">
 					<img class="profilepic" src="Logo/groupProg.png" height="110" width="110"/>
 				</div>
@@ -95,17 +97,25 @@
 					<img src="Logo/bubble.png" height="50" width="40"/>
 				</div>
 			</div>
+			<div onclick="" class="groupelement" style="border-color: green;">
+				<div class="elempic">
+					<img class="profilepic" src="Logo/newGroup.png" height="110" width="110"/>
+				</div>
+				<div class="elemname">
+					<p> Neuer Chat </p>
+				</div>
+			</div>
 		</div>
 		
 		<!-- Main-Stuff -->
 		<div class="center" col="2"> 
-			<p>E-Technik</E-Technik></p>
-			<div class="members">5 Personen im Chat: </div>
-			<div class="members">Alexander, Robbie, Marty, Chuck, Bob, Rosemarie</div>
+			<p>Analysis A</p>
+			<div class="members">4 Personen im Chat: </div>
+			<div class="members">Tom, Robbie, Bob, Rosemarie</div>
 			<div class="body" id="chat"></div>
 			<form class="message-form">
 				<input class="message-form-input" id="message" placeholder="Schreibe eine Nachricht.." type="text"></input>
-				<button class="message-form-button" onclick="sendMessageGroupe('Chuck')" type="button">Senden</button>
+				<button class="message-form-button" onclick="sendMessageGroup('Rosemarie')" type="button">Senden</button>
 			</form>
 		</div>
 		
@@ -115,7 +125,6 @@
 			<p href=""> Impressum </p>
 	</div>
 	
-	<script src="./chatScript.js"></script>
 	</body>
 
 	<script>
