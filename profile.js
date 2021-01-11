@@ -21,17 +21,22 @@ function changePassword() {
   var oldPassword = document.getElementById("oldPasswordInput");
   var newPassword = document.getElementById("newPasswordInput");
   var errorEl = document.getElementById("errorOldPass");
+  console.log(oldPassword.value + " :old password")
   if (oldPassword.value != getCookie("passwort")) {
     errorEl.innerHTML = "Das war wohl das falsche Passwort, probier's nochmal";
-    errorEl.style.display = "inline";
+    console.log("please show error message");
+    errorEl.style.visibility = "visible";
   } else if(newPassword == "") {
+    console.log("Im confused, but this should show with no password")
     errorEl.innerHTML = "Du musst dir ein neues Passwort aussuchen";
-    errorEl.style.display = "inline";
+    errorEl.style.display = "visible";
   } else {
-    setCookie("passwort", newPassword);
+    console.log("password: " + newPassword.value + "cookie: " + getCookie("passwort"))
+    setCookie("passwort", newPassword.value);
     oldPassword.value = "";
     newPassword.value = "";
-    errorEl.style.display = "none";
+    errorEl.innerHTML = "Passwort wurde erfolgreich geändert";
+    errorEl.style.visibility = "visible";
   }
 }
 
@@ -44,7 +49,8 @@ function updateInfo() {
   change('name');
   change('fach');
   change('ort');
-  if(document.getElementById("newPasswordInput").value != ""){
+  console.log(document.getElementById("newPasswordInput").value)
+  if(document.getElementById("oldPasswordInput").value != ""){
     changePassword();
   }
 }

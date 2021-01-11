@@ -1,15 +1,16 @@
 <!Doctype HTML>
 <html>
-  <script src="./darkmode.js"></script>
-  <script src="./cookieScript.js"></script>
-  <script src="./profile.js"></script>
-  <script src="./redirectionScript.js"></script>
-  <script>
-window.onload = function() {
-  setTheme();
-  getInfo();
-}
+<script src="./darkmode.js"></script>
+<script src="./cookieScript.js"></script>
+<script src="./profile.js"></script>
+<script src="./redirectionScript.js"></script>
+<script>
+  window.onload = function () {
+    setTheme();
+    getInfo();
+  }
 </script>
+
 <head>
   <meta charset="UTF-8">
 
@@ -52,28 +53,27 @@ window.onload = function() {
         <div class="table-row">
           <label for="nameInput">Name</label>
           <input onfocus="this.value=''" id="nameInput" type="text">
-          <button id="changeNameButton" type="button" onclick="change('name')">Name ändern</button>
         </div>
         <div class="table-row">
           <label for="oldPasswordInput">Altes Passwort:</label>
-          <input id="oldPasswordInput" type="password"><span style="display: none;" id="errorOldPass"></span>
+          <input id="oldPasswordInput" type="password"><span style="visibility: hidden;" id="errorOldPass">Das war wohl das falsche Passwort, probier's nochmal</span>
         </div>
         <div class="table-row">
           <label for="newPasswordInput">Neues Passwort:</label>
           <input id="newPasswordInput" type="password">
-          <button id="changePasswordButton" type="button" onclick="changePassword()">Passwort ändern</button>
         </div>
         <div class="table-row">
           <label for="fachInput">Fach:</label>
           <input onfocus="this.value=''" id="fachInput" type="text">
-          <button id="changeNameButton" type="button" onclick="change('fach')">Fach ändern</button>
         </div>
         <div class="table-row">
           <label for="ortInput">Ort:</label>
           <input onfocus="this.value=''" id="ortInput" type="text">
-          <button id="changeNameButton" type="button" onclick="change('ort')">Ort ändern</button>
         </div>
-        <button id="updateInfoButton" type="submit">Angaben aktualisieren</button>
+        <div class="table-row">
+          <label></label>
+          <button id="updateInfoButton" type="submit">Angaben aktualisieren</button>
+        </div>
       </form>
     </div>
 
