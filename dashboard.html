@@ -1,8 +1,9 @@
 <!Doctype HTML>
 <html>
-  <script src="./darkmode.js"></script>
-  <script src="cookieScript.js"></script>
-  <script src="./redirectionScript.js"></script>
+<script src="./darkmode.js"></script>
+<script src="cookieScript.js"></script>
+<script src="./redirectionScript.js"></script>
+<script src="./search.js"></script>
 
 <head>
   <meta charset="UTF-8">
@@ -18,7 +19,7 @@
       <a onclick="switchToSettings()">Einstellungen</a>
       <a onclick="switchToProfile()">Profil</a>
       <a onclick="switchToMessages()">Nachrichten</a>
-	  <a class="active" onclick="switchToMain()">Startseite</a>
+      <a class="active" onclick="switchToMain()">Startseite</a>
     </div>
 
   </div>
@@ -28,293 +29,434 @@
 
 <body onload="initPage()">
 
-	<div class="container" id="container"> 
-	
-		<!-- Groups Menu -->
-		<div class="left" col="1"> 
-		
+  <div class="container" id="container">
 
-			<!-- Gruppennamen klein halten -->
-			<div onclick="" class="groupelement">
-
-				<div class="elempic">
-					<img class="profilepic" src="Logo/groupAna.png" height="110" width="110"/>
-				</div>
-				<div class="elemname">
-					<p> Analysis A </p>
-				</div>
-				<div class="elemstatWaiting">
-					<img src="Logo/hourglass.png" height="50" width="40"/>
-				</div>
-			</div>
-			<div onclick="" class="groupelement">
-				<div class="elempic">
-					<img class="profilepic" src="Logo/group1.png" height="110" width="110"/>
-				</div>
-				<div class="elemname">
-					<p> Lina A </p>
-				</div>
-				<div class="elemstat">
-					<img src="Logo/hourglass.png" height="50" width="40"/>
-				</div>
-			</div>
-			<div onclick="" class="groupelement">
-				<div class="elempic">
-					<img class="profilepic" src="Logo/group2.png" height="110" width="110"/>
-				</div>
-				<div class="elemname">
-					<p> GDS </p>
-				</div>
-				<div class="elemstat">
-					<img src="Logo/hourglass.png" height="50" width="40"/>
-				</div>
-			</div>
-			<div onclick="" class="groupelement">
-				<div class="elempic">
-					<img class="profilepic" src="Logo/groupET.png" height="110" width="110"/>
-				</div>
-				<div class="elemname">
-					<p> E-Technik </p>
-				</div>
-				<div class="elemstat">
-					<img src="Logo/hourglass.png" height="50" width="40"/>
-				</div>
-			</div>
-			<div onclick="" class="groupelement">
-				<div class="elempic">
-					<img class="profilepic" src="Logo/groupProg.png" height="110" width="110"/>
-				</div>
-				<div class="elemname">
-					<p> Prog 1 </p>
-				</div>
-				<div class="elemstat">
-					<img src="Logo/hourglass.png" height="50" width="40"/>
-				</div>
-			</div>
-
-			<div onclick="" class="groupelement" style="border-color: green;">
-				<div class="elempic">
-					<img class="profilepic" src="Logo/newGroup.png" height="110" width="110"/>
-				</div>
-				<div class="elemname">
-					<p> Gruppe erstellen </p>
-				</div>
-			</div>
-			
-		</div>
-		
-		<!-- Main-Stuff -->
-		<div class="center" col="2"> 
-
-			<!-- Searchbar -->
-			<div class="searchBarContainer">
-
-				<div class="search">
-
-				   <input type="text" onkeydown="enterSearch(event)" class="searchTerm" placeholder="Suche eine Gruppe">
-				   <button onclick="switchToSearch()" type="submit" class="searchButton">
-						<img src="Logo/search.png"/>
-				  </button>
-
-				</div>
-			 
-			</div>
-
-			<!-- Dashboard-Menus-->
-			<div class="eventContainer">
-				<!-- Nächste Termine-->
-				<div class="nextEvent">
-					<div class="eventHeader">
-						<p> Deine nächsten Lerngruppen </p>
-					</div>
+    <!-- Groups Menu -->
+    <div class="left" col="1">
 
 
-					<table style="width:100%; border-collapse: collapse;">
-						<tr>
-							<th>Gruppe:</th>
-							<th>Zeit:</th>
-							<th>Ort:</th>
-							<th></th>
-						</tr>
-						<tr>
-							<td>Prog 1</td>
-							<td>Heute, 16:00</td>
-							<td>Leibniz Uni</td>
-							<td class="tableButton"><button> Anschauen </button</td>
-						</tr>
-						<tr>
-							<td>E-Technik</td>
-							<td>Morgen, 14:00</td>
-							<td>Bei Malte zuhause</td>
-							<td class="tableButton"><button> Anschauen </button</td>
-						</tr>
-						<tr>
-							<td>Analysis A</td>
-							<td>Samstag, 16:00</td>
-							<td>Bei Jonas</td>
-							<td class="tableButton"><button> Anschauen </button</td>
-						</tr>
-						<tr>
-							<td>Lina A</td>
-							<td>Montag, 15:00</td>
-							<td>Leibniz Uni</td>
-							<td class="tableButton"><button> Anschauen </button</td>
-						</tr>
-					</table>
-				</div>
+      <!-- Gruppennamen klein halten -->
+      <div onclick="" class="groupelement">
 
-				<!-- Nächste Termine-->
-				<div class="nextEvent">
-					<div class="eventHeader">
-						<p> Terminkalender  </p>
-					</div>
+        <div class="elempic">
+          <img class="profilepic" src="Logo/groupAna.png" height="110" width="110" />
+        </div>
+        <div class="elemname">
+          <p> Analysis A </p>
+        </div>
+        <div class="elemstatWaiting">
+          <img src="Logo/hourglass.png" height="50" width="40" />
+        </div>
+      </div>
+      <div onclick="" class="groupelement">
+        <div class="elempic">
+          <img class="profilepic" src="Logo/group1.png" height="110" width="110" />
+        </div>
+        <div class="elemname">
+          <p> Lina A </p>
+        </div>
+        <div class="elemstat">
+          <img src="Logo/hourglass.png" height="50" width="40" />
+        </div>
+      </div>
+      <div onclick="" class="groupelement">
+        <div class="elempic">
+          <img class="profilepic" src="Logo/group2.png" height="110" width="110" />
+        </div>
+        <div class="elemname">
+          <p> GDS </p>
+        </div>
+        <div class="elemstat">
+          <img src="Logo/hourglass.png" height="50" width="40" />
+        </div>
+      </div>
+      <div onclick="" class="groupelement">
+        <div class="elempic">
+          <img class="profilepic" src="Logo/groupET.png" height="110" width="110" />
+        </div>
+        <div class="elemname">
+          <p> E-Technik </p>
+        </div>
+        <div class="elemstat">
+          <img src="Logo/hourglass.png" height="50" width="40" />
+        </div>
+      </div>
+      <div onclick="" class="groupelement">
+        <div class="elempic">
+          <img class="profilepic" src="Logo/groupProg.png" height="110" width="110" />
+        </div>
+        <div class="elemname">
+          <p> Prog 1 </p>
+        </div>
+        <div class="elemstat">
+          <img src="Logo/hourglass.png" height="50" width="40" />
+        </div>
+      </div>
 
-					<div class="navigateWeekdays">
-						<button class="weekdayButton"  onclick="lastDay()"> &larr; </button>
-						<p class="weekday" id="weekday"> Wochentag </p>
-						<button class="weekdayButton" onclick="nextDay()"> &rarr; </button>
-					</div>
+      <div onclick="" class="groupelement" style="border-color: green;">
+        <div class="elempic">
+          <img class="profilepic" src="Logo/newGroup.png" height="110" width="110" />
+        </div>
+        <div class="elemname">
+          <p> Gruppe erstellen </p>
+        </div>
+      </div>
 
-					<table style="width:100%; border-collapse: collapse;">
-						<tr>
-							<td>8:00 - 9:00</td>
-							<td class="dayActivity">Vorlesung</td>
-						</tr>
-						<tr>
-							<td>9:00 - 10:00</td>
-							<td class="dayActivity">Vorlesung</td>
-						</tr>
-						<tr>
-							<td>10:00 - 11:00</td>
-							<td class="dayActivity"></td>
-						</tr>
-						<tr>
-							<td>11:00 - 12:00</td>
-							<td class="dayActivity"></td>
-						</tr>
-						<tr>
-							<td>12:00 - 13:00</td>
-							<td class="dayActivity"></td>
-						</tr>
-						<tr>
-							<td>13:00 - 14:00</td>
-							<td class="dayActivity">Fußball</td>
-						</tr>
-						<tr>
-							<td>14:00 - 15:00</td>
-							<td class="dayActivity">Fußball</td>
-						</tr>
-						<tr>
-							<td>15:00 - 16:00</td>
-							<td class="dayActivity">Fußball</td>
-						</tr>
-						<tr>
-							<td>17:00 - 18:00</td>
-							<td class="dayActivity"></td>
-						</tr>
-						<tr>
-							<td>18:00 - 19:00</td>
-							<td class="dayActivity"></td>
-						</tr>
-						<tr>
-							<td>19:00 - 20:00</td>
-							<td class="dayActivity"></td>
-						</tr>
-						<tr>
-							<td>20:00 - 21:00</td>
-							<td class="dayActivity"></td>
-						</tr>
-						<tr>
-							<td>21:00 - 22:00</td>
-							<td class="dayActivity"></td>
-						</tr>
-					</table>
+    </div>
 
-				</div>
-				
-				
-			</div>
+    <!-- Main-Stuff -->
+    <div class="center" col="2">
 
-		</div>
-		
-	</div>
-	<div class="footer"> 
-			<p href=""> Impressum </p>
-		</div>
+      <!-- Searchbar -->
+      <div class="searchBarContainer">
+
+        <div class="search">
+
+          <input type="text" onkeydown="enterShowSearch(event)" class="searchTerm" placeholder="Suche eine Gruppe">
+          <button onclick="showSearch()" type="submit" class="searchButton">
+            <img src="Logo/search.png" />
+          </button>
+
+        </div>
+
+      </div>
+
+      <!-- Dashboard-Menus-->
+      <div class="eventContainer">
+        <!-- Nächste Termine-->
+        <div class="nextEvent">
+          <div class="eventHeader">
+            <p> Deine nächsten Lerngruppen </p>
+          </div>
+
+
+          <table style="width:100%; border-collapse: collapse;">
+            <tr>
+              <th>Gruppe:</th>
+              <th>Zeit:</th>
+              <th>Ort:</th>
+              <th></th>
+            </tr>
+            <tr>
+              <td>Prog 1</td>
+              <td>Heute, 16:00</td>
+              <td>Leibniz Uni</td>
+              <td class="tableButton"><button> Anschauen </button< /td>
+            </tr>
+            <tr>
+              <td>E-Technik</td>
+              <td>Morgen, 14:00</td>
+              <td>Bei Malte zuhause</td>
+              <td class="tableButton"><button> Anschauen </button< /td>
+            </tr>
+            <tr>
+              <td>Analysis A</td>
+              <td>Samstag, 16:00</td>
+              <td>Bei Jonas</td>
+              <td class="tableButton"><button> Anschauen </button< /td>
+            </tr>
+            <tr>
+              <td>Lina A</td>
+              <td>Montag, 15:00</td>
+              <td>Leibniz Uni</td>
+              <td class="tableButton"><button> Anschauen </button< /td>
+            </tr>
+          </table>
+        </div>
+
+        <!-- Nächste Termine-->
+        <div class="nextEvent">
+          <div class="eventHeader">
+            <p> Terminkalender </p>
+          </div>
+
+          <div class="navigateWeekdays">
+            <button class="weekdayButton" onclick="lastDay()"> &larr; </button>
+            <p class="weekday" id="weekday"> Wochentag </p>
+            <button class="weekdayButton" onclick="nextDay()"> &rarr; </button>
+          </div>
+
+          <table style="width:100%; border-collapse: collapse;">
+            <tr>
+              <td>8:00 - 9:00</td>
+              <td class="dayActivity">Vorlesung</td>
+            </tr>
+            <tr>
+              <td>9:00 - 10:00</td>
+              <td class="dayActivity">Vorlesung</td>
+            </tr>
+            <tr>
+              <td>10:00 - 11:00</td>
+              <td class="dayActivity"></td>
+            </tr>
+            <tr>
+              <td>11:00 - 12:00</td>
+              <td class="dayActivity"></td>
+            </tr>
+            <tr>
+              <td>12:00 - 13:00</td>
+              <td class="dayActivity"></td>
+            </tr>
+            <tr>
+              <td>13:00 - 14:00</td>
+              <td class="dayActivity">Fußball</td>
+            </tr>
+            <tr>
+              <td>14:00 - 15:00</td>
+              <td class="dayActivity">Fußball</td>
+            </tr>
+            <tr>
+              <td>15:00 - 16:00</td>
+              <td class="dayActivity">Fußball</td>
+            </tr>
+            <tr>
+              <td>17:00 - 18:00</td>
+              <td class="dayActivity"></td>
+            </tr>
+            <tr>
+              <td>18:00 - 19:00</td>
+              <td class="dayActivity"></td>
+            </tr>
+            <tr>
+              <td>19:00 - 20:00</td>
+              <td class="dayActivity"></td>
+            </tr>
+            <tr>
+              <td>20:00 - 21:00</td>
+              <td class="dayActivity"></td>
+            </tr>
+            <tr>
+              <td>21:00 - 22:00</td>
+              <td class="dayActivity"></td>
+            </tr>
+          </table>
+
+        </div>
+
+
+      </div>
+
+    </div>
+
+  </div>
+  <div class="footer">
+    <p href=""> Impressum </p>
+  </div>
+  <div id="waitForAcceptance" class="modal fade" style="display: none;">
+
+    <!-- Modal content -->
+    <div class="modal-content">
+      <span class="close" onclick="closeModal()">&times;</span>
+      <p>Du hast dich in die Gruppe
+        <b id="groupName">Name der Gruppe</b>
+        eingetragen. Warte auf Bestätigung des Gruppenadmins.
+      </p>
+    </div>
+
+  </div>
+  </div>
+
+  <!--  search overlay  -->
+  <div id="searchModal" class="modal fade" style="display: none;">
+  <div class="modal-content center">
+    <span class="close" onclick="closeModal()">&times;</span>
+
+    <!-- Searchbar
+      <div class="search">
+
+        <input type="text" onkeydown="enterSearch(event)" class="searchTerm" placeholder="Suche eine Gruppe">
+        <button onclick="search()" type="submit" class="searchButton">
+          <img src="Logo/search.png" />
+        </button>
+
+      </div>
+    -->
+    <!-- Gruppennamen klein halten -->
+    <div class="">
+
+      <h2 style="color: gray;"> Suchergebnisse für "Prog 1": </h2>
+
+      <div class="searchResultHeader">
+
+        <div class="searchPic">
+
+        </div>
+
+        <div class="searchName">
+          <p> Gruppenname </p>
+        </div>
+
+        <div class="searchPlaces">
+          <p> Teilnehmerzahl </p>
+        </div>
+
+        <div class="searchTime">
+          <p> Zeit </p>
+        </div>
+
+        <div class="searchJoin">
+
+        </div>
+
+      </div>
+      <div id="resultList">
+        <div class="searchResult">
+
+          <div class="searchPic">
+            <img src="Logo/groupProg.png" height="110" width="110" />
+          </div>
+
+          <div class="searchName">
+            <p> Programmieren 1 </p>
+          </div>
+
+          <div class="searchPlaces">
+            <p> 3/4 </p>
+          </div>
+
+          <div class="searchTime">
+            <p> Montags, 17:00 </p>
+          </div>
+
+          <div class="searchJoin">
+            <button onclick="beitreten('Programmieren 1')" class="searchJoinButton"> Bewerben </button>
+          </div>
+
+        </div>
+        <div class="searchResult">
+
+          <div class="searchPic">
+            <img src="Logo/groupProg.png" height="110" width="110" />
+          </div>
+
+          <div class="searchName">
+            <p> Prog 1 Lerngruppe </p>
+          </div>
+
+          <div class="searchPlaces">
+            <p> 2/5 </p>
+          </div>
+
+          <div class="searchTime">
+            <p> Samstags, 14:00 </p>
+          </div>
+
+          <div class="searchJoin">
+            <button onclick="beitreten('Prog 1 Lerngruppe')" class="searchJoinButton"> Bewerben </button>
+          </div>
+
+        </div>
+
+        <div class="searchResult">
+
+          <div class="searchPic">
+            <img src="Logo/groupProg.png" height="110" width="110" />
+          </div>
+
+          <div class="searchName">
+            <p> Proggen (Prog 1) </p>
+          </div>
+
+          <div class="searchPlaces">
+            <p> 1/4 </p>
+          </div>
+
+          <div class="searchTime">
+            <p> Freitags, 16:00 </p>
+          </div>
+
+          <div class="searchJoin">
+            <button onclick="beitreten('Proggen (Prog 1)')" class="searchJoinButton"> Bewerben </button>
+          </div>
+
+        </div>
+
+        <div class="searchResult">
+
+          <div class="searchPic">
+            <img src="Logo/groupProg.png" height="110" width="110" />
+          </div>
+
+          <div class="searchName">
+            <p> 1 nice Programmierer </p>
+          </div>
+
+          <div class="searchPlaces">
+            <p> 4/6 </p>
+          </div>
+
+          <div class="searchTime">
+            <p> Sonntags, 11:00 </p>
+          </div>
+
+          <div class="searchJoin">
+            <button onclick="beitreten('1 nice Programmierer')" class="searchJoinButton"> Bewerben </button>
+          </div>
+
+
+        </div>
+
+      </div>
+    </div>
+  </div>
 </body>
 
 <!-- Navigation via Top Menu -->
 <script>
 
-	//var theme = 1;
-	var days = ["Sonntag", "Montag", "Dienstag", "Mittwoch", "Donnerstag", "Freitag", "Samstag"];
-	var currentDay = 0;
+  //var theme = 1;
+  var days = ["Sonntag", "Montag", "Dienstag", "Mittwoch", "Donnerstag", "Freitag", "Samstag"];
+  var currentDay = 0;
 
 
-	function initPage(){
-		getDay();
-		var elements = document.getElementsByClassName("elemstat");
-    	while(elements.length > 0){
-        	elements[0].parentNode.removeChild(elements[0]);
-		}
-		loadDay(currentDay);
-	}
+  function initPage() {
+    getDay();
+    var elements = document.getElementsByClassName("elemstat");
+    while (elements.length > 0) {
+      elements[0].parentNode.removeChild(elements[0]);
+    }
+    loadDay(currentDay);
+  }
 
-	function getDay() {
-		var d = new Date();
-		document.getElementById("weekday").innerHTML = days[d.getDay()];
-		currentDay = d.getDay();
-		loadDay(currentDay);
-	}
+  function getDay() {
+    var d = new Date();
+    document.getElementById("weekday").innerHTML = days[d.getDay()];
+    currentDay = d.getDay();
+    loadDay(currentDay);
+  }
 
-	function nextDay(){
-		currentDay = currentDay + 1;
-		if(currentDay > 6) {
-			currentDay = currentDay - 7;
-		}
-		document.getElementById("weekday").innerHTML = days[currentDay];
-		loadDay(currentDay);
-	}
+  function nextDay() {
+    currentDay = currentDay + 1;
+    if (currentDay > 6) {
+      currentDay = currentDay - 7;
+    }
+    document.getElementById("weekday").innerHTML = days[currentDay];
+    loadDay(currentDay);
+  }
 
-	function lastDay(){
-		currentDay = currentDay - 1;
-		if(currentDay < 0) {
-			currentDay = currentDay + 7;
-		}
-		document.getElementById("weekday").innerHTML = days[currentDay];
-		loadDay(currentDay);
-	}
+  function lastDay() {
+    currentDay = currentDay - 1;
+    if (currentDay < 0) {
+      currentDay = currentDay + 7;
+    }
+    document.getElementById("weekday").innerHTML = days[currentDay];
+    loadDay(currentDay);
+  }
 
-	function loadDay(day) {
-		elements = document.getElementsByClassName("dayActivity");
-		var i = 0;
-		while(elements.length > i){
-			var timeslot = elements[i].parentNode;
-        	if(elements[i].innerHTML == "") {
-				timeslot.style.backgroundColor = "green";
-			} else {
-				timeslot.style.backgroundColor = "red";
-			}
-			i = i + 1;
-    	}
-	}
-
-  	function showmodal() {
-    	console.log("hi");
-    	document.getElementById("myModal").style.display = "block";
-	  }
-	  
-  	function closeModal() {
-   		document.getElementById("myModal").style.display = "none";
-  	}
-
-  function enterSearch(event) {
-    console.log("key pressed: " + event);
-    if(event.key == "Enter" || event.which == 13 || event.keyCode == 13) {
-      event.preventDefault();
-      switchToSearch();
+  function loadDay(day) {
+    elements = document.getElementsByClassName("dayActivity");
+    var i = 0;
+    while (elements.length > i) {
+      var timeslot = elements[i].parentNode;
+      if (elements[i].innerHTML == "") {
+        timeslot.style.backgroundColor = "green";
+      } else {
+        timeslot.style.backgroundColor = "red";
+      }
+      i = i + 1;
     }
   }
+
 </script>
 
 </html>

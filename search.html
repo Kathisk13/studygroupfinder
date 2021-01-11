@@ -3,9 +3,9 @@
 
 <head>
   <meta charset="UTF-8">
-    <script src="./darkmode.js"></script>
-    <script src="./cookieScript.js"></script>
-	  <script src="./redirectionScript.js"></script>
+  <script src="./darkmode.js"></script>
+  <script src="./cookieScript.js"></script>
+  <script src="./redirectionScript.js"></script>
 
   <div class="headerContainer">
 
@@ -18,7 +18,7 @@
       <a onclick="switchToSettings()">Einstellungen</a>
       <a onclick="switchToProfile()">Profil</a>
       <a onclick="switchToMessages()">Nachrichten</a>
-	  <a class="active" onclick="switchToMain()">Startseite</a>
+      <a class="active" onclick="switchToMain()">Startseite</a>
     </div>
 
   </div>
@@ -28,101 +28,101 @@
 
 <body onload="initPage()">
 
-	<div class="container" id="container"> 
-	
-		<!-- Groups Menu -->
-		<div class="left" col="1"> 
-		
+  <div class="container" id="container">
 
-			<!-- Gruppennamen klein halten -->
-			<div onclick="()" class="groupelement">
+    <!-- Groups Menu -->
+    <div class="left" col="1">
 
-				<div class="elempic">
-					<img class="profilepic" src="Logo/groupAna.png" height="110" width="110"/>
-				</div>
-				<div class="elemname">
-					<p> Analysis A </p>
-				</div>
-				<div class="elemstatWaiting">
-					<img src="Logo/hourglass.png" height="50" width="40"/>
-				</div>
-			</div>
-			<div onclick="" class="groupelement">
-				<div class="elempic">
-					<img class="profilepic" src="Logo/group1.png" height="110" width="110"/>
-				</div>
-				<div class="elemname">
-					<p> Lina A </p>
-				</div>
-				<div class="elemstat">
-					<img src="Logo/hourglass.png" height="50" width="40"/>
-				</div>
-			</div>
-			<div onclick="" class="groupelement">
-				<div class="elempic">
-					<img class="profilepic" src="Logo/group2.png" height="110" width="110"/>
-				</div>
-				<div class="elemname">
-					<p> GDS </p>
-				</div>
-				<div class="elemstat">
-					<img src="Logo/hourglass.png" height="50" width="40"/>
-				</div>
-			</div>
-			<div onclick="" class="groupelement">
-				<div class="elempic">
-					<img class="profilepic" src="Logo/groupET.png" height="110" width="110"/>
-				</div>
-				<div class="elemname">
-					<p> E-Technik </p>
-				</div>
-				<div class="elemstat">
-					<img src="Logo/hourglass.png" height="50" width="40"/>
-				</div>
-			</div>
-			<div onclick="" class="groupelement">
-				<div class="elempic">
-					<img class="profilepic" src="Logo/groupProg.png" height="110" width="110"/>
-				</div>
-				<div class="elemname">
-					<p> Prog 1 </p>
-				</div>
-				<div class="elemstat">
-					<img src="Logo/hourglass.png" height="50" width="40"/>
-				</div>
-			</div>
-			<div onclick="" class="groupelement" style="border-color: green;">
-				<div class="elempic">
-					<img class="profilepic" src="Logo/newGroup.png" height="110" width="110"/>
-				</div>
-				<div class="elemname">
-					<p> Gruppe erstellen </p>
-				</div>
-			</div>
-			
-		</div>
 
-		<!-- Main-Stuff -->
-		<div class="center" col="2"> 
+      <!-- Gruppennamen klein halten -->
+      <div onclick="" class="groupelement">
+
+        <div class="elempic">
+          <img class="profilepic" src="Logo/groupAna.png" height="110" width="110" />
+        </div>
+        <div class="elemname">
+          <p> Analysis A </p>
+        </div>
+        <div class="elemstatWaiting">
+          <img src="Logo/hourglass.png" height="50" width="40" />
+        </div>
+      </div>
+      <div onclick="" class="groupelement">
+        <div class="elempic">
+          <img class="profilepic" src="Logo/group1.png" height="110" width="110" />
+        </div>
+        <div class="elemname">
+          <p> Lina A </p>
+        </div>
+        <div class="elemstat">
+          <img src="Logo/hourglass.png" height="50" width="40" />
+        </div>
+      </div>
+      <div onclick="" class="groupelement">
+        <div class="elempic">
+          <img class="profilepic" src="Logo/group2.png" height="110" width="110" />
+        </div>
+        <div class="elemname">
+          <p> GDS </p>
+        </div>
+        <div class="elemstat">
+          <img src="Logo/hourglass.png" height="50" width="40" />
+        </div>
+      </div>
+      <div onclick="" class="groupelement">
+        <div class="elempic">
+          <img class="profilepic" src="Logo/groupET.png" height="110" width="110" />
+        </div>
+        <div class="elemname">
+          <p> E-Technik </p>
+        </div>
+        <div class="elemstat">
+          <img src="Logo/hourglass.png" height="50" width="40" />
+        </div>
+      </div>
+      <div onclick="" class="groupelement">
+        <div class="elempic">
+          <img class="profilepic" src="Logo/groupProg.png" height="110" width="110" />
+        </div>
+        <div class="elemname">
+          <p> Prog 1 </p>
+        </div>
+        <div class="elemstat">
+          <img src="Logo/hourglass.png" height="50" width="40" />
+        </div>
+      </div>
+      <div onclick="" class="groupelement" style="border-color: green;">
+        <div class="elempic">
+          <img class="profilepic" src="Logo/newGroup.png" height="110" width="110" />
+        </div>
+        <div class="elemname">
+          <p> Gruppe erstellen </p>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Main-Stuff -->
+    <div class="center" col="2">
 
       <button onclick="switchToMain()" class="returnButton"> Zurück </button>
-      
-			<!-- Searchbar -->
-			<div class="searchBarContainer" style="transform: translate(-65.8%, -52.0%);">
 
-				<div class="search">
+      <!-- Searchbar -->
+      <div class="searchBarContainer" style="transform: translate(-65.8%, -52.0%);">
 
-				   <input type="text" onkeydown="enterSearch(event)" class="searchTerm" placeholder="Suche eine Gruppe">
-				   <button onclick="switchToSearch()" type="submit" class="searchButton">
-						<img src="Logo/search.png"/>
-				  </button>
+        <div class="search">
 
-				</div>
-			 
+          <input type="text" onkeydown="enterSearch(event)" class="searchTerm" placeholder="Suche eine Gruppe">
+          <button onclick="showSearch()" type="submit" class="searchButton">
+            <img src="Logo/search.png" />
+          </button>
+
+        </div>
+
       </div>
-      
 
-      
+
+
 
       <!-- Gruppennamen klein halten -->
       <div class="searchContainer">
@@ -130,174 +130,155 @@
         <h2 style="color: gray;"> Suchergebnisse für "Prog 1": </h2>
 
         <div class="searchResultHeader">
-          
+
           <div class="searchPic">
-            
+
           </div>
 
           <div class="searchName">
             <p> Gruppenname </p>
           </div>
-          
+
           <div class="searchPlaces">
             <p> Teilnehmerzahl </p>
           </div>
-          
+
           <div class="searchTime">
             <p> Zeit </p>
           </div>
 
           <div class="searchJoin">
-            
-          </div>
-  
-        </div>
 
-        <div class="searchResult">
-
-          <div class="searchPic">
-            <img src="Logo/groupProg.png" height="110" width="110"/>
           </div>
-          
-          <div class="searchName">
-            <p> Programmieren 1 </p>
-          </div>
-          
-          <div class="searchPlaces">
-            <p> 3/4 </p>
-          </div>
-          
-          <div class="searchTime">
-            <p> Montags, 17:00 </p>
-          </div>
-          
-          <div class="searchJoin">
-            <button  onclick="beitreten('Programmieren 1')" class="searchJoinButton"> Bewerben </button>
-          </div>
-  
-        </div>
-
-        <div class="searchResult">
-
-          <div class="searchPic">
-            <img src="Logo/groupProg.png" height="110" width="110"/>
-          </div>
-          
-          <div class="searchName">
-            <p> Prog 1 Lerngruppe </p>
-          </div>
-          
-          <div class="searchPlaces">
-            <p> 2/5 </p>
-          </div>
-          
-          <div class="searchTime">
-            <p> Samstags, 14:00 </p>
-          </div>
-          
-          <div class="searchJoin">
-            <button  onclick="beitreten('Prog 1 Lerngruppe')" class="searchJoinButton"> Bewerben </button>
-          </div>
-  
-        </div>
-
-        <div class="searchResult">
-
-          <div class="searchPic">
-            <img src="Logo/groupProg.png" height="110" width="110"/>
-          </div>
-          
-          <div class="searchName">
-            <p> Proggen (Prog 1) </p>
-          </div>
-          
-          <div class="searchPlaces">
-            <p> 1/4 </p>
-          </div>
-          
-          <div class="searchTime">
-            <p> Freitags, 16:00 </p>
-          </div>
-          
-          <div class="searchJoin">
-            <button  onclick="beitreten('Proggen (Prog 1)')" class="searchJoinButton"> Bewerben </button>
-          </div>
-  
-        </div>
-
-        <div class="searchResult">
-
-          <div class="searchPic">
-            <img src="Logo/groupProg.png" height="110" width="110"/>
-          </div>
-          
-          <div class="searchName">
-            <p> 1 nice Programmierer </p>
-          </div>
-          
-          <div class="searchPlaces">
-            <p> 4/6 </p>
-          </div>
-          
-          <div class="searchTime">
-            <p> Sonntags, 11:00 </p>
-          </div>
-          
-          <div class="searchJoin">
-            <button onclick="beitreten('1 nice Programmierer')" class="searchJoinButton"> Bewerben </button>
-          </div>
-  
 
         </div>
+        <div id="resultList">
+          <div class="searchResult">
 
+            <div class="searchPic">
+              <img src="Logo/groupProg.png" height="110" width="110" />
+            </div>
+
+            <div class="searchName">
+              <p> Programmieren 1 </p>
+            </div>
+
+            <div class="searchPlaces">
+              <p> 3/4 </p>
+            </div>
+
+            <div class="searchTime">
+              <p> Montags, 17:00 </p>
+            </div>
+
+            <div class="searchJoin">
+              <button onclick="beitreten('Programmieren 1')" class="searchJoinButton"> Bewerben </button>
+            </div>
+
+          </div>
+          <div class="searchResult">
+
+            <div class="searchPic">
+              <img src="Logo/groupProg.png" height="110" width="110" />
+            </div>
+
+            <div class="searchName">
+              <p> Prog 1 Lerngruppe </p>
+            </div>
+
+            <div class="searchPlaces">
+              <p> 2/5 </p>
+            </div>
+
+            <div class="searchTime">
+              <p> Samstags, 14:00 </p>
+            </div>
+
+            <div class="searchJoin">
+              <button onclick="beitreten('Prog 1 Lerngruppe')" class="searchJoinButton"> Bewerben </button>
+            </div>
+
+          </div>
+
+          <div class="searchResult">
+
+            <div class="searchPic">
+              <img src="Logo/groupProg.png" height="110" width="110" />
+            </div>
+
+            <div class="searchName">
+              <p> Proggen (Prog 1) </p>
+            </div>
+
+            <div class="searchPlaces">
+              <p> 1/4 </p>
+            </div>
+
+            <div class="searchTime">
+              <p> Freitags, 16:00 </p>
+            </div>
+
+            <div class="searchJoin">
+              <button onclick="beitreten('Proggen (Prog 1)')" class="searchJoinButton"> Bewerben </button>
+            </div>
+
+          </div>
+
+          <div class="searchResult">
+
+            <div class="searchPic">
+              <img src="Logo/groupProg.png" height="110" width="110" />
+            </div>
+
+            <div class="searchName">
+              <p> 1 nice Programmierer </p>
+            </div>
+
+            <div class="searchPlaces">
+              <p> 4/6 </p>
+            </div>
+
+            <div class="searchTime">
+              <p> Sonntags, 11:00 </p>
+            </div>
+
+            <div class="searchJoin">
+              <button onclick="beitreten('1 nice Programmierer')" class="searchJoinButton"> Bewerben </button>
+            </div>
+
+
+          </div>
+
+        </div>
       </div>
-			
-	</div>
-	<div class="footer"> 
-			<p href=""> Impressum </p>
     </div>
-        <div id="waitForAcceptance" class="modal fade" style="display: none;">
-        
-          <!-- Modal content -->
-          <div class="modal-content">
-            <span class="close" onclick="closeModal()">&times;</span>
-            <p>Du hast dich in die Gruppe
-              <b id="groupName">Name der Gruppe</b>
-              eingetragen. Warte auf Bestätigung des Gruppenadmins.
-            </p>
-          </div>
-        
-        </div>
+    <div class="footer">
+      <p href=""> Impressum </p>
+    </div>
+    <div id="waitForAcceptance" class="modal fade" style="display: none;">
+
+      <!-- Modal content -->
+      <div class="modal-content">
+        <span class="close" onclick="closeModal()">&times;</span>
+        <p>Du hast dich in die Gruppe
+          <b id="groupName">Name der Gruppe</b>
+          eingetragen. Warte auf Bestätigung des Gruppenadmins.
+        </p>
+      </div>
+
+    </div>
+  </div>
 </body>
 
 <!-- Navigation via Top Menu -->
 <script>
 
-	var theme = 1;
+  var theme = 1;
 
-  function initPage(){
-		var elements = document.getElementsByClassName("elemstat");
-    	while(elements.length > 0){
-        	elements[0].parentNode.removeChild(elements[0]);
-    	}
-  }
-  
-    function beitreten(groupName) {
-      document.getElementById("groupName").innerHTML = groupName;
-      document.getElementById("waitForAcceptance").style.display = "block";
-    }
-
-    function closeModal() {
-      document.getElementById("waitForAcceptance").style.display = "none";
-    }
-     	function switchToSettings() {
-    	window.location = "settings.html";
-  	}
-  function enterSearch(event) {
-    console.log("key pressed: " + event);
-    if (event.key == "Enter" || event.which == 13 || event.keyCode == 13) {
-      event.preventDefault();
-      switchToSearch();
+  function initPage() {
+    var elements = document.getElementsByClassName("elemstat");
+    while (elements.length > 0) {
+      elements[0].parentNode.removeChild(elements[0]);
     }
   }
 </script>
