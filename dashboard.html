@@ -36,7 +36,7 @@
 
 
       <!-- Gruppennamen klein halten -->
-      <div onclick="removeGroup()" class="groupelement" id='test'>
+      <div onclick="" class="groupelement">
 
         <div class="elempic">
           <img class="profilepic" src="Logo/groupAna.png" height="110" width="110" />
@@ -44,7 +44,7 @@
         <div class="elemname">
           <p> Analysis A </p>
         </div>
-        <div class="elemstatWaiting">
+        <div onclick="removeGroup()" class="elemstatWaiting"  id='hourglass'>
           <img src="Logo/hourglass.png" height="50" width="40" />
         </div>
       </div>
@@ -461,7 +461,7 @@
   function removeGroup() {
     
     if (confirm("Gruppenanfrage zurückziehen")) {
-        var b = document.getElementById('test');
+        var b = document.getElementById('hourglass');
         b.parentNode.removeChild(b);
 
     }
