@@ -233,6 +233,7 @@ details.timeTable > summary{
 	border-radius: 5px;
 	box-shadow: 1px 1px 2px #bbbbbb;
 	cursor: pointer;
+	color: var(--font-color-bright);
 }
 
 details.dark-timeTable > summary{
@@ -249,6 +250,7 @@ details.dark-timeTable > summary{
 	border-radius: 5px;
 	box-shadow: 1px 1px 2px #bbbbbb;
 	cursor: pointer;
+	color: var(--font-color-dark);
 }
 
 
