@@ -4,7 +4,26 @@ function checkBrowserSupport(){
 		window.alert("Your Browser is not supported!");
 	}
 }
-window.onload = checkBrowserSupport();
+
+function createTimeTable(){
+	for(var i = 0; i < 24; i++){
+		row = document.getElementById("timeTable").insertRow();
+		for(var j = 0; j < 7; j++){
+			let cell = row.appendChild(document.createElement("td"));
+			var string = (i)+":00 Uhr"
+			let text = document.createTextNode(string);
+			cell.appendChild(text);
+			cell.class = "timeTable";
+			cell.addEventListener("click", function(event){
+				if(!this.style.backgroundColor){
+					this.style.backgroundColor = "#4fe870";
+				}else{
+					this.style.backgroundColor = "";
+				}
+			});
+		}
+	}
+}
 
 function register(ev){
 	var accept = true;
@@ -27,7 +46,6 @@ function register(ev){
 	setCookie("passwort", document.getElementById("passwordInput").value, COOKIE_EXPIRE_HOURS);
 	setCookie("fach", document.getElementById("fachInput").value, COOKIE_EXPIRE_HOURS);
 	setCookie("ort", document.getElementById("ortInput").value, COOKIE_EXPIRE_HOURS);
-	// console.log(getCookie("name")+"|"+getCookie("passwort")+"|"+getCookie("fach")+"|"+getCookie("ort"));
 	var pathname = window.location.pathname;
 	window.location.href = pathname.substring(0, pathname.lastIndexOf("Register.html")) + "dashboard.html";
 }
@@ -44,6 +62,7 @@ function uploadPic(ev){
 	input.onchange = function(){
 		profilePic = URL.createObjectURL(input.files[0]);
 		document.getElementById("ProfilePic").src = profilePic;
+		setCookie("bild", profilePic);
 		input.remove();
 	}
 }
@@ -60,7 +79,10 @@ function change_theme(){
 	document.getElementById("fachLabel").classList.toggle("dark-FormLabel");
 	document.getElementById("ortInput").classList.toggle("dark-FormInput");
 	document.getElementById("ortLabel").classList.toggle("dark-FormLabel");
-	document.getElementById("optionalInputsString").classList.toggle("dark-FormLabel");
+	var elements = document.getElementsByTagName("td");
+	for(var i = 0; i < elements.length; i++){
+		elements[0].classList.toggle("td.dark-timeTable");
+	}
 }
 
 function darkmode_toggle(ev){
@@ -81,4 +103,9 @@ function checkTheme(){
 	}
 	console.log("Checking theme...");
 }
-window.onload = checkTheme();
+
+window.onload = function(ev){
+	checkBrowserSupport();
+	createTimeTable();
+	checkTheme();
+};

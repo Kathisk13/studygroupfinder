@@ -25,12 +25,6 @@ body {
 .col-11 {width: 91.66%;}
 .col-12 {width: 100%;}
 
-@media only screen and (max-width: 600px){
-	[class*="col-"]{
-		width: 100%;
-	}
-}
-
 @keyframes falseCredentials{
 	50% {background-color: var(--highlight-color-bright);}
 }
@@ -162,13 +156,7 @@ ul{
 }
 
 .CenterMargin{
-		margin-left:25%;
-}
-	
-@media only screen and (max-width: 600px){
-	.CenterMargin{
-		margin-left:0%;
-	}
+	margin-left:25%;
 }
 .Darkmode-Button{
 	margin-left: 10px;
@@ -177,3 +165,57 @@ ul{
 	width: auto;
 	cursor: pointer;
 }
+
+table{
+	margin: 20px 0px 20px 0px;
+	text-align: center;
+	width: 100%;
+	border: 1px solid black;
+	border-radius: 3px;
+}
+
+td{
+	padding: 10px 10px 10px 10px;
+	border-style: solid;
+	border-width: 1px;
+	border-collapse: collapse;
+	transition-duration: 0.4s;
+	background-color: white;
+	cursor: pointer;
+}
+
+td:hover{
+	background-color: var(--button-hover-color-bright);
+}
+
+th{
+	padding: 10px 10px 10px 10px;
+}
+
+table.dark-timeTable{
+	padding: 10px 10px 10px 10px;
+	border-style: solid;
+	border-width: 1px;
+	border-collapse: collapse;
+	transition-duration: 0.4s;
+	background-color: var(--background-dark);
+	cursor: pointer;
+}
+
+td.dark-timeTable{
+	background-color: var(--button-background-dark);
+	color: var(--button-font-color-dark);
+	border-color: var(--button-border-color-dark);
+	padding: 10px 10px 10px 10px;
+	border-style: solid;
+	border-width: 1px;
+	border-collapse: collapse;
+	transition-duration: 0.4s;
+	cursor: pointer;
+}
+
+th.dark-timeTable{
+	
+}
+
+
