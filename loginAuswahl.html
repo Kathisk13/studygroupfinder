@@ -6,9 +6,12 @@
 	<link rel="stylesheet" href="loginAuswahlStyle.css">
 </head>
 <body>
-<img src="moon.png" class="Darkmode-Button" onclick="darkmode_toggle(event);">
-
-<div class="Buttons light">
+<div style="display: flex; float: left; width: 100%;">
+	<img src="moon.png" class="Darkmode-Button" onclick="darkmode_toggle(event);">
+	<img id="logoPic" src="Logo/logo.png">
+</div>
+<h1 id="Title" class="Title">Willkommen beim Studygroupfinder</h1>
+<div class="ButtonDiv light">
 <input id="loginButton" class="Button" type="button" value="Anmelden" onclick="login(event);">
 <input id="registerButton" class="Button" type="button" value="Registrieren" onclick="register(event);">
 <input id="registerWebSSOButton" class="Button" type="button" value="Authentifizieren mit WebSSO" onclick="websso(event);">
