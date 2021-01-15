@@ -35,7 +35,7 @@
 		
 
 			<!-- Gruppennamen klein halten -->
-			<div onclick="()" class="groupelement">
+			<div onclick="" class="groupelement">
 
 				<div class="elempic">
 					<img class="profilepic" src="Logo/groupAna.png" height="110" width="110"/>
@@ -111,7 +111,6 @@
 			<div class="searchBarContainer" style="transform: translate(-65.8%, -52.0%);">
 
 				<div class="search">
-
 				   <input type="text" onkeydown="enterSearch(event)" class="searchTerm" placeholder="Suche eine Gruppe">
 				   <button onclick="switchToSearch()" type="submit" class="searchButton">
 						<img src="Logo/search.png"/>
@@ -294,6 +293,7 @@
     	window.location = "settings.html";
   	}
   function enterSearch(event) {
+    //alert("funktioniert");
     console.log("key pressed: " + event);
     if (event.key == "Enter" || event.which == 13 || event.keyCode == 13) {
       event.preventDefault();
