@@ -7,6 +7,7 @@ function beitreten(groupName) {
 function closeModal() {
     document.getElementById("waitForAcceptance").style.display = "none";
     document.getElementById("searchModal").style.display = "none";
+    document.getElementById("groupdetails").style.display = "none";
 }
 function enterSearch(event) {
     console.log("key pressed: " + event);
@@ -24,4 +25,9 @@ function showSearch() {
 function showmodal() {
     console.log("hi");
     document.getElementById("myModal").style.display = "block";
+}
+
+function showDetails(subject) {
+    document.getElementById("groupTitel").innerHTML = subject;
+    document.getElementById("groupdetails").style.display = "block"
 }

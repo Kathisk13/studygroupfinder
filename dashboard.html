@@ -112,7 +112,7 @@
 
         <div class="search">
 
-          <input type="text" onkeydown="enterShowSearch(event)" class="searchTerm" placeholder="Suche eine Gruppe">
+          <input type="text" onkeydown="enterSearch(event)" class="searchTerm" placeholder="Suche eine Gruppe">
           <button onclick="showSearch()" type="submit" class="searchButton">
             <img src="Logo/search.png" />
           </button>
@@ -137,29 +137,25 @@
               <th>Ort:</th>
               <th></th>
             </tr>
-            <tr>
+            <tr class="clickable" onclick="showDetails('Prog 1')">
               <td>Prog 1</td>
               <td>Heute, 16:00</td>
               <td>Leibniz Uni</td>
-              <td class="tableButton"><button> Anschauen </button< /td>
             </tr>
-            <tr>
+            <tr class="clickable" onclick="showDetails('Prog 1')">
               <td>E-Technik</td>
               <td>Morgen, 14:00</td>
               <td>Bei Malte zuhause</td>
-              <td class="tableButton"><button> Anschauen </button< /td>
             </tr>
-            <tr>
+            <tr class="clickable" onclick="showDetails('Prog 1')">
               <td>Analysis A</td>
               <td>Samstag, 16:00</td>
               <td>Bei Jonas</td>
-              <td class="tableButton"><button> Anschauen </button< /td>
             </tr>
-            <tr>
+            <tr class="clickable" onclick="showDetails('Prog 1')">
               <td>Lina A</td>
               <td>Montag, 15:00</td>
               <td>Leibniz Uni</td>
-              <td class="tableButton"><button> Anschauen </button< /td>
             </tr>
           </table>
         </div>
@@ -254,151 +250,194 @@
     </div>
 
   </div>
-  </div>
+
 
   <!--  search overlay  -->
   <div id="searchModal" class="modal fade" style="display: none;">
-  <div class="modal-content center">
-    <span class="close" onclick="closeModal()">&times;</span>
+    <div class="modal-content center">
+      <span class="close" onclick="closeModal()">&times;</span>
 
-    <!-- Searchbar
-      <div class="search">
+      <!-- Gruppennamen klein halten -->
+      <div class="">
 
-        <input type="text" onkeydown="enterSearch(event)" class="searchTerm" placeholder="Suche eine Gruppe">
-        <button onclick="search()" type="submit" class="searchButton">
-          <img src="Logo/search.png" />
-        </button>
+        <h2 style="color: gray;"> Suchergebnisse für "Prog 1": </h2>
 
-      </div>
-    -->
-    <!-- Gruppennamen klein halten -->
-    <div class="">
-
-      <h2 style="color: gray;"> Suchergebnisse für "Prog 1": </h2>
-
-      <div class="searchResultHeader">
-
-        <div class="searchPic">
-
-        </div>
-
-        <div class="searchName">
-          <p> Gruppenname </p>
-        </div>
-
-        <div class="searchPlaces">
-          <p> Teilnehmerzahl </p>
-        </div>
-
-        <div class="searchTime">
-          <p> Zeit </p>
-        </div>
-
-        <div class="searchJoin">
-
-        </div>
-
-      </div>
-      <div id="resultList">
-        <div class="searchResult">
+        <div class="searchResultHeader">
 
           <div class="searchPic">
-            <img src="Logo/groupProg.png" height="110" width="110" />
+
           </div>
 
           <div class="searchName">
-            <p> Programmieren 1 </p>
+            <p> Gruppenname </p>
           </div>
 
           <div class="searchPlaces">
-            <p> 3/4 </p>
+            <p> Teilnehmerzahl </p>
           </div>
 
           <div class="searchTime">
-            <p> Montags, 17:00 </p>
+            <p> Zeit </p>
           </div>
 
           <div class="searchJoin">
-            <button onclick="beitreten('Programmieren 1')" class="searchJoinButton"> Bewerben </button>
+
           </div>
 
         </div>
-        <div class="searchResult">
+        <div id="resultList">
+          <div class="searchResult">
 
-          <div class="searchPic">
-            <img src="Logo/groupProg.png" height="110" width="110" />
+            <div class="searchPic">
+              <img src="Logo/groupProg.png" height="110" width="110" />
+            </div>
+
+            <div class="searchName">
+              <p> Programmieren 1 </p>
+            </div>
+
+            <div class="searchPlaces">
+              <p> 3/4 </p>
+            </div>
+
+            <div class="searchTime">
+              <p> Montags, 17:00 </p>
+            </div>
+
+            <div class="searchJoin">
+              <button onclick="beitreten('Programmieren 1')" class="searchJoinButton"> Bewerben </button>
+            </div>
+
+          </div>
+          <div class="searchResult">
+
+            <div class="searchPic">
+              <img src="Logo/groupProg.png" height="110" width="110" />
+            </div>
+
+            <div class="searchName">
+              <p> Prog 1 Lerngruppe </p>
+            </div>
+
+            <div class="searchPlaces">
+              <p> 2/5 </p>
+            </div>
+
+            <div class="searchTime">
+              <p> Samstags, 14:00 </p>
+            </div>
+
+            <div class="searchJoin">
+              <button onclick="beitreten('Prog 1 Lerngruppe')" class="searchJoinButton"> Bewerben </button>
+            </div>
+
           </div>
 
-          <div class="searchName">
-            <p> Prog 1 Lerngruppe </p>
+          <div class="searchResult">
+
+            <div class="searchPic">
+              <img src="Logo/groupProg.png" height="110" width="110" />
+            </div>
+
+            <div class="searchName">
+              <p> Proggen (Prog 1) </p>
+            </div>
+
+            <div class="searchPlaces">
+              <p> 1/4 </p>
+            </div>
+
+            <div class="searchTime">
+              <p> Freitags, 16:00 </p>
+            </div>
+
+            <div class="searchJoin">
+              <button onclick="beitreten('Proggen (Prog 1)')" class="searchJoinButton"> Bewerben </button>
+            </div>
+
           </div>
 
-          <div class="searchPlaces">
-            <p> 2/5 </p>
-          </div>
+          <div class="searchResult">
 
-          <div class="searchTime">
-            <p> Samstags, 14:00 </p>
-          </div>
+            <div class="searchPic">
+              <img src="Logo/groupProg.png" height="110" width="110" />
+            </div>
 
-          <div class="searchJoin">
-            <button onclick="beitreten('Prog 1 Lerngruppe')" class="searchJoinButton"> Bewerben </button>
+            <div class="searchName">
+              <p> 1 nice Programmierer </p>
+            </div>
+
+            <div class="searchPlaces">
+              <p> 4/6 </p>
+            </div>
+
+            <div class="searchTime">
+              <p> Sonntags, 11:00 </p>
+            </div>
+
+            <div class="searchJoin">
+              <button onclick="beitreten('1 nice Programmierer')" class="searchJoinButton"> Bewerben </button>
+            </div>
+
+
           </div>
 
         </div>
-
-        <div class="searchResult">
-
-          <div class="searchPic">
-            <img src="Logo/groupProg.png" height="110" width="110" />
-          </div>
-
-          <div class="searchName">
-            <p> Proggen (Prog 1) </p>
-          </div>
-
-          <div class="searchPlaces">
-            <p> 1/4 </p>
-          </div>
-
-          <div class="searchTime">
-            <p> Freitags, 16:00 </p>
-          </div>
-
-          <div class="searchJoin">
-            <button onclick="beitreten('Proggen (Prog 1)')" class="searchJoinButton"> Bewerben </button>
-          </div>
-
-        </div>
-
-        <div class="searchResult">
-
-          <div class="searchPic">
-            <img src="Logo/groupProg.png" height="110" width="110" />
-          </div>
-
-          <div class="searchName">
-            <p> 1 nice Programmierer </p>
-          </div>
-
-          <div class="searchPlaces">
-            <p> 4/6 </p>
-          </div>
-
-          <div class="searchTime">
-            <p> Sonntags, 11:00 </p>
-          </div>
-
-          <div class="searchJoin">
-            <button onclick="beitreten('1 nice Programmierer')" class="searchJoinButton"> Bewerben </button>
-          </div>
-
-
-        </div>
-
       </div>
     </div>
   </div>
+
+  <!--  group details overlay  -->
+  <div id="groupdetails" class="modal fade" style="display: none;">
+
+    <!-- Modal content -->
+    <div class="modal-content">
+      <span class="close" onclick="closeModal()">&times;</span>
+      <div class="flex-container">
+        <div class="flex-container-row col-8">
+          <div class="flex-container col-12">
+            <img class="profilepic" id="grouppic" src="Logo/groupProg.png" />
+            <h3 id="groupTitel">Gruppenname</h3>
+          </div>
+          <div class="flex-container col-12">
+            <p id="groupDescr">
+              Hallo wir sind eine Gruppe, die sich für die Vorlesung "Programmieren 1" der LUH zum Lernen treffen wollen
+            </p>
+          </div>
+          <div class="flex-container">
+            <p>Gruppenadmin: Max</p>
+            <img class="profilepic" id="adminPic" src="Logo/Jonas.png" />
+          </div>
+        </div>
+        <div class="flex-container-row col-4">
+          <div>
+            <h4>Ort: </h4>
+            <p>Leibniz Uni Hannover</p>
+          </div>
+          <div>
+            <h4>Zeit: </h4>
+            <div class="flex-container">
+              <div class="col-6">
+                Montags:
+              </div>
+              <div class="col-6">
+                16:00 - 18:00
+              </div>
+            </div>
+            <div class="flex-container">
+              <div class="col-6">
+                Dienstags:
+              </div>
+              <div class="col-6">
+                14:00 - 16:00
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
 </body>
 
 <!-- Navigation via Top Menu -->

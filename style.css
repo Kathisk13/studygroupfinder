@@ -24,6 +24,18 @@ body {
 .col-11 {width: 91.66%;}
 .col-12 {width: 100%;}
 
+.flex-container {
+	display: flex;
+	flex-wrap: nowrap;
+	align-items: center;
+}
+
+.flex-container-row {
+	display: flex;
+	flex-direction: column;
+	justify-content: left;
+}
+
 img {
 	max-width: 65%;
     height: auto;
@@ -556,7 +568,9 @@ th {
   border-width: 1px;
   border-color: black;
   border-style: solid;
- 
+  max-width: 70px;
+  max-height: 70px;
+	margin: 3%;
 }
 .time-right {
 	color: #999999;
@@ -620,4 +634,8 @@ label {
 form {
   display: table;
   width: 100%;
+}
+
+.clickable {
+	cursor: var(--cursorForLink);
 }
