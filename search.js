@@ -31,3 +31,10 @@ function showDetails(subject) {
     document.getElementById("groupTitel").innerHTML = subject;
     document.getElementById("groupdetails").style.display = "block"
 }
+
+function filterSearch(term) {
+    var results = document.getElementsByClassName("searchName");
+    for(let i=0; i<results.length; i++) {
+        var result = results[i];
+    }
+}

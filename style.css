@@ -243,7 +243,6 @@ a.active:hover {
 	border-color: black;
 	border-width: 3px;
 	border-style: solid;
-	cursor: var(--cursorForLink);
 	background-color: var(--background);
 	
 }
@@ -258,6 +257,7 @@ a.active:hover {
 	margin-right: 0pt;
 	margin-top: 4pt;
 	float: left;
+	cursor: var(--cursorForLink)
 }
 
 .elemname {
@@ -266,6 +266,7 @@ a.active:hover {
 	margin-right: 0pt;
 	float: left;
 	color: var(--font-color);
+	cursor: var(--cursorForLink)
 }
 
 .elemstat {
