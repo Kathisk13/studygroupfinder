@@ -166,7 +166,7 @@ ul{
 	cursor: pointer;
 }
 
-table{
+table.timeTable{
 	margin: 20px 0px 20px 0px;
 	text-align: center;
 	width: 100%;
@@ -174,7 +174,7 @@ table{
 	border-radius: 3px;
 }
 
-td{
+td.timeTable{
 	padding: 10px 10px 10px 10px;
 	border-style: solid;
 	border-width: 1px;
@@ -184,11 +184,11 @@ td{
 	cursor: pointer;
 }
 
-td:hover{
+td:hover.timeTable{
 	background-color: var(--button-hover-color-bright);
 }
 
-th{
+th.timeTable{
 	padding: 10px 10px 10px 10px;
 }
 
@@ -215,7 +215,24 @@ td.dark-timeTable{
 }
 
 th.dark-timeTable{
-	
+	padding: 10px 10px 10px 10px;
+	color: var(--font-color-dark);
+}
+
+details > summary{
+	text-align: left;
+	padding: 20px;
+	margin-top: 20px;
+	margin-bottom: 20px;
+	width: 600px;
+	margin-left: calc(50% - 300px);
+	background-color: var(--input-background-bright);
+	border-color: var(--button-border-color-bright);
+	border-style: solid;
+	border-width: 2px;
+	border-radius: 5px;
+	box-shadow: 1px 1px 2px #bbbbbb;
+	cursor: pointer;
 }
 
 
