@@ -17,6 +17,7 @@ function change_theme(){
 	document.getElementById("loginButton").classList.toggle("dark-button");
 	document.getElementById("registerButton").classList.toggle("dark-button");
 	document.getElementById("registerWebSSOButton").classList.toggle("dark-button");
+	document.getElementById("Title").classList.toggle("dark-Title");
 	document.body.classList.toggle("dark-body");
 }
 

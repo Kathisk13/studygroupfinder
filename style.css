@@ -244,9 +244,12 @@ a.active:hover {
 	border-width: 3px;
 	border-style: solid;
 	cursor: var(--cursorForLink);
-
 	background-color: var(--background);
 	
+}
+
+.groupelement:hover{
+	background-color: #999999;
 }
 
 .elempic {
