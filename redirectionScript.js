@@ -7,7 +7,7 @@ function switchToMain() {
 }
 
 function switchToMessages() {
-    window.location = "chatOverview.html";
+    window.location = "chatAna.html";
 }
 
 function switchToProfile() {
