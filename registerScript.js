@@ -46,6 +46,7 @@ function register(ev){
 	setCookie("passwort", document.getElementById("passwordInput").value, COOKIE_EXPIRE_HOURS);
 	setCookie("fach", document.getElementById("fachInput").value, COOKIE_EXPIRE_HOURS);
 	setCookie("ort", document.getElementById("ortInput").value, COOKIE_EXPIRE_HOURS);
+	setCookie("hobby", document.getElementById("hobbyInput").value, COOKIE_EXPIRE_HOURS);
 	var pathname = window.location.pathname;
 	window.location.href = pathname.substring(0, pathname.lastIndexOf("Register.html")) + "dashboard.html";
 }
@@ -81,6 +82,7 @@ function change_theme(){
 	document.getElementById("ortLabel").classList.toggle("dark-FormLabel");
 	document.getElementById("hobbyInput").classList.toggle("dark-FormInput");
 	document.getElementById("hobbyLabel").classList.toggle("dark-FormLabel");
+	document.getElementsByTagName("details")[0].classList.toggle("dark-timeTable");
 	var tdelements = document.getElementsByTagName("td");
 	for(var i = 0; i < tdelements.length; i++){
 		tdelements[i].classList.toggle("dark-timeTable");
