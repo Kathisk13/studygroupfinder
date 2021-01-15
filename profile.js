@@ -8,6 +8,7 @@ function uploadPic(ev) {
   input.onchange = function () {
     profilePic = URL.createObjectURL(input.files[0]);
     document.getElementById("ProfilePic").src = profilePic;
+	if(profilePic) setCookie("bild", profilePic);
     input.remove();
   };
 }
@@ -16,6 +17,7 @@ function getInfo(){
   document.getElementById("nameInput").value = getCookie('name');
   document.getElementById("fachInput").value = getCookie('fach');
   document.getElementById("ortInput").value = getCookie('ort');
+  if(getCookie("bild")) document.getElementById("ProfilePic").src = getCookie("bild");
 }
 function changePassword() {
   var oldPassword = document.getElementById("oldPasswordInput");
