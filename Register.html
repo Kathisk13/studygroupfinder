@@ -37,19 +37,24 @@
 	<p id="ortLabel" class="FormLabel CenterMargin ">Ort:</p>
 	<input id="ortInput" class="FormInput CenterMargin col-6" type="text">
 </ul>
-
-<table id="timeTable" class="timeTable">
-<tr class="timeTable">
-	<th class="timeTable">Montag</th>
-	<th class="timeTable">Dienstag</th>
-	<th class="timeTable">Mittwoch</th>
-	<th class="timeTable">Donnerstag</th>
-	<th class="timeTable">Freitag</th>
-	<th class="timeTable">Samstag</th>
-	<th class="timeTable">Sonntag</th>
-</tr>
-</table>
-
+<ul>
+	<p id="hobbyLabel" class="FormLabel CenterMargin ">Hobby:</p>
+	<input id="hobbyInput" class="FormInput CenterMargin col-6" type="text">
+</ul>
+<details class="timeTable">
+<summary>Eingabe der Verfügungszeiten</summary>
+	<table id="timeTable" class="timeTable">
+		<tr class="timeTable">
+			<th class="timeTable">Montag</th>
+			<th class="timeTable">Dienstag</th>
+			<th class="timeTable">Mittwoch</th>
+			<th class="timeTable">Donnerstag</th>
+			<th class="timeTable">Freitag</th>
+			<th class="timeTable">Samstag</th>
+			<th class="timeTable">Sonntag</th>
+		</tr>
+	</table>
+</details>
 <input id="register" class="RegisterButton" type="submit" value="Registrierung abschließen" onclick="register(event);">
 </div>
 <script src="cookieScript.js"></script>
