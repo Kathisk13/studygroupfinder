@@ -44,7 +44,7 @@
         <div onclick="showDetails('Prog 1')" class="elemname">
           <p> Analysis A </p>
         </div>
-        <div onclick="removeGroup()" class="elemstatWaiting" >
+        <div onclick="removeGroup()" class="elemstatWaiting">
           <img src="Logo/hourglass.png" height="50" width="40" />
         </div>
       </div>
@@ -67,7 +67,7 @@
           <p> GDS </p>
         </div>
         <div class="elemstat">
-         <img src="Logo/hourglass.png" height="50" width="40" />
+          <img src="Logo/hourglass.png" height="50" width="40" />
 
         </div>
       </div>
@@ -113,7 +113,8 @@
 
         <div class="search">
 
-          <input autofocus type="text" onkeydown="enterSearch(event)" class="searchTerm" placeholder="Suche eine Gruppe">
+          <input autofocus type="text" onkeydown="enterSearch(event)" class="searchTerm"
+            placeholder="Suche eine Gruppe">
           <button onclick="showSearch()" type="submit" class="searchButton">
             <img src="Logo/search.png" />
           </button>
@@ -127,7 +128,7 @@
         <!-- Nächste Termine-->
         <div class="nextEvent">
           <div class="eventHeader">
-            <p> Deine nächsten Lerngruppen </p>
+            <p>Gruppenvorschläge</p>
           </div>
 
 
@@ -138,23 +139,23 @@
               <th>Ort:</th>
               <th></th>
             </tr>
-            <tr class="clickable" onclick="showDetails('Prog 1')">
-              <td>Prog 1</td>
+            <tr class="clickable" onclick="showDetails('GDS')">
+              <td>ModSys</td>
               <td>Heute, 16:00</td>
               <td>Leibniz Uni</td>
             </tr>
-            <tr class="clickable" onclick="showDetails('Prog 1')">
-              <td>E-Technik</td>
+            <tr class="clickable" onclick="showDetails('Prog 1 Lerngruppe')">
+              <td>Prog 1 Lerngruppe</td>
               <td>Morgen, 14:00</td>
               <td>Bei Malte zuhause</td>
             </tr>
-            <tr class="clickable" onclick="showDetails('Prog 1')">
-              <td>Analysis A</td>
+            <tr class="clickable" onclick="showDetails('Fußball')">
+              <td>Fußball</td>
               <td>Samstag, 16:00</td>
               <td>Bei Jonas</td>
             </tr>
-            <tr class="clickable" onclick="showDetails('Prog 1')">
-              <td>Lina A</td>
+            <tr class="clickable" onclick="showDetails('1 nice Programmierer')">
+              <td>1 nice Programmierer</td>
               <td>Montag, 15:00</td>
               <td>Leibniz Uni</td>
             </tr>
@@ -239,8 +240,9 @@
   <div class="footer">
     <a href="https://www.uni-hannover.de/"> Impressum </a>
   </div>
-  <div id="waitForAcceptance" class="modal fade" style="display: none;">
 
+
+  <div id="waitForAcceptance" class="modal fade" style="display: none;">
     <!-- Modal content -->
     <div class="modal-content">
       <span class="close" onclick="closeModal()">&times;</span>
@@ -394,46 +396,52 @@
     <!-- Modal content -->
     <div class="modal-content">
       <span class="close" onclick="closeModal()">&times;</span>
-      <div class="flex-container">
-        <div class="flex-container-row col-8">
-          <div class="flex-container col-12">
-            <img class="profilepic" id="grouppic" src="Logo/groupProg.png" />
-            <h3 id="groupTitel">Gruppenname</h3>
+      <div class="flex-container-row">
+        <div class="flex-container">
+          <div class="flex-container-row col-8">
+            <div class="flex-container col-12">
+              <img class="profilepic" id="grouppic" src="Logo/groupProg.png" />
+              <h3 id="groupTitel">Gruppenname</h3>
+            </div>
+            <div class="flex-container col-12">
+              <p id="groupDescr">
+                Hallo wir sind eine Gruppe, die sich für die Vorlesung "Programmieren 1" der LUH zum Lernen treffen
+                wollen
+              </p>
+            </div>
+            <div class="flex-container">
+              <p>Gruppenadmin: Max</p>
+              <img class="profilepic" id="adminPic" src="Logo/Jonas.png" />
+            </div>
           </div>
-          <div class="flex-container col-12">
-            <p id="groupDescr">
-              Hallo wir sind eine Gruppe, die sich für die Vorlesung "Programmieren 1" der LUH zum Lernen treffen wollen
-            </p>
-          </div>
-          <div class="flex-container">
-            <p>Gruppenadmin: Max</p>
-            <img class="profilepic" id="adminPic" src="Logo/Jonas.png" />
+          <div class="flex-container-row col-4">
+            <div>
+              <h4>Ort: </h4>
+              <p>Leibniz Uni Hannover</p>
+            </div>
+            <div>
+              <h4>Zeit: </h4>
+              <div class="flex-container-left">
+                <div class="col-6">
+                  Montags:
+                </div>
+                <div class="col-6">
+                  16:00 - 18:00
+                </div>
+              </div>
+              <div class="flex-container-left">
+                <div class="col-6">
+                  Dienstags:
+                </div>
+                <div class="col-6">
+                  14:00 - 16:00
+                </div>
+              </div>
+            </div>
           </div>
         </div>
-        <div class="flex-container-row col-4">
-          <div>
-            <h4>Ort: </h4>
-            <p>Leibniz Uni Hannover</p>
-          </div>
-          <div>
-            <h4>Zeit: </h4>
-            <div class="flex-container">
-              <div class="col-6">
-                Montags:
-              </div>
-              <div class="col-6">
-                16:00 - 18:00
-              </div>
-            </div>
-            <div class="flex-container">
-              <div class="col-6">
-                Dienstags:
-              </div>
-              <div class="col-6">
-                14:00 - 16:00
-              </div>
-            </div>
-          </div>
+        <div class="col-12 flex-container-row-right">
+          <button onclick="beitreten(document.getElementById('groupTitel').innerHTML)">Beitreten</button>
         </div>
       </div>
     </div>
@@ -498,15 +506,15 @@
   }
 
   function removeGroup() {
-    
+
     if (confirm("Gruppenanfrage zurückziehen")) {
-        var b = document.getElementById('groupAna');
-        b.parentNode.removeChild(b);
+      var b = document.getElementById('groupAna');
+      b.parentNode.removeChild(b);
 
     }
-   
+
   }
-  
+
 
 </script>
 

@@ -2,6 +2,7 @@ function beitreten(groupName) {
     document.getElementById("groupName").innerHTML = groupName;
     document.getElementById("waitForAcceptance").style.display = "block";
     document.getElementById("searchModal").style.display = "none";
+    document.getElementById("groupdetails").style.display = "none";
 }
 
 function closeModal() {
