@@ -19,7 +19,7 @@ function enterSearch(event) {
 }
 
 function showSearch() {
-    console.log("show search");
+    filterSearch(document.getElementById("searchTerm").value);
     document.getElementById("searchModal").style.display = "block";
 }
 
@@ -30,12 +30,28 @@ function showmodal() {
 
 function showDetails(subject) {
     document.getElementById("groupTitel").innerHTML = subject;
-    document.getElementById("groupdetails").style.display = "block"
+    document.getElementById("groupdetails").style.display = "block";
 }
 
 function filterSearch(term) {
     var results = document.getElementsByClassName("searchName");
-    for(let i=0; i<results.length; i++) {
-        var result = results[i];
+    var any = false;
+    for (let i = 1; i < results.length; i++) {
+        var result = results[i].childNodes[1].innerHTML;
+        termList = term.split(" ");
+        var found = false;
+        for (var j = 0; j < termList.length; j++) {
+            if (result.toLowerCase().includes(termList[j].toLowerCase())) {
+                results[i].parentNode.style.display = "flex";
+                found = true;
+                any = true;
+            }
+        }
+        if (found == false) {
+            results[i].parentNode.style.display = "none";
+        }
+    }
+    if (any == false) {
+        document.getElementById("resultList").innerHTML = "<p> Leider gab es zu deinem Suchbegriff keinen Treffer. Du kannst aber selber eine Gruppe erstellen</p>"
     }
 }
