@@ -39,12 +39,12 @@ body {
 	flex-wrap: wrap;
 	flex-direction: column;
 }
-.flex-container-row-right {
+.flex-container-right {
 	display: flex;
 	flex-wrap: wrap;
 	align-items: center;
-	flex-direction: column;
-
+	flex-direction: row;
+	justify-content: flex-end;
 	align-items: flex-end;
 }
 

@@ -4,6 +4,7 @@
 <script src="./cookieScript.js"></script>
 <script src="./redirectionScript.js"></script>
 <script src="./search.js"></script>
+<script src="./dashboard.js"></script>
 
 <head>
   <meta charset="UTF-8">
@@ -36,34 +37,34 @@
 
 
       <!-- Gruppennamen klein halten -->
-      <div class="groupelement" id='groupAna'>
+      <div class="groupelement" id='Analysis A'>
 
-        <div onclick="showDetails('Prog 1')" class="elempic">
+        <div onclick="showDetails('Analysis A', true)" class="elempic">
           <img class="profilepic" src="Logo/groupAna.png" height="110" width="110" />
         </div>
-        <div onclick="showDetails('Prog 1')" class="elemname">
+        <div onclick="showDetails('Analysis A', true)" class="elemname">
           <p> Analysis A </p>
         </div>
         <div onclick="removeGroup()" class="elemstatWaiting">
           <img src="Logo/hourglass.png" height="50" width="40" />
         </div>
       </div>
-      <div onclick="" class="groupelement">
-        <div onclick="showDetails('Prog 1')" class="elempic">
+      <div class="groupelement" id="Lina A">
+        <div onclick="showDetails('Lina A', true)" class="elempic">
           <img class="profilepic" src="Logo/group1.png" height="110" width="110" />
         </div>
-        <div onclick="showDetails('Prog 1')" class="elemname">
+        <div onclick="showDetails('Lina A', true)" class="elemname">
           <p> Lina A </p>
         </div>
         <div class="elemstat">
           <img src="Logo/hourglass.png" height="50" width="40" />
         </div>
       </div>
-      <div onclick="" class="groupelement">
-        <div onclick="showDetails('Prog 1')" class="elempic">
+      <div class="groupelement" id="GDS">
+        <div onclick="showDetails('GDS', true)" class="elempic">
           <img class="profilepic" src="Logo/group2.png" height="110" width="110" />
         </div>
-        <div onclick="showDetails('Prog 1')" class="elemname">
+        <div onclick="showDetails('GDS', true)" class="elemname">
           <p> GDS </p>
         </div>
         <div class="elemstat">
@@ -71,22 +72,22 @@
 
         </div>
       </div>
-      <div onclick="" class="groupelement">
-        <div onclick="showDetails('Prog 1')" class="elempic">
+      <div class="groupelement" id="E-Technik">
+        <div onclick="showDetails('E-Technik', true)" class="elempic">
           <img class="profilepic" src="Logo/groupET.png" height="110" width="110" />
         </div>
-        <div onclick="showDetails('Prog 1')" class="elemname">
+        <div onclick="showDetails('E-Technik', true)" class="elemname">
           <p> E-Technik </p>
         </div>
         <div class="elemstat">
           <img src="Logo/hourglass.png" height="50" width="40" />
         </div>
       </div>
-      <div onclick="" class="groupelement">
-        <div onclick="showDetails('Prog 1')" class="elempic">
+      <div class="groupelement" id="Prog 1">
+        <div onclick="showDetails('Prog 1', true)" class="elempic">
           <img class="profilepic" src="Logo/groupProg.png" height="110" width="110" />
         </div>
-        <div onclick="showDetails('Prog 1')" class="elemname">
+        <div onclick="showDetails('Prog 1', true)" class="elemname">
           <p> Prog 1 </p>
         </div>
         <div class="elemstat">
@@ -94,7 +95,7 @@
         </div>
       </div>
 
-      <div onclick="" class="groupelement" style="border-color: green;">
+      <div onclick="createGroup()" class="groupelement" style="border-color: green;">
         <div class="elempic">
           <img class="profilepic" src="Logo/newGroup.png" height="110" width="110" />
         </div>
@@ -139,22 +140,22 @@
               <th>Ort:</th>
               <th></th>
             </tr>
-            <tr class="clickable" onclick="showDetails('GDS')">
+            <tr class="clickable" onclick="showDetails('GDS', false)">
               <td>ModSys</td>
               <td>Heute, 16:00</td>
               <td>Leibniz Uni</td>
             </tr>
-            <tr class="clickable" onclick="showDetails('Prog 1 Lerngruppe')">
+            <tr class="clickable" onclick="showDetails('Prog 1 Lerngruppe', false)">
               <td>Prog 1 Lerngruppe</td>
               <td>Morgen, 14:00</td>
               <td>Bei Malte zuhause</td>
             </tr>
-            <tr class="clickable" onclick="showDetails('Fußball')">
+            <tr class="clickable" onclick="showDetails('Fußball', false)">
               <td>Fußball</td>
               <td>Samstag, 16:00</td>
               <td>Bei Jonas</td>
             </tr>
-            <tr class="clickable" onclick="showDetails('1 nice Programmierer')">
+            <tr class="clickable" onclick="showDetails('1 nice Programmierer', false)">
               <td>1 nice Programmierer</td>
               <td>Montag, 15:00</td>
               <td>Leibniz Uni</td>
@@ -440,8 +441,10 @@
             </div>
           </div>
         </div>
-        <div class="col-12 flex-container-row-right">
-          <button onclick="beitreten(document.getElementById('groupTitel').innerHTML)">Beitreten</button>
+        <div class="col-12 flex-container-right">
+          <button id="settings">Einstellungen</button>
+          <div class="col-1"></div>
+          <button id="groupButton">Beitreten</button>
         </div>
       </div>
     </div>
@@ -503,16 +506,6 @@
       }
       i = i + 1;
     }
-  }
-
-  function removeGroup() {
-
-    if (confirm("Gruppenanfrage zurückziehen")) {
-      var b = document.getElementById('groupAna');
-      b.parentNode.removeChild(b);
-
-    }
-
   }
 
 

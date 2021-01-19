@@ -1,10 +1,3 @@
-function beitreten(groupName) {
-    document.getElementById("groupName").innerHTML = groupName;
-    document.getElementById("waitForAcceptance").style.display = "block";
-    document.getElementById("searchModal").style.display = "none";
-    document.getElementById("groupdetails").style.display = "none";
-}
-
 function closeModal() {
     document.getElementById("waitForAcceptance").style.display = "none";
     document.getElementById("searchModal").style.display = "none";
@@ -26,11 +19,6 @@ function showSearch() {
 function showmodal() {
     console.log("hi");
     document.getElementById("myModal").style.display = "block";
-}
-
-function showDetails(subject) {
-    document.getElementById("groupTitel").innerHTML = subject;
-    document.getElementById("groupdetails").style.display = "block";
 }
 
 function filterSearch(term) {
