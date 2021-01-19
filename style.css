@@ -26,22 +26,22 @@ body {
 
 .flex-container {
 	display: flex;
-	flex-wrap: nowrap;
+	flex-wrap: wrap;
 	align-items: center;
 }
 .flex-container-left {
 	display: flex;
-	flex-wrap: nowrap;
+	flex-wrap: wrap;
 	justify-content: flex-start;
 }
 .flex-container-row {
 	display: flex;
-	flex-wrap: nowrap;
+	flex-wrap: wrap;
 	flex-direction: column;
 }
 .flex-container-row-right {
 	display: flex;
-	flex-wrap: nowrap;
+	flex-wrap: wrap;
 	align-items: center;
 	flex-direction: column;
 
@@ -591,8 +591,8 @@ th {
   border-width: 1px;
   border-color: black;
   border-style: solid;
-  max-width: 70px;
-  max-height: 70px;
+  max-width: 90px;
+  max-height: 90px;
 	margin: 3%;
 }
 .time-right {
@@ -657,6 +657,54 @@ label {
 form {
   display: table;
   width: 100%;
+}
+table.timeTable{
+	margin: 20px 0px 20px 0px;
+	text-align: center;
+	width: 100%;
+	border: 1px solid black;
+	border-radius: 3px;
+	background-color: var(--background);
+}
+
+td.timeTable{
+	padding: 10px 10px 10px 10px;
+	border-style: solid;
+	border-width: 1px;
+	border-collapse: collapse;
+	transition-duration: 0.4s;
+	background-color: var(--button-background-color);
+	color: var(--button-font-color);
+	border-color: var(--button-border-color);
+	cursor: pointer;
+	user-select: none;
+}
+
+td:hover.timeTable{
+	background-color: var(--button-border-color);
+}
+
+th.timeTable{
+	padding: 10px 10px 10px 10px;
+	color: var(--font-color);
+}
+
+
+details.timeTable > summary{
+	text-align: left;
+	padding: 20px;
+	margin-top: 20px;
+	margin-bottom: 20px;
+	width: 600px;
+	background-color: var(--input-background);
+	border-color: var(--button-border-color);
+	border-style: solid;
+	border-width: 2px;
+	border-radius: 5px;
+	box-shadow: 1px 1px 2px #bbbbbb;
+	cursor: pointer;
+	color: var(--font-color);
+	user-select: none;
 }
 
 .clickable {
