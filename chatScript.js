@@ -57,8 +57,9 @@ function sendMessage() {
         return;
     }
 
-    messages.appendChild(createMessageUser(message, "Bob"));
-    setTimeout(response("Hallo Bob :)", "Rosemarie"), 10000);
+    
+    messages.appendChild(createMessageUser(message, getCookie('name')));
+    setTimeout(response("Hallo " + getCookie('name') + ":)", "Rosemarie"), 10000);
 }
 
 function response(message, user){
@@ -73,7 +74,7 @@ function sendMessageGroup(user) {
     if (message == ''){
         return;
     }
-
-    messages.appendChild(createMessageUser(message, "Bob"));
+    
+    messages.appendChild(createMessageUser(message, getCookie('name')));
     setTimeout(response("Wilkommen in unserer Gruppe!", user), 10000);
 }
