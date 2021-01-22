@@ -99,7 +99,7 @@
         <div class="elempic">
           <img class="profilepic" src="Logo/newGroup.png" height="110" width="110" />
         </div>
-        <div class="elemname">
+        <div onclick="createGroup()" class="elemname">
           <p> Gruppe erstellen </p>
         </div>
       </div>
@@ -447,6 +447,18 @@
           <button id="groupButton">Beitreten</button>
         </div>
       </div>
+    </div>
+  </div>
+
+  <!--  group details overlay  -->
+  <div id="neuegruppe" class="modal fade" style="display: none;">
+
+    <!-- Modal content -->
+    <div class="modal-content">
+      <span class="close" onclick="closeModal()">&times;</span>
+          <div class="flex-container-row col-8">
+            <p>Die Funktion zur Erstellung neuer Gruppen wurde noch nicht implementiert.</p>
+          </div>
     </div>
   </div>
 

@@ -6,7 +6,7 @@ function beitreten(groupName) {
 }
 
 function createGroup(){
-
+    document.getElementById("neuegruppe").style.display = "block";
 }
 
 function showDetails(subject, member) {

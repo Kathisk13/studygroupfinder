@@ -2,6 +2,7 @@ function closeModal() {
     document.getElementById("waitForAcceptance").style.display = "none";
     document.getElementById("searchModal").style.display = "none";
     document.getElementById("groupdetails").style.display = "none";
+    document.getElementById("neuegruppe").style.display = "none";
 }
 function enterSearch(event) {
     console.log("key pressed: " + event);
