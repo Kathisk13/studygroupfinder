@@ -9,6 +9,10 @@ function createGroup(){
     document.getElementById("neuegruppe").style.display = "block";
 }
 
+function createChat(){
+    document.getElementById("neuerchat").style.display = "block";
+}
+
 function openSettings() {
     document.getElementById("einstellung").style.display = "block";
 }

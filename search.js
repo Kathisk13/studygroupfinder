@@ -5,6 +5,10 @@ function closeModal() {
     document.getElementById("neuegruppe").style.display = "none";
     document.getElementById("einstellung").style.display = "none";
 }
+
+function closeChat(){
+    document.getElementById("neuerchat").style.display = "none";
+}
 function enterSearch(event) {
     console.log("key pressed: " + event);
     if (event.key == "Enter" || event.which == 13 || event.keyCode == 13) {
