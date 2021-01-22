@@ -30,12 +30,15 @@ function changePassword() {
     console.log("please show error message");
     errorEl.style.visibility = "visible";
   } else if(newPassword == "") {
-    console.log("Im confused, but this should show with no password")
     errorEl.innerHTML = "Du musst dir ein neues Passwort aussuchen";
     errorEl.style.display = "visible";
   } else {
     console.log("password: " + newPassword.value + "cookie: " + getCookie("passwort"))
     setCookie("passwort", newPassword.value);
+    document.getElementById("newPasswordInput").addEventListener("animationiteration", function () {
+      document.getElementById("newPasswordInput").style.animationPlayState = "paused";
+    });
+    document.getElementById("newPasswordInput").style.animation = "inputChanged 2s linear 0s infinite normal running";
     oldPassword.value = "";
     newPassword.value = "";
     errorEl.innerHTML = "Passwort wurde erfolgreich geändert";
@@ -47,6 +50,10 @@ function change(value){
   var input = document.getElementById(value + "Input").value;
   if(input != "") {
     setCookie(value, input);
+    document.getElementById(value + "Input").addEventListener("animationiteration", function () {
+      document.getElementById(value + "Input").style.animationPlayState = "paused";
+    });
+    document.getElementById(value + "Input").style.animation = "inputChanged 2s linear 0s infinite normal running";
   }
 }
 
@@ -54,8 +61,7 @@ function updateInfo() {
   change('name');
   change('fach');
   change('ort');
-  change('hobby')
-  console.log(document.getElementById("newPasswordInput").value)
+  change('hobby');
   if(document.getElementById("oldPasswordInput").value != ""){
     changePassword();
   }

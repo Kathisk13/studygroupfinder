@@ -644,6 +644,13 @@ input {
   background: var(--input-background);
   margin: 8px 4px;
   display: table-cell;
+  border-style: solid;
+  border-color: var(--button-border-color);
+  border-radius: 5px;
+}
+
+@keyframes inputChanged{
+	50% {background-color: var(--highlight-color);}
 }
 
 label {
