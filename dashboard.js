@@ -9,6 +9,10 @@ function createGroup(){
     document.getElementById("neuegruppe").style.display = "block";
 }
 
+function openSettings() {
+    document.getElementById("einstellung").style.display = "block";
+}
+
 function showDetails(subject, member, size) {
     var groupButton = document.getElementById("groupButton");
     if(member == true) {

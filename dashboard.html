@@ -445,7 +445,7 @@
             </div>
           </div>
         </div>
-        <div class="col-12 flex-container-right">
+        <div onclick="openSettings()" class="col-12 flex-container-right">
           <button id="settings">Einstellungen</button>
           <div class="col-1"></div>
           <button id="groupButton">Beitreten</button>
@@ -462,6 +462,18 @@
       <span class="close" onclick="closeModal()">&times;</span>
           <div class="flex-container-row col-8">
             <p>Die Funktion zur Erstellung neuer Gruppen wurde noch nicht implementiert.</p>
+          </div>
+    </div>
+  </div>
+
+<!-- Settings overlay-->
+  <div id="einstellung" class="modal fade" style="display: none;">
+
+    <!-- Modal content -->
+    <div class="modal-content">
+      <span class="close" onclick="closeModal()">&times;</span>
+          <div class="flex-container-row col-8">
+            <p>Die Funktion zur Einstellung der Gruppen wurde noch nicht implementiert.</p>
           </div>
     </div>
   </div>
