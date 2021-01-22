@@ -463,7 +463,7 @@
     if (confirm("Gruppenanfrage zurückziehen")) {
         var b = document.getElementById('groupAna');
         b.parentNode.removeChild(b);
-
+        //setCookie("groupAna", document.getElementById("groupAna").value, COOKIE_EXPIRE_HOURS);
     }
    
   }
