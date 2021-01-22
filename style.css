@@ -24,6 +24,30 @@ body {
 .col-11 {width: 91.66%;}
 .col-12 {width: 100%;}
 
+.flex-container {
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+}
+.flex-container-left {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: flex-start;
+}
+.flex-container-row {
+	display: flex;
+	flex-wrap: wrap;
+	flex-direction: column;
+}
+.flex-container-right {
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	flex-direction: row;
+	justify-content: flex-end;
+	align-items: flex-end;
+}
+
 img {
 	max-width: 65%;
     height: auto;
@@ -45,6 +69,13 @@ button {
 	color: var(--button-font-color);
 	border-color: var(--button-border-color);
 	cursor: var(--cursorForLink);
+	border-style: solid;
+	border-width: 2px;
+	border-radius: 5px;
+	transition-duration: 0.4s;
+}
+button:hover {
+	background-color: var(--button-border-color);
 }
 
 .text1 {
@@ -231,7 +262,6 @@ a.active:hover {
 	border-color: black;
 	border-width: 3px;
 	border-style: solid;
-	cursor: var(--cursorForLink);
 	background-color: var(--background);
 	
 }
@@ -246,6 +276,7 @@ a.active:hover {
 	margin-right: 0pt;
 	margin-top: 4pt;
 	float: left;
+	cursor: var(--cursorForLink)
 }
 
 .elemname {
@@ -254,6 +285,7 @@ a.active:hover {
 	margin-right: 0pt;
 	float: left;
 	color: var(--font-color);
+	cursor: var(--cursorForLink)
 }
 
 .elemstat {
@@ -559,7 +591,9 @@ th {
   border-width: 1px;
   border-color: black;
   border-style: solid;
- 
+  max-width: 90px;
+  max-height: 90px;
+	margin: 3%;
 }
 .time-right {
 	color: #999999;
@@ -623,4 +657,56 @@ label {
 form {
   display: table;
   width: 100%;
+}
+table.timeTable{
+	margin: 20px 0px 20px 0px;
+	text-align: center;
+	width: 100%;
+	border: 1px solid black;
+	border-radius: 3px;
+	background-color: var(--background);
+}
+
+td.timeTable{
+	padding: 10px 10px 10px 10px;
+	border-style: solid;
+	border-width: 1px;
+	border-collapse: collapse;
+	transition-duration: 0.4s;
+	background-color: var(--button-background-color);
+	color: var(--button-font-color);
+	border-color: var(--button-border-color);
+	cursor: pointer;
+	user-select: none;
+}
+
+td:hover.timeTable{
+	background-color: var(--button-border-color);
+}
+
+th.timeTable{
+	padding: 10px 10px 10px 10px;
+	color: var(--font-color);
+}
+
+
+details.timeTable > summary{
+	text-align: left;
+	padding: 20px;
+	margin-top: 20px;
+	margin-bottom: 20px;
+	width: 600px;
+	background-color: var(--input-background);
+	border-color: var(--button-border-color);
+	border-style: solid;
+	border-width: 2px;
+	border-radius: 5px;
+	box-shadow: 1px 1px 2px #bbbbbb;
+	cursor: pointer;
+	color: var(--font-color);
+	user-select: none;
+}
+
+.clickable {
+	cursor: var(--cursorForLink);
 }

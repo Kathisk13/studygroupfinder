@@ -14,9 +14,10 @@ function uploadPic(ev) {
 }
 
 function getInfo(){
-  document.getElementById("nameInput").value = getCookie('name');
-  document.getElementById("fachInput").value = getCookie('fach');
-  document.getElementById("ortInput").value = getCookie('ort');
+  document.getElementById("nameInput").placeholder = getCookie('name');
+  document.getElementById("fachInput").placeholder = getCookie('fach');
+  document.getElementById("ortInput").placeholder = getCookie('ort');
+  document.getElementById("hobbyInput").placeholder = getCookie('hobby');
   if(getCookie("bild")) document.getElementById("ProfilePic").src = getCookie("bild");
 }
 function changePassword() {
@@ -44,15 +45,37 @@ function changePassword() {
 
 function change(value){
   var input = document.getElementById(value + "Input").value;
-  setCookie(value, input);
+  if(input != "") {
+    setCookie(value, input);
+  }
 }
 
 function updateInfo() {
   change('name');
   change('fach');
   change('ort');
+  change('hobby')
   console.log(document.getElementById("newPasswordInput").value)
   if(document.getElementById("oldPasswordInput").value != ""){
     changePassword();
+  }
+}
+function createTimeTable() {
+  for (var i = 0; i < 24; i++) {
+    row = document.getElementById("timeTable").insertRow();
+    for (var j = 0; j < 7; j++) {
+      let cell = row.appendChild(document.createElement("td"));
+      var string = (i + 1) + ":00 Uhr";
+      let text = document.createTextNode(string);
+      cell.appendChild(text);
+      cell.className = "timeTable";
+      cell.addEventListener("click", function (event) {
+        if (!this.style.backgroundColor) {
+          this.style.backgroundColor = "#4fe870";
+        } else {
+          this.style.backgroundColor = "";
+        }
+      });
+    }
   }
 }

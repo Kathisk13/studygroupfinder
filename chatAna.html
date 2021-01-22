@@ -6,7 +6,7 @@
 	 <script src="./redirectionScript.js"></script>
 <head>
 <meta charset = "UTF-8">
-
+	<title>Studygroupfinder</title>
 	<div class="headerContainer"> 
 	
 		<div class="headerImage" col="1"> 
@@ -25,7 +25,7 @@
 
 	<link rel="stylesheet" href="style.css">
 </head>
-<body bgcolor="F1F1F1" onload="initPage()">
+<body onload="initPage();setTheme()">
 
 	<div class="container"> 
 	
@@ -116,7 +116,7 @@
 			<div class="members">Tom, Robbie, Bob, Rosemarie</div>
 			<div class="body" id="chat"></div>
 			<form class="message-form">
-				<input class="message-form-input" id="message" placeholder="Schreibe eine Nachricht.." type="text"></input>
+				<input autofocus class="message-form-input" id="message" placeholder="Schreibe eine Nachricht.." type="text"></input>
 				<button class="message-form-button" onclick="sendMessageGroup('Rosemarie')" type="button">Senden</button>
 			</form>
 		</div>
@@ -124,7 +124,7 @@
 	</div>
 
 	<div class="footer"> 
-			<p href=""> Impressum </p>
+			<a href="https://www.uni-hannover.de/"> Impressum </a>
 	</div>
 	
 	</body>

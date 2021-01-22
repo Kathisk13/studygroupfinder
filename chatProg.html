@@ -6,6 +6,7 @@
 	<script src="./redirectionScript.js"></script>
 <head>
 <meta charset = "UTF-8">
+	<title>Studygroupfinder</title>
 
 	<div class="headerContainer"> 
 	
@@ -25,7 +26,7 @@
 
 	<link rel="stylesheet" href="style.css">
 </head>
-<body bgcolor="F1F1F1" onload="initPage()">
+<body onload="initPage();setTheme()">
 
 	<div class="container"> 
 	
@@ -116,7 +117,7 @@
 			<div class="members">Alexander, Robbie, Marty, Chuck, Bob</div>
 			<div class="body" id="chat"></div>
 			<form class="message-form">
-				<input class="message-form-input" id="message" placeholder="Schreibe eine Nachricht.." type="text"></input>
+				<input autofocus class="message-form-input" id="message" placeholder="Schreibe eine Nachricht.." type="text"></input>
 				<button class="message-form-button" onclick="sendMessageGroup('Marty')" type="button">Senden</button>
 			</form>
 		</div>

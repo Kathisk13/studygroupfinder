@@ -8,10 +8,12 @@
   window.onload = function () {
     setTheme();
     getInfo();
+    createTimeTable();
   }
 </script>
 
 <head>
+    <title>Studygroupfinder</title>
   <meta charset="UTF-8">
 
   <div class="headerContainer">
@@ -36,23 +38,23 @@
 
 <body>
 
-  <div class="container">
+  <div class="flex-container">
 
     <!-- Main-Stuff -->
     <div class="col-10" style="padding-left:10%">
       <h1> Profil </h1>
-      <div class="ProfilePicDiv col-6 CenterMargin">
+      <div class="flex-container">
 
         <img id="ProfilePic" class="profilepic" src="Logo/Jonas.png" alt="ProfilePicture">
-        <button id="uploadImage" class="PicUploadButton" onclick="uploadPic(event);">Profilbild hochladen</button>
+        <button id="uploadImage" onclick="uploadPic(event);">Profilbild hochladen</button>
       </div>
 
       <br>
 
       <form onsubmit="updateInfo();return false">
         <div class="table-row">
-          <label for="nameInput">Name</label>
-          <input onfocus="this.value=''" id="nameInput" type="text">
+          <label for="nameInput">Name:</label>
+          <input autofocus id="nameInput" type="text">
         </div>
         <div class="table-row">
           <label for="oldPasswordInput">Altes Passwort:</label>
@@ -64,11 +66,32 @@
         </div>
         <div class="table-row">
           <label for="fachInput">Fach:</label>
-          <input onfocus="this.value=''" id="fachInput" type="text">
+          <input id="fachInput" type="text">
         </div>
         <div class="table-row">
           <label for="ortInput">Ort:</label>
-          <input onfocus="this.value=''" id="ortInput" type="text">
+          <input id="ortInput" type="text">
+        </div>
+        <div class="table-row">
+          <label for="hobbyInput">Hobby:</label>
+          <input id="hobbyInput" type="text">
+        </div>
+        <div class="table-row">
+          <label></label>
+          <details class="timeTable">
+            <summary>Eingabe der Verfügungszeiten</summary>
+            <table id="timeTable" class="timeTable">
+              <tr class="timeTable">
+                <th class="timeTable">Montag</th>
+                <th class="timeTable">Dienstag</th>
+                <th class="timeTable">Mittwoch</th>
+                <th class="timeTable">Donnerstag</th>
+                <th class="timeTable">Freitag</th>
+                <th class="timeTable">Samstag</th>
+                <th class="timeTable">Sonntag</th>
+              </tr>
+            </table>
+          </details>
         </div>
         <div class="table-row">
           <label></label>
@@ -78,7 +101,7 @@
     </div>
 
     <div class="footer">
-      <p href=""> Impressum </p>
+     <a href="https://www.uni-hannover.de/"> Impressum </a>
     </div>
 </body>
 
