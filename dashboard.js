@@ -9,7 +9,7 @@ function createGroup(){
     document.getElementById("neuegruppe").style.display = "block";
 }
 
-function showDetails(subject, member) {
+function showDetails(subject, member, size) {
     var groupButton = document.getElementById("groupButton");
     if(member == true) {
         groupButton.innerHTML = "Austreten";
@@ -19,6 +19,7 @@ function showDetails(subject, member) {
         groupButton.onclick = function () { beitreten(document.getElementById('groupTitel').innerHTML); };
     }
     document.getElementById("groupTitel").innerHTML = subject;
+    document.getElementById("groupSize").innerHTML = size;
     document.getElementById("groupdetails").style.display = "block";
 }
 
