@@ -24,7 +24,8 @@ function showDetails(subject, member) {
 
 function removeGroup(group) {
     closeModal();
-    if (confirm("Möchtest du diese Gruppe wirklich verlassen?")) {
+    
+    if (confirm("Möchtest du die Gruppe " + group +" wirklich verlassen?")) {
         var b = document.getElementById(group);
         b.parentNode.removeChild(b);
     }
