@@ -1,4 +1,5 @@
-function beitreten(groupName) {
+function beitreten(event, groupName) {
+    event.stopPropagation()
     document.getElementById("groupName").innerHTML = groupName;
     document.getElementById("waitForAcceptance").style.display = "block";
     document.getElementById("searchModal").style.display = "none";
@@ -23,19 +24,23 @@ function openSettings() {
 
 function showDetails(subject, member, size) {
     var groupButton = document.getElementById("groupButton");
+    var settingsButton = document.getElementById("settings");
     if(member == true) {
         groupButton.innerHTML = "Austreten";
         groupButton.onclick = function () { removeGroup(subject); };
+        settingsButton.style.display = "block";
     } else {
         groupButton.innerHTML = "Beitreten";
         groupButton.onclick = function () { beitreten(document.getElementById('groupTitel').innerHTML); };
+        settingsButton.style.display = "none"
     }
     document.getElementById("groupTitel").innerHTML = subject;
     document.getElementById("groupSize").innerHTML = size;
     document.getElementById("groupdetails").style.display = "block";
 }
 
-function removeGroup(group) {
+function removeGroup(event, group) {
+    event.stopPropagation();
     closeModal();
     
     if (confirm("Möchtest du die Gruppe " + group +" wirklich verlassen?")) {

@@ -37,71 +37,71 @@
 
 
       <!-- Gruppennamen klein halten -->
-      <div class="groupelement" id='Analysis A'>
+      <div class="groupelement" id='Analysis A' onclick="showDetails('Analysis A', true, 5)">
 
-        <div onclick="showDetails('Analysis A', true, 5)" class="elempic">
+        <div class="elempic">
           <img class="profilepic" src="Logo/groupAna.png" height="110" width="110" />
         </div>
-        <div onclick="showDetails('Analysis A', true, 5)" class="elemname">
+        <div class="elemname">
           <p> Analysis A </p>
         </div>
-        <div onclick="removeGroup()" class="elemstat">
+        <div onclick="removeGroup(event, 'Analysis A')" class="elemstat">
           <img src="Logo/hourglass.png" height="50" width="40" />
         </div>
       </div>
-      <div class="groupelement" id="Lina A">
-        <div onclick="showDetails('Lina A', true, 4)" class="elempic">
+      <div class="groupelement" id="Lina A" onclick="showDetails('Lina A', true, 4)">
+        <div class="elempic">
           <img class="profilepic" src="Logo/group1.png" height="110" width="110" />
         </div>
-        <div onclick="showDetails('Lina A', true, 4)" class="elemname">
+        <div class="elemname">
           <p> Lina A </p>
         </div>
-        <div onclick="removeGroup()" class="elemstat">
+        <div onclick="removeGroup(event, 'Lina A')" class="elemstat">
           <img src="Logo/hourglass.png" height="50" width="40" />
         </div>
       </div>
-      <div class="groupelement" id="GDS">
-        <div onclick="showDetails('GDS', true, 3)" class="elempic">
+      <div class="groupelement" id="GDS" onclick="showDetails('GDS', true, 3)">
+        <div class="elempic">
           <img class="profilepic" src="Logo/group2.png" height="110" width="110" />
         </div>
-        <div onclick="showDetails('GDS', true, 3)" class="elemname">
+        <div class="elemname">
           <p> GDS </p>
         </div>
-        <div onclick="removeGroup()" class="elemstat">
+        <div onclick="removeGroup(event, 'GDS')" class="elemstat">
           <img src="Logo/hourglass.png" height="50" width="40" />
 
         </div>
       </div>
-      <div class="groupelement" id="E-Technik">
-        <div onclick="showDetails('E-Technik', true, 7)" class="elempic">
+      <div class="groupelement" id="E-Technik" onclick="showDetails('E-Technik', true, 7)">
+        <div class="elempic">
           <img class="profilepic" src="Logo/groupET.png" height="110" width="110" />
         </div>
-        <div onclick="showDetails('E-Technik', true, 7)" class="elemname">
+        <div class="elemname">
           <p> E-Technik </p>
         </div>
-        <div onclick="removeGroup()" class="elemstat">
+        <div onclick="removeGroup(event, 'E-Technik')" class="elemstat">
           <img src="Logo/hourglass.png" height="50" width="40" />
         </div>
       </div>
-      <div class="groupelement" id="Prog 1">
-        <div onclick="showDetails('Prog 1', true, 6)" class="elempic">
+      <div class="groupelement" id="Prog 1" onclick="showDetails('Prog 1', true, 6)">
+        <div class="elempic">
           <img class="profilepic" src="Logo/groupProg.png" height="110" width="110" />
         </div>
-        <div onclick="showDetails('Prog 1', true, 6)" class="elemname">
+        <div class="elemname">
           <p> Prog 1 </p>
         </div>
-        <div onclick="removeGroup('Prog 1')" class="elemstatWaiting">
+        <div class="elemstatWaiting">
           <img src="Logo/hourglass.png" height="50" width="40" />
         </div>
       </div>
-      <div class="groupelement" id="1 nice Programmierer">
-        <div onclick="showDetails('1 nice Programmierer', true, 6)" class="elempic">
+      <div class="groupelement" id="1 nice Programmierer" onclick="showDetails('1 nice Programmierer', true, 6)">
+        <div class="elempic">
           <img class="profilepic" src="Logo/groupProg.png" height="110" width="110" />
         </div>
-        <div onclick="showDetails('1 nice Programmierer', true, 6)" class="elemname">
+        <div class="elemname">
           <p>1 nice Programmierer</p>
         </div>
-        <div onclick="removeGroup('1 nice Programmierer')" class="elemstatWaiting">
+        <div onclick="removeGroup(event, '1 nice Programmierer')" class="elemstatWaiting">
           <img src="Logo/hourglass.png" height="50" width="40" />
         </div>
       </div>
@@ -151,22 +151,22 @@
               <th>Ort:</th>
               <th></th>
             </tr>
-            <tr class="clickable" onclick="showDetails('GDS', false)">
+            <tr class="clickable" onclick="showDetails('GDS', false, 3)">
               <td>ModSys</td>
               <td>Heute, 16:00</td>
               <td>Leibniz Uni</td>
             </tr>
-            <tr class="clickable" onclick="showDetails('Prog 1', false)">
+            <tr class="clickable" onclick="showDetails('Prog 1', false, 4)">
               <td>Prog 1</td>
               <td>Morgen, 14:00</td>
               <td>Bei Malte zuhause</td>
             </tr>
-            <tr class="clickable" onclick="showDetails('Fußball', false)">
+            <tr class="clickable" onclick="showDetails('Fußball', false, 7)">
               <td>Fußball</td>
               <td>Samstag, 16:00</td>
               <td>Bei Jonas</td>
             </tr>
-            <tr class="clickable" onclick="showDetails('1 nice Programmierer', false)">
+            <tr class="clickable" onclick="showDetails('1 nice Programmierer', false, 5)">
               <td>1 nice Programmierer</td>
               <td>Montag, 15:00</td>
               <td>Leibniz Uni</td>
@@ -288,7 +288,7 @@
           </div>
 
           <div class="searchPlaces">
-            <p> Teilnehmerzahl </p>
+            <p> Teilnehmer </p>
           </div>
 
           <div class="searchTime">
@@ -301,7 +301,7 @@
 
         </div>
         <div id="resultList">
-          <div class="searchResult">
+          <div class="searchResult clickable" onclick="showDetails('Programmieren 1', false, 5)">
 
             <div class="searchPic">
               <img src="Logo/groupProg.png" height="110" width="110" />
@@ -320,11 +320,11 @@
             </div>
 
             <div class="searchJoin">
-              <button onclick="beitreten('Programmieren 1')" class="searchJoinButton"> Bewerben </button>
+              <button onclick="beitreten(event, 'Programmieren 1')" class="searchJoinButton"> Bewerben </button>
             </div>
 
           </div>
-          <div class="searchResult" onclick="showDetails('Prog 1')">
+          <div class="searchResult clickable" onclick="showDetails('Prog 1', false, 6)">
 
             <div class="searchPic">
               <img src="Logo/groupProg.png" height="110" width="110" />
@@ -343,12 +343,12 @@
             </div>
 
             <div class="searchJoin">
-              <button onclick="beitreten('Prog 1')" class="searchJoinButton"> Bewerben </button>
+              <button onclick="beitreten(event, 'Prog 1')" class="searchJoinButton"> Bewerben </button>
             </div>
 
           </div>
 
-          <div class="searchResult">
+          <div class="searchResult clickable" onclick="showDetails('Proggen (Prog 1)', false, 4)">
 
             <div class="searchPic">
               <img src="Logo/groupProg.png" height="110" width="110" />
@@ -367,12 +367,12 @@
             </div>
 
             <div class="searchJoin">
-              <button onclick="beitreten('Proggen (Prog 1)')" class="searchJoinButton"> Bewerben </button>
+              <button onclick="beitreten(event, 'Proggen (Prog 1)')" class="searchJoinButton"> Bewerben </button>
             </div>
 
           </div>
 
-          <div class="searchResult">
+          <div class="searchResult clickable" onclick="showDetails('1 nice Programmierer', false, 5)">
 
             <div class="searchPic">
               <img src="Logo/groupProg.png" height="110" width="110" />
@@ -391,7 +391,7 @@
             </div>
 
             <div class="searchJoin">
-              <button onclick="beitreten('1 nice Programmierer')" class="searchJoinButton"> Bewerben </button>
+              <button onclick="beitreten(event, '1 nice Programmierer')" class="searchJoinButton"> Bewerben </button>
             </div>
 
 
@@ -407,7 +407,7 @@
 
     <!-- Modal content -->
     <div class="modal-content">
-      <span class="close" onclick="closeModal()">&times;</span>
+      <span class="close" onclick="closeDetails()">&times;</span>
       <div class="flex-container-row">
         <div class="flex-container">
           <div class="flex-container-row col-8">
