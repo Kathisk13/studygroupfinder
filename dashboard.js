@@ -3,6 +3,7 @@ function beitreten(groupName) {
     document.getElementById("waitForAcceptance").style.display = "block";
     document.getElementById("searchModal").style.display = "none";
     document.getElementById("groupdetails").style.display = "none";
+    document.getElementById(groupName).style.display = "block"
 }
 
 function createGroup(){
