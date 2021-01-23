@@ -39,21 +39,21 @@
       <!-- Gruppennamen klein halten -->
       <div class="groupelement" id='Analysis A'>
 
-        <div onclick="showDetails('Analysis A', true)" class="elempic">
+        <div onclick="showDetails('Analysis A', true, 5)" class="elempic">
           <img class="profilepic" src="Logo/groupAna.png" height="110" width="110" />
         </div>
-        <div onclick="showDetails('Analysis A', true)" class="elemname">
+        <div onclick="showDetails('Analysis A', true, 5)" class="elemname">
           <p> Analysis A </p>
         </div>
-        <div onclick="removeGroupAna()" class="elemstatWaiting">
+        <div onclick="removeGroup()" class="elemstatWaiting">
           <img src="Logo/hourglass.png" height="50" width="40" />
         </div>
       </div>
       <div class="groupelement" id="Lina A">
-        <div onclick="showDetails('Lina A', true)" class="elempic">
+        <div onclick="showDetails('Lina A', true, 4)" class="elempic">
           <img class="profilepic" src="Logo/group1.png" height="110" width="110" />
         </div>
-        <div onclick="showDetails('Lina A', true)" class="elemname">
+        <div onclick="showDetails('Lina A', true, 4)" class="elemname">
           <p> Lina A </p>
         </div>
         <div class="elemstat">
@@ -61,10 +61,10 @@
         </div>
       </div>
       <div class="groupelement" id="GDS">
-        <div onclick="showDetails('GDS', true)" class="elempic">
+        <div onclick="showDetails('GDS', true, 3)" class="elempic">
           <img class="profilepic" src="Logo/group2.png" height="110" width="110" />
         </div>
-        <div onclick="showDetails('GDS', true)" class="elemname">
+        <div onclick="showDetails('GDS', true, 3)" class="elemname">
           <p> GDS </p>
         </div>
         <div class="elemstat">
@@ -73,10 +73,10 @@
         </div>
       </div>
       <div class="groupelement" id="E-Technik">
-        <div onclick="showDetails('E-Technik', true)" class="elempic">
+        <div onclick="showDetails('E-Technik', true, 7)" class="elempic">
           <img class="profilepic" src="Logo/groupET.png" height="110" width="110" />
         </div>
-        <div onclick="showDetails('E-Technik', true)" class="elemname">
+        <div onclick="showDetails('E-Technik', true, 7)" class="elemname">
           <p> E-Technik </p>
         </div>
         <div class="elemstat">
@@ -84,10 +84,10 @@
         </div>
       </div>
       <div class="groupelement" id="Prog 1">
-        <div onclick="showDetails('Prog 1', true)" class="elempic">
+        <div onclick="showDetails('Prog 1', true, 6)" class="elempic">
           <img class="profilepic" src="Logo/groupProg.png" height="110" width="110" />
         </div>
-        <div onclick="showDetails('Prog 1', true)" class="elemname">
+        <div onclick="showDetails('Prog 1', true, 6)" class="elemname">
           <p> Prog 1 </p>
         </div>
         <div class="elemstat">
@@ -417,6 +417,10 @@
           </div>
           <div class="flex-container-row col-4">
             <div>
+              <h4>Teilnehmerzahl: </h4>
+              <p id="groupSize"></p>
+            </div>
+            <div>
               <h4>Ort: </h4>
               <p>Leibniz Uni Hannover</p>
             </div>
@@ -441,7 +445,7 @@
             </div>
           </div>
         </div>
-        <div class="col-12 flex-container-right">
+        <div onclick="openSettings()" class="col-12 flex-container-right">
           <button id="settings">Einstellungen</button>
           <div class="col-1"></div>
           <button id="groupButton">Beitreten</button>
@@ -450,7 +454,7 @@
     </div>
   </div>
 
-  <!--  group details overlay  -->
+  <!--  new group overlay  -->
   <div id="neuegruppe" class="modal fade" style="display: none;">
 
     <!-- Modal content -->
@@ -458,6 +462,18 @@
       <span class="close" onclick="closeModal()">&times;</span>
           <div class="flex-container-row col-8">
             <p>Die Funktion zur Erstellung neuer Gruppen wurde noch nicht implementiert.</p>
+          </div>
+    </div>
+  </div>
+
+<!-- Settings overlay-->
+  <div id="einstellung" class="modal fade" style="display: none;">
+
+    <!-- Modal content -->
+    <div class="modal-content">
+      <span class="close" onclick="closeModal()">&times;</span>
+          <div class="flex-container-row col-8">
+            <p>Die Funktion zur Einstellung der Gruppen wurde noch nicht implementiert.</p>
           </div>
     </div>
   </div>
@@ -520,7 +536,7 @@
     }
   }
 
-  function removeGroupAna() {
+  function removeGroup() {
     
     if (confirm("Gruppenanfrage zurückziehen")) {
         var b = document.getElementById('Analysis A');

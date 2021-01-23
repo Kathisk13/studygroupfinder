@@ -1,9 +1,11 @@
 <!Doctype HTML>
 <html>
 	<script src="./darkmode.js"></script>
-	  <script src="cookieScript.js"></script>
+	  <script src="./cookieScript.js"></script>
 	  <script src="./chatScript.js"></script>
 	 <script src="./redirectionScript.js"></script>
+	 <script src="./dashboard.js"></script>
+	 <script src="./search.js"></script>
 <head>
 <meta charset = "UTF-8">
 	<title>Studygroupfinder</title>
@@ -100,7 +102,7 @@
 					<img src="Logo/bubble.png" height="50" width="40"/>
 				</div>
 			</div>
-			<div onclick="" class="groupelement" style="border-color: green;">
+			<div onclick="createChat()" class="groupelement" style="border-color: green;">
 				<div class="elempic">
 					<img class="profilepic" src="Logo/newGroup.png" height="110" width="110"/>
 				</div>
@@ -125,8 +127,21 @@
 	</div>
 
 	<div class="footer"> 
-			<p href=""> Impressum </p>
+		<a href="https://www.uni-hannover.de/"> Impressum </a>
 	</div>
+
+	<!--  new chat overlay  -->
+	<div id="neuerchat" class="modal fade" style="display: none;">
+
+		<!-- Modal content -->
+		<div class="modal-content">
+		  <span class="close" onclick="closeChat()">&times;</span>
+			  <div class="flex-container-row col-8">
+				<p>Die Funktion zur Erstellung eines neuen Chats wurde noch nicht implementiert.</p>
+			  </div>
+		</div>
+	</div>
+	
     </body>
 
 	<script>
