@@ -27,7 +27,7 @@ function showDetails(subject, member, size) {
     var settingsButton = document.getElementById("settings");
     if(member == true) {
         groupButton.innerHTML = "Austreten";
-        groupButton.onclick = function () { removeGroup(subject); };
+        groupButton.onclick = function () { removeGroup(event, subject); };
         settingsButton.style.display = "block";
     } else {
         groupButton.innerHTML = "Beitreten";
@@ -39,7 +39,7 @@ function showDetails(subject, member, size) {
     document.getElementById("groupdetails").style.display = "block";
 }
 
-function removeGroup(event, group) {
+function removeGroup(event,group) {
     event.stopPropagation();
     closeModal();
     
