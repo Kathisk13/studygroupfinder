@@ -3,7 +3,10 @@ function beitreten(groupName) {
     document.getElementById("waitForAcceptance").style.display = "block";
     document.getElementById("searchModal").style.display = "none";
     document.getElementById("groupdetails").style.display = "none";
-    document.getElementById(groupName).style.display = "block"
+    document.getElementById(groupName).style.display = "block";
+    setTimeout(function checkLocation() {
+        document.getElementById(groupName).children[2].style.display = "none";
+    }, 5000);
 }
 
 function createGroup(){
