@@ -27,7 +27,10 @@ function showDetails(subject, member, size) {
     var settingsButton = document.getElementById("settings");
     if(member == true) {
         groupButton.innerHTML = "Austreten";
-        groupButton.onclick = function () { removeGroup(event, subject); };
+        groupButton.onclick = function (event) {
+            closeDetails();
+            removeGroup(event, subject);
+        };
         settingsButton.style.display = "block";
     } else {
         groupButton.innerHTML = "Beitreten";
