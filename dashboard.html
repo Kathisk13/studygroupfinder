@@ -445,8 +445,10 @@
             </div>
           </div>
         </div>
-        <div onclick="openSettings()" class="col-12 flex-container-right">
+        <div  class="col-12 flex-container-right">
+          <div onclick="openSettings()">
           <button id="settings">Einstellungen</button>
+        </div>
           <div class="col-1"></div>
           <button id="groupButton">Beitreten</button>
         </div>
@@ -536,14 +538,6 @@
     }
   }
 
-  function removeGroup() {
-    
-    if (confirm("Gruppenanfrage zurückziehen")) {
-        var b = document.getElementById('Analysis A');
-        b.parentNode.removeChild(b);
-    }
-   
-  }
   
 
 
