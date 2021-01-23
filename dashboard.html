@@ -485,6 +485,8 @@
 <!-- Navigation via Top Menu -->
 <script>
 
+
+
   //var theme = 1;
   var days = ["Sonntag", "Montag", "Dienstag", "Mittwoch", "Donnerstag", "Freitag", "Samstag"];
   var currentDay = 0;
@@ -497,6 +499,12 @@
       elements[0].parentNode.removeChild(elements[0]);
     }
     loadDay(currentDay);
+
+
+    var elements = document.getElementsByClassName("elemstatWaiting");
+    while (elements.length > 0) {
+      elements[0].parentNode.remove();
+    }
   }
 
   function getDay() {
