@@ -18,7 +18,9 @@ function enterSearch(event) {
 }
 
 function showSearch() {
-    filterSearch(document.getElementById("searchTerm").value);
+    var term = document.getElementById("searchTerm").value
+    filterSearch(term);
+    document.getElementById("group").innerHTML = term;
     document.getElementById("searchModal").style.display = "block";
 }
 
